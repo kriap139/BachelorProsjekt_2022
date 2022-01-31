@@ -11,9 +11,18 @@ def dirUp(path: str, n: int) -> str:
     return path
 
 
-def pathAppend(path: str, add: str) -> str:
+def pathAppend(path: str, add: str, sep = None) -> str:
 
-    sep, rep = ('\\', '/') if path.__contains__('\\') else ('/', '\\')
+    if sep is None:
+        sep, rep = ('\\', '/') if path.__contains__('\\') else ('/', '\\')
+    else:
+        rep = ''
+        if sep == '/':
+            rep = '\\'
+        elif sep == '\\':
+            rep = '/'
+        path.replace(rep, sep)
+    
     add = add.replace(rep, sep)
 
     if path.endswith(sep):
@@ -47,7 +56,7 @@ def dataDir(add: str = None) -> str:
         aDir = ''
         
         for relPath in sysRels.get(system):
-            dDir = pathAppend(home, add=relPath)
+            dDir = pathAppend(home, add=relPathm, sep='/')
             
             if os.path.exists(dDir):
                 break
@@ -57,7 +66,7 @@ def dataDir(add: str = None) -> str:
     else:
         raise NotImplementedError(f"OS: {system} is not supported")
 
-    dDir = pathAppend(dDir, add)
+    dDir = pathAppend(dDir, add, sep='/')
 
     if not os.path.exists(dDir):
         raise NotADirectoryError(f"Data Directory Path: [{dDir}], doesn't exist")
