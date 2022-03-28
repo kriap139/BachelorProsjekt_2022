@@ -6,7 +6,7 @@ import glob
 #img2 = cv.imread('b.jpg',cv.IMREAD_GRAYSCALE)          # queryImage
 #img2 = cv.GaussianBlur(img2,(3,3),cv.BORDER_DEFAULT)
 #unsharp_mask(img1)
-img1 = cv.imread('apen.jpg',cv.IMREAD_GRAYSCALE) # trainImage
+img1 = cv.imread('apen.jpg', cv.IMREAD_GRAYSCALE) # trainImage
 img1 = cv.GaussianBlur(img1,(9,9),cv.BORDER_DEFAULT)
 
 # Initiate SIFT detector

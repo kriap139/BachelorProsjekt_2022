@@ -1,5 +1,6 @@
 from enum import Enum
 
+
 class ValveType(Enum):
     ArrowValve = 0
 

@@ -1,0 +1,15 @@
+{
+    "valves" : {
+        "AFGK11" : {
+            "clazz": "fra yolo",
+            "state": false,
+            "pipeDirection": "topBottom/leftRight/unset"
+        }
+    },
+    "colorsHSV": {
+        "ventilclasse": {
+            "lower": [255, 255, 255],
+            "upper": [0, 0, 0]
+        }
+    }
+}

@@ -11,14 +11,18 @@ from rembg.bg import remove
 import io
 from PIL import Image
 from PIL import ImageFile
+from src.GUI.PlotWindow import PlotWindow
 import os
 
+pw = PlotWindow()
 
 #Defining function for plotting images
-def display(img,cmap=None):
+def display(title, img, cmap=None):
     fig = plt.figure(figsize=(10, 8))
     ax = fig.add_subplot(111)
     ax.imshow(img, cmap=cmap)
+
+    pw.addPlot(title, fig)
 
 
 # removing background of the input image 
@@ -45,31 +49,31 @@ def watersheld (img_Pipe):
     
     # Apply Threshold (Inverse Binary with OTSU method as well)  in order to make it black and white
     ret, thresh = cv2.threshold(gray_p,0,255,cv2.THRESH_BINARY_INV+cv2.THRESH_OTSU)
-    display(thresh,cmap='gray')
+    display("thresh", thresh,cmap='gray')
     
     # noise removal
     # To define a kernel size 3X3 
     kernel = np.ones((3,3),np.uint8)
     # To remove unnecessary noise by applying morphologyEx
     opening = cv2.morphologyEx(thresh,cv2.MORPH_OPEN,kernel, iterations = 2)
-    display(opening,cmap='gray')
+    display("opening", opening,cmap='gray')
     
     # To grab the sure Background area 
     sure_bg = cv2.dilate(opening,kernel,iterations=3)
-    display(sure_bg,cmap='gray')
+    display("sure_bg", sure_bg,cmap='gray')
     
     # To finding sure foreground area
     dist_transform = cv2.distanceTransform(opening,cv2.DIST_L2,5)
-    display(dist_transform,cmap='gray')
+    display("dist transform", dist_transform,cmap='gray')
     
     #0.7*dist_transform.max()
     ret, sure_fg = cv2.threshold(dist_transform,0.998*dist_transform.max(),255,0)
-    display(sure_fg,cmap='gray')
+    display("sure fg", sure_fg,cmap='gray')
     
     # Finding unknown region in the image
     sure_fg = np.uint8(sure_fg)
     unknown = cv2.subtract(sure_bg,sure_fg)
-    display(unknown,cmap='gray')
+    display("unknown", unknown,cmap='gray')
     
     # Marker labelling
     ret, markers = cv2.connectedComponents(sure_fg)
@@ -79,11 +83,11 @@ def watersheld (img_Pipe):
     
     # mark the region of unknown with zero
     markers[unknown==255] = 0
-    display(markers,cmap='gray')
+    display("markers", markers, cmap='gray')
     
     # Applying Watershed Algorithm to find Markers
     markers = cv2.watershed(img_Pipe,markers)
-    display(markers)
+    display("markers final", markers)
     return markers
 
 # Mapping the angle from the rotated reqtangle
@@ -97,20 +101,25 @@ def angleCalc (w,h,angle):
         angle = abs(90 + angle)
     return angle
 
+
+
+
+
+
 # path to the original image with background
 input_image = f'{os.getcwd()}/resources/ventil-tilstand/2.jpg'
 
 #Read the orginal image
 img_orginal=cv2.imread(input_image)
-display(img_orginal)
+display("Original Image", img_orginal)
 
 #Remove the background from the original image    
 rembg_img = remover(input_image)
-display(rembg_img)
+display("Background Removed", rembg_img)
 
 
 # getting the markers by using whatersheld from the rembg_img
-markers= watersheld(rembg_img)
+markers = watersheld(rembg_img)
 
 # Finding Contours on Markers
 # cv2.RETR_EXTERNAL:Only extracts external contours
@@ -131,7 +140,7 @@ filter_arr = sorted_contours_p[1]
 for i in range(len(filter_arr)):
     # draw the rquaired contour
     cv2.drawContours(rembg_img, filter_arr, i, (0, 255, 0), 20)
-display(rembg_img)
+display("Required contour", rembg_img)
 
 # draw boundingRect around the rquaired contour
 x_p,y_p,w_p,h_p = cv2.boundingRect(filter_arr)
@@ -143,7 +152,7 @@ box_Pipe = cv2.boxPoints(minAreaPipe)
 box_Pipe = np.int0(box_Pipe)
 
 output_Pipe = cv2.drawContours(rembg_img, [box_Pipe], -1, (0, 0, 255), 5)
-display(rembg_img)
+display("MAR", rembg_img)
 
 
 
@@ -161,7 +170,7 @@ print(info_P)
 
 # print informtion for the pipe 
 cv2.putText(img=rembg_img, text= info_P, org=(0, 100), fontFace=cv2.FONT_HERSHEY_TRIPLEX ,fontScale=3, color=(0, 0, 255), thickness=3)
-display(rembg_img)
+display("Vinkel cmp x", rembg_img)
 
 
 
@@ -200,11 +209,11 @@ color_dict_HSV = {'black': [[180, 255, 30], [0, 0, 0]],
 """
 #blur the orginal image to remove the noise 
 blurred = cv2.GaussianBlur(img_orginal, (11,11), 0)
-display(blurred)
+display("Blurred", blurred)
 
 # Convert the image to HSV colorspace 
 hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
-display(hsv)  
+display("HSV", hsv)
 
 # Find the colors within the specified boundaries and apply the mask
 mask = cv2.inRange(hsv, color_Lower, color_Upper)
@@ -212,7 +221,7 @@ mask = cv2.inRange(hsv, color_Lower, color_Upper)
 # Deleting noises which are in area of mask
 mask = cv2.erode(mask, None, iterations=2)
 mask = cv2.dilate(mask, None, iterations=2)
-display(mask)
+display("Maks", mask)
 
 # Find contours from the mask
 contours_h,_ = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
@@ -258,7 +267,7 @@ if len(contours_h) > 0:
     cv2.putText(img=img_orginal, text= info_h, org=(0, 200), fontFace=cv2.FONT_HERSHEY_TRIPLEX ,fontScale=3, color=(255, 0, 0), thickness=3)
 
     # display the orginal image 
-    display(img_orginal)
+    display("OG image", img_orginal)
     
 # make a decision
 info_V=""
@@ -275,5 +284,5 @@ else:
     
 # print informtion about the valve state on the orginal image
 cv2.putText(img=img_orginal, text= info_V, org=(0, 300), fontFace=cv2.FONT_HERSHEY_TRIPLEX ,fontScale=3, color=(0, 255, 0), thickness=3)
-display(img_orginal)
-plt.show()
+display("Valve state info", img_orginal)
+pw.show()

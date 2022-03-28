@@ -1,5 +1,5 @@
 .idea/
-testing/models/
-testing/testvid/
-resources/
+src/testing/models/
+src/testing/testvid/
+resources/testing/
 venv/
