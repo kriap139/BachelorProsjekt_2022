@@ -1,0 +1,52 @@
+
+
+SIFT:
+    ENTIRE PICTURE:
+        Time: 
+        TAR: 
+            ARV: 
+                0: 
+                3:
+                6:
+
+    BBOX ONLY:
+        Time:
+        TAR: 
+            ARV: 
+                0: 
+                3:
+                6:
+
+Watershed:
+    ENTIRE PICTURE:
+        Time: 
+        TAR: 
+            ARV: 
+                0: 
+                3:
+                6:
+
+    BBOX ONLY:
+        Time:
+        TAR: 
+            ARV: 
+                0: 
+                3:
+                6:
+
+Merking:
+    ENTIRE PICTURE:
+        Time: 
+        TAR: 
+            ARV: 
+                0: 
+                3:
+                6:
+
+    BBOX ONLY:
+        Time:
+        TAR: 
+            ARV: 
+                0: 
+                3:
+                6:

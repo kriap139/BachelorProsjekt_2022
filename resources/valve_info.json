@@ -2,8 +2,7 @@
     "valves" : {
         "AFGK11" : {
             "clazz": "fra yolo",
-            "state": false,
-            "pipeDirection": "topBottom/leftRight/unset"
+            "state": false
         }
     },
     "colorsHSV": {

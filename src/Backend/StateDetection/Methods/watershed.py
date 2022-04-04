@@ -1,5 +1,6 @@
 from typing import Union, Tuple
 from src.Backend.StateDetection.Methods.TypeDefs import TYDisplay
+from src.Backend.Valve import Valve
 from rembg.bg import remove
 from src.Backend.StateDetection.Methods.constants import *
 from PIL import Image
@@ -66,7 +67,6 @@ def removeBKG(img: np.ndarray) -> np.ndarray:
     img = Image.fromarray(result).convert("RGBA")
     img = np.array(img)
     img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
-
     return img
 
 
@@ -200,7 +200,8 @@ def calcPipeMARVec(cx_p, cy_p, w_p, h_p, angle_p) -> Tuple[tuple, tuple]:
     return vec_p, (p_p1, p_p2)
 
 
-def watershedVec(img: np.ndarray, display: TYDisplay) -> Tuple[ReturnType, Union[ValveState, float]]:
+def watershedVec(img: np.ndarray, bbox: Tuple[int, int, int, int], v: Valve, display: TYDisplay) \
+            -> Tuple[ReturnType, Union[ValveState, float]]:
 
     rembg_img = removeBKG(img)
 
@@ -234,9 +235,6 @@ def watershedVec(img: np.ndarray, display: TYDisplay) -> Tuple[ReturnType, Union
 
     cv2.arrowedLine(rembg_img, p_p2, p_p1, (218, 165, 32), thickness=6, tipLength=0.1)
 
-    color_lower = (20, 100, 100)
-    color_upper = (30, 255, 255)
-
     # blur the orginal image to remove the noise
     blurred = cv2.GaussianBlur(img, (11, 11), 0)
 
@@ -244,7 +242,7 @@ def watershedVec(img: np.ndarray, display: TYDisplay) -> Tuple[ReturnType, Union
     hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
 
     # Find the colors within the specified boundaries and apply the mask
-    mask = cv2.inRange(hsv, color_lower, color_upper)
+    mask = cv2.inRange(hsv, v.colorLower, v.colorUpper)
 
     # Deleting noises which are in area of mask
     mask = cv2.erode(mask, None, iterations=2)
