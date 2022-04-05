@@ -30,7 +30,7 @@ def pickMarking(img: np.ndarray, bbox: Tuple[int, int, int, int], contours_p: np
 
 
 def pipeMarking(img: np.ndarray, bbox: Tuple[int, int, int, int], v: Valve, display: TYDisplay) \
-        -> Tuple[ReturnType, ValveState]:
+        -> Tuple[ReturnType, Union[ValveState, float]]:
 
     blurred = cv2.GaussianBlur(img, (11, 11), 0)
     hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)

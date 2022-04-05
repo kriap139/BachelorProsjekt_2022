@@ -29,8 +29,6 @@ if __name__ == "__main__":
     img_original = cv2.imread(imgPath)
     ret_type, result = dm.watershedVec(img_original, vs.display)
 
-
-
     if ret_type == dm.ReturnType.ANGLE:
         print(f"Vinklen til ventil i forhold til pipen: {np.round(result)} deg")
     else:
