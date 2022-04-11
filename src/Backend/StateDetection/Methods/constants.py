@@ -4,6 +4,7 @@ from enum import Enum, unique
 
 PI_OVER_TWO = np.pi / 2
 RAD_TO_DEG = 180 / np.pi
+DEG_TO_RAD = np.pi / 180
 
 
 @unique

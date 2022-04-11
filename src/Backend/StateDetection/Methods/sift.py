@@ -25,12 +25,12 @@ class SIFTImageHandler:
         img_open_path = os.path.join(cls.SIFT_IMAGES_PATH, str(v.classID), "OPEN")
         img_closed_path = os.path.join(cls.SIFT_IMAGES_PATH, str(v.classID), "CLOSED")
 
-        if os.path.exists(img_open_path):
-            Logging.print(f"SIFT image path doesn't exist: {img_open_path}")
-            return
-        if os.path.exists(img_closed_path):
-            Logging.print(f"SIFT image path doesn't exist: {img_open_path}")
-            return
+        if not os.path.exists(img_open_path):
+            Logging.print(f"SIFT image Dir doesn't exist: {img_open_path}")
+            return None, None
+        if not os.path.exists(img_closed_path):
+            Logging.print(f"SIFT image Dir doesn't exist: {img_open_path}")
+            return None, None
 
         img_open = []
         img_closed = []
@@ -59,15 +59,15 @@ def sift(img: np.ndarray, bbox: Tuple[int, int, int, int], v: Valve, display: TY
         return ReturnType.STATE, ValveState.UNKNOWN
 
     sft = cv2.SIFT_create()
-    kp, des = sft.detectAndCompute(img, None)
+    blurred = cv2.GaussianBlur(img, (5, 5), cv2.BORDER_DEFAULT)
+    kp, des = sft.detectAndCompute(blurred, None)
 
-    comp_open_res = []
-    comp_closed_res = []
-    num_key_points = []
+    num_kp_arr = [0, 0]
 
-    for comp_res, comp_images in ((comp_open_res, comp_open), (comp_closed_res, comp_closed)):
+    for i, comp_images in enumerate((comp_open, comp_closed)):
 
         num_kp = 0
+        comp_good = []
 
         for comp in comp_images:
             com_kp, comp_des = sft.detectAndCompute(comp, None)
@@ -80,17 +80,17 @@ def sift(img: np.ndarray, bbox: Tuple[int, int, int, int], v: Valve, display: TY
             for m, n in matches:
 
                 if m.distance < 0.75 * n.distance:
-                    comp_res.append([m])
+                    comp_good.append([m])
 
                 if len(kp) >= len(com_kp):
                     num_kp = len(kp)
                 else:
                     num_kp = len(com_kp)
 
-            num_key_points.append(num_kp)
+            num_kp_arr[i] += len(comp_good) / num_kp * 100
 
-    sim_open = len(comp_open_res) / num_key_points[0] * 100
-    sim_closed = len(comp_closed_res) / num_key_points[1] * 100
+    sim_open = num_kp_arr[0]
+    sim_closed = num_kp_arr[1]
 
     return (ReturnType.STATE, ValveState.OPEN) if sim_open > sim_closed else (ReturnType.STATE, ValveState.CLOSED)
 

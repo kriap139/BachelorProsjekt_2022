@@ -15,11 +15,11 @@ high_V = max_value
 window_capture_name = 'Image'
 window_detection_name = 'Object Detection'
 low_H_name = 'Low H'
-low_S_name = 'Low S'
-low_V_name = 'Low V'
+low_S_name = 'Low L'
+low_V_name = 'Low S'
 high_H_name = 'High H'
-high_S_name = 'High S'
-high_V_name = 'High V'
+high_S_name = 'High L'
+high_V_name = 'High S'
 
 
 def on_low_H_thresh_trackbar(val):
@@ -83,21 +83,26 @@ cv.createTrackbar(high_S_name, window_detection_name, high_S, max_value, on_high
 cv.createTrackbar(low_V_name, window_detection_name, low_V, max_value, on_low_V_thresh_trackbar)
 cv.createTrackbar(high_V_name, window_detection_name, high_V, max_value, on_high_V_thresh_trackbar)
 
-p = os.path.join("resources", "testing", "ventil-tilstand", "5.jpg")
+p = os.path.join("resources", "testing", "ventil-tilstand", "9.png")
 
 img = cv.imread(p)
 
 
-
 while True:
+    # color = (H, L, S)
+
+    # For Texst(svart): Lower=(0, 44, 0), Upper=(180, 184, 43)
+    # tag(hvit): Lower=(0, 227, 255), Upper=(180, 0, 255)
+
+    # tag(new): Lower=(0, 0, 0), Upper=(180, 218, 255)
 
     frame = img.copy()
 
     if frame is None:
         break
 
-    frame_HSV = cv.cvtColor(frame, cv.COLOR_BGR2HSV)
-    frame_threshold = cv.inRange(frame_HSV, (low_H, low_S, low_V), (high_H, high_S, high_V))
+    frame_HLS = cv.cvtColor(frame, cv.COLOR_BGR2HLS)
+    frame_threshold = cv.inRange(frame_HLS, (low_H, low_S, low_V), (high_H, high_S, high_V))
 
     cv.imshow(window_capture_name, frame)
     cv.imshow(window_detection_name, frame_threshold)

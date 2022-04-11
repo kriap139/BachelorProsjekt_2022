@@ -1,3 +1,4 @@
+import numbers
 from typing import Union, Tuple
 from src.Backend.StateDetection.Methods.TypeDefs import TYDisplay
 from src.Backend.Valve import Valve
@@ -68,36 +69,55 @@ def removeBKG(img: np.ndarray) -> np.ndarray:
     return img
 
 
-def calcPipeMARVec(img: np.ndarray, cx_p, cy_p, w_p, h_p, angle_p) -> Tuple[tuple, tuple]:
+def calcPipeMARVec(img: np.ndarray, marPipe, errMargin: numbers.Number = 16) -> Union[Tuple[tuple, tuple], None]:
+
+    ((cx, cy), (w, h), angle) = marPipe
 
     # Make a diagonal line through the MAR of the pipe
-    print("MAR: ", w_p, h_p, angle_p * RAD_TO_DEG)
+    points = (
+        (int(cx), int(cy - h * 0.5)), (int(cx), int(cy + h * 0.5)),
+        (int(cx - w * 0.5), int(cy)), (int(cx + w * 0.5), int(cy))
+    )
 
-    if w_p > h_p:
-        if angle_p == -0:
-            p_p1 = (int(cx_p - w_p * 0.5), int(cy_p))
-            p_p2 = (int(cx_p + w_p * 0.5), int(cy_p))
-        else:
-            p_p1 = (int(cx_p), int(cy_p - h_p * 0.5))
-            p_p2 = (p_p1[0], int(cy_p + h_p * 0.5))
-    elif w_p < h_p:
-        if angle_p == -0:
-            p_p1 = (int(cx_p), int(cy_p - h_p * 0.5))
-            p_p2 = (p_p1[0], int(cy_p + h_p * 0.5))
-        else:
-            p_p1 = (int(cx_p - w_p * 0.5), int(cy_p))
-            p_p2 = (int(cx_p + w_p * 0.5), int(cy_p))
+    # Vec from p1 to p2: (p2x - p1x, p2y - p1y)
+    vectors = [
+        (points[0][0] - points[1][0], points[0][1] - points[1][1]),
+        (points[2][0] - points[3][0], points[2][1] - points[3][1])
+    ]
+
+    vectors[0] = vectors[0] / np.linalg.norm(vectors[0])
+    vectors[1] = vectors[1] / np.linalg.norm(vectors[1])
+
+    iw, ih, _ = img.shape
+    iwm, ihm = int(iw * 0.5), int(ih * 0.5)
+
+    # Points vec_ix: (iwm, 0), (iw, ihm)
+    # Points vec_iy: (0, ihm), (iwm, ih)
+    vec_ix = np.array((iw - iwm, ihm))
+    vec_ix = vec_ix / np.linalg.norm(vec_ix)
+
+    vec_iy = np.array((iwm, ih - ihm))
+    vec_iy = vec_iy / np.linalg.norm(vec_iy)
+
+    dot = np.dot(vectors[0], vec_ix)
+    angle_ix = np.degrees(np.arccos(dot))
+
+    dot = np.dot(vectors[0], vec_iy)
+    angle_iy = np.degrees(np.arccos(dot))
+
+    if angle_ix <= angle_iy:
+        index = 0
+        ip1, ip2 = 0, 1
     else:
-        p_p1 = (int(cx_p), int(cy_p - h_p * 0.5))
-        p_p2 = (p_p1[0], int(cy_p + h_p * 0.5))
+        index = 1
+        ip1, ip2 = 2, 3
 
-    # create a normalized vector through the MAR
-    vec_p = np.array((p_p2[0] - p_p1[0], p_p2[1] - p_p1[1]))
-    vec_p = vec_p / np.linalg.norm(vec_p)
+    # print(f"MAR: w={round(w, 1)}, h={round(h, 1)}, angle={round(angle, 1)}", end=',   ')
+    # print(f"Points: p1={points[ip1]}, p2={points[ip2]}, Angles: angle_ix={angle_ix}, angle_iy={angle_iy}")
 
-    cv2.arrowedLine(img, p_p2, p_p1, (218, 165, 32), thickness=6, tipLength=0.1)
+    cv2.arrowedLine(img, points[ip2], points[ip1], (0, 0, 255), thickness=6, tipLength=0.06)
 
-    return vec_p
+    return vectors[index]
 
 
 def watershedVec(img: np.ndarray, bbox: Tuple[int, int, int, int], v: Valve, display: TYDisplay) \
@@ -105,10 +125,12 @@ def watershedVec(img: np.ndarray, bbox: Tuple[int, int, int, int], v: Valve, dis
 
     display("OG_image", img)
 
-    rembg_img = removeBKG(img)
+    blurred = cv2.GaussianBlur(img, (7, 7), cv2.BORDER_DEFAULT)
+    display("blurred", blurred)
+
+    rembg_img = removeBKG(blurred)
     display("Rem_BKG", rembg_img)
 
-    # getting the markers by using whatersheld from the rembg_img
     markers = watershed(rembg_img, display)
     display("Markers_final", markers)
 
@@ -128,19 +150,16 @@ def watershedVec(img: np.ndarray, bbox: Tuple[int, int, int, int], v: Valve, dis
         # draw the rquaired contour
         cv2.drawContours(rembg_img, filter_arr, i, (0, 255, 0), 20)
 
-    # Find Minimum Area Rect
     mar_pipe = cv2.minAreaRect(filter_arr)
-
     box_pipe = np.int64(cv2.boxPoints(mar_pipe))
     cv2.drawContours(rembg_img, [box_pipe], -1, (255, 0, 0), 5)
 
-    ((cx_p, cy_p), (w_p, h_p), angle_p) = mar_pipe
-    vec_p = calcPipeMARVec(rembg_img, cx_p, cy_p, w_p, h_p, angle_p)
+    vec_p = calcPipeMARVec(rembg_img, mar_pipe)
 
-    # blur the orginal image to remove the noise
+    if vec_p is None:
+        return ReturnType.STATE, ValveState.UNKNOWN
+
     blurred = cv2.GaussianBlur(img, (11, 11), 0)
-
-    # Convert the image to HSV colorspace
     hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
     display("hsv", hsv)
 
@@ -152,11 +171,9 @@ def watershedVec(img: np.ndarray, bbox: Tuple[int, int, int, int], v: Valve, dis
     mask = cv2.dilate(mask, None, iterations=2)
     display("Mask_valve", mask)
 
-    # Find contours from the mask
     contours_h, _ = cv2.findContours(mask.copy(), cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_SIMPLE)
 
     if len(contours_h) > 0:
-        # get max contour
         c = max(contours_h, key=cv2.contourArea)
 
         rows, cols = rembg_img.shape[:2]
@@ -166,7 +183,9 @@ def watershedVec(img: np.ndarray, bbox: Tuple[int, int, int, int], v: Valve, dis
         cv2.arrowedLine(rembg_img, (0, lefty), (cols - 1, righty), (150, 141, 184), thickness=6, tipLength=0.03)
 
         vec_v = np.array((vx, vy))
-        angle, = np.arccos(np.dot(vec_p, vec_v)) * RAD_TO_DEG
+
+        dot = np.dot(vec_p, vec_v)
+        angle, = np.degrees(np.arccos(dot))
 
         display("Processed image", rembg_img)
         return ReturnType.ANGLE, angle
