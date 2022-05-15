@@ -29,8 +29,12 @@ while cv2.waitKey(5000) != 27:
 
     cv2.imshow("rectangles", image)
 
-    print(f"Original: w={originalRect[1][0]}, h={originalRect[1][1]}, angle={angle}")
-    print(f"Calculated: w={calculatedRect[1][0]}, h={calculatedRect[1][1]}, angle={calculatedRect[2]}\n")
+    #print(f"Original: w={originalRect[1][0]}, h={originalRect[1][1]}, angle={angle}")
+    #print(f"Calculated: w={calculatedRect[1][0]}, h={calculatedRect[1][1]}, angle={calculatedRect[2]}\n")
+
+    ((cx, cy), (w, h), ma) = calculatedRect
+
+    print(f"OG Angle={angle} -> MAR: w={w}, h={h}, angle={ma}")
 
     image = np.zeros((200, 400, 3), dtype=np.uint8)
     vertVect = []

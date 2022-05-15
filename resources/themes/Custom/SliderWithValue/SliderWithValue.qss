@@ -1,0 +1,30 @@
+QSlider::groove:vertical {
+                background-color: #222;
+                width: 30px;
+        }
+        QSlider::handle:vertical {
+            border: 1px #438f99;
+            border-style: outset;
+            margin: -2px 0;
+            width: 30px;
+            height: 3px;
+            background-color: #438f99;
+        }
+        QSlider::sub-page:vertical {
+            background: #4B4B4B;
+        }
+        QSlider::groove:horizontal {
+                background-color: #222;
+                height: 30px;
+        }
+        QSlider::handle:horizontal {
+            border: 1px #438f99;
+            border-style: outset;
+            margin: -2px 0;
+            width: 3px;
+            height: 30px;
+            background-color: #438f99;
+        }
+        QSlider::sub-page:horizontal {
+            background: #4B4B4B;
+        }

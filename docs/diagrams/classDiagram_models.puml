@@ -1,0 +1,107 @@
+@startuml
+!define DARKRED
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+package src.Backend {
+
+    package Valve.py <<Frame>> {
+        enum ValveState {
+            + UNKNOWN
+            + OPEN 
+            + CLOSED
+        }
+
+        class ValveClass {
+            + classID: int 
+            + className: str 
+            + colorLower: tuple
+            + colorUpper: tuple
+            + stateMethod: str
+
+            + infoLabelStr() -> str
+        }
+
+        class Valve {
+            + id: str
+            + cls: ValveClass
+            + state: ValveState
+            + angle: float
+            + lastUpdated: Datetime
+
+            + setState(state: ValveState): None
+            + infoLabelStr() -> str
+        }
+    }
+
+    package Dataclasses.py <<Frame>> {
+        class ValveStateData {
+            + valveID: str
+            + valveState: ValveState
+            + angle: float 
+        }
+
+        class BBoxData {
+            + classID: int
+            + box: tuple
+            + tagBox: tuple
+            + valveID: str
+            + valveState: ValveState
+            + angle: float
+        }
+
+        class SharedImage {
+            + memName: str
+            + dType: np.dtype
+            + shape: tuple
+        }
+
+        class ImageData {
+            + streamID: str
+            + sharedImage: SharedImage
+            + bboxes: List[BBoxdata]
+        }
+
+        class PreStateDetectArgs {
+            + streamPath: str
+            + streamID: str
+            + confidValveThresh: float
+            + confidTagThresh: float
+        }
+
+        class PreStateDetectData {
+            + mainActive: bool
+            + stActive: bool 
+            + activateFlag: bool
+            + finishedFlag: bool
+            + shutdownFlag: bool
+            + valveModel
+            + args: PreStateDetectArgs
+        }
+
+        class StateDetectData {
+            + mainActive: bool
+            + stActive: bool 
+            + activateFlag: bool
+            + finishedFlag: bool
+        }
+
+    }
+}
+
+Valve <--up ValveClass
+Valve <--up ValveState
+ValveStateData <--ValveState
+BBoxData <-- ValveState
+ImageData <-- SharedImage
+ImageData *-- BBoxData
+
+PreStateDetectData <-- PreStateDetectArgs
+
+Valve -[hidden]- SharedImage
+
+@enduml

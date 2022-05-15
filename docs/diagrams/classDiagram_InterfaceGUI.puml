@@ -1,0 +1,87 @@
+@startuml
+!define DARKRED
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+
+package PyQt6 {
+    class QThread {
+        + run()
+    }
+
+    class QMutex {
+        + acquire()
+        + release()
+    }
+
+    class QObject {
+
+    }
+}
+
+package multiprocessing {
+    class Pipe {
+
+    }
+}
+
+package src.GUI.BackInterface {
+    
+    class ProcessWrapper {
+        streamID: str
+        process
+        args: PreStateDetectArgs
+        timeAdded: float
+    }
+
+    class QBackendHandler extends QThread {
+        {static} + TAG_BOX_COLOR: tuple
+        + maxTimeoutSec: float
+        - currStreamID: str
+        + frontPipe: Pipe
+        + backPipe: Pipe
+        + coms: list
+        + comsLock: QMutex
+        + procWrapperByPipe: Dict[Pipe, ProcessWrapper]
+
+        + updateValveStates(newStates: List[ValveStateData]) <<signal>>
+        + updateImageFeed(frame: QImage) <<signal>>
+        + run() -> None 
+        + shutdown__() -> None
+        + handleResults__() -> None
+        + updateImageStream__(imageDaata: ImageData) -> None
+        + addProcess__(pw: ProcessWrapper) -> None
+        + addProcess(pw: ProcessWrapper) -> None
+        + addStream(streamPath: str) -> None
+        + setCurrentImageFeed(streamID: str) -> None
+        + shutdown() -> None
+        {static} + createStreamID(streamPath: str) -> str
+    }
+
+    class QValveStateDetector extends QObject {
+        + valveClasses: Dict[classID, ValveClasses]
+        + valves: Dict[valveID, Valve]
+        + backHandler: QBackendHandler
+
+        + valvesUpdated(valves: List[Valves]) <<signal>>
+        + imageFeedUpdated(frame: QImage) <<signal>>
+        + addStream(streamPath: str) -> None
+        + shutdown() -> None
+        + setCurrentImageFeed(streamID: str) -> None
+        + getValves() -> List[Valve]
+    }
+}
+
+QBackendHandler <-- QMutex
+QBackendHandler *--up Pipe
+QBackendHandler *-- ProcessWrapper
+
+QValveStateDetector <-right- QBackendHandler
+
+
+
+@enduml

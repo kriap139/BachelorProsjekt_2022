@@ -1,0 +1,722 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1184.3px" preserveAspectRatio="none" style="width:2073px;height:1184px;background:#777777;" version="1.1" viewBox="0 0 2073 1184" width="2073.5px" zoomAndPan="magnify"><defs/><g><!--MD5=[95296a8e9a7c5c6cefdcaeb3255b90b9]
+cluster src.Backend--><polygon fill="#777777" points="20.8,8.5826,142.7563,8.5826,151.8563,41.1709,2051.4,41.1709,2051.4,1175.9826,20.8,1175.9826,20.8,8.5826" style="stroke:#000000;stroke-width:1.9500000000000002;"/><line style="stroke:#000000;stroke-width:1.9500000000000002;" x1="20.8" x2="151.8563" y1="41.1709" y2="41.1709"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="114.1563" x="26" y="30.6383">src.Backend</text><!--MD5=[bbdc8e1da7e1febc4f72bceaf8ad5f15]
+cluster StateDetectSingleThread.py--><rect fill="#777777" height="300.3" style="stroke:#000000;stroke-width:1.9500000000000002;" width="504.4" x="1445.6" y="629.9826"/><path d="M1722.9875,629.9826 L1722.9875,645.6709 L1709.9875,658.6709 L1445.6,658.6709 " fill="none" style="stroke:#000000;stroke-width:1.9500000000000002;"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="264.3875" x="1449.5" y="650.7383">StateDetectSingleThread.py</text><!--MD5=[5ecff44237ecb36e5f78b8d1ea14d7b5]
+cluster src.Backend.StateMethods--><polygon fill="#777777" points="52,961.4826,312.65,961.4826,321.75,994.0709,1053,994.0709,1053,1144.7826,52,1144.7826,52,961.4826" style="stroke:#000000;stroke-width:1.9500000000000002;"/><line style="stroke:#000000;stroke-width:1.9500000000000002;" x1="52" x2="321.75" y1="994.0709" y2="994.0709"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="252.85" x="57.2" y="983.5383">src.Backend.StateMethods</text><!--MD5=[faff7e0243b9bb7b8fdde8b2b88115b5]
+cluster src.Backend.IDMethods--><polygon fill="#777777" points="1375.4,175.6326,1607.0438,175.6326,1616.1438,208.2209,2020.2,208.2209,2020.2,514.9326,1375.4,514.9326,1375.4,175.6326" style="stroke:#000000;stroke-width:1.9500000000000002;"/><line style="stroke:#000000;stroke-width:1.9500000000000002;" x1="1375.4" x2="1616.1438" y1="208.2209" y2="208.2209"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="223.8438" x="1380.6" y="197.6883">src.Backend.IDMethods</text><!--MD5=[b8f86975db4e36b25030f261877109b9]
+cluster src.Backend.Processes--><polygon fill="#777777" points="52,68.3826,273.2438,68.3826,282.3438,100.9709,1344.2,100.9709,1344.2,912.7326,52,912.7326,52,68.3826" style="stroke:#000000;stroke-width:1.9500000000000002;"/><line style="stroke:#000000;stroke-width:1.9500000000000002;" x1="52" x2="282.3438" y1="100.9709" y2="100.9709"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="213.4438" x="57.2" y="90.4383">src.Backend.Processes</text><!--MD5=[6904d586f11a3edbb4f4300b2174eed5]
+cluster multiprocessing--><polygon fill="#777777" points="513.5,678.7326,675.4313,678.7326,684.5313,711.3209,1186.9,711.3209,1186.9,881.5326,513.5,881.5326,513.5,678.7326" style="stroke:#000000;stroke-width:1.9500000000000002;"/><line style="stroke:#000000;stroke-width:1.9500000000000002;" x1="513.5" x2="684.5313" y1="711.3209" y2="711.3209"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="154.1313" x="518.7" y="700.7883">multiprocessing</text><!--MD5=[4beb0fbcf7329fa3fe6582ce5df31aca]
+class StateDetectSingleThread--><rect codeLine="11" fill="#2E2E2E" height="229.8881" id="StateDetectSingleThread" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="461.5" x="1467.05" y="679.3826"/><ellipse cx="1610.05" cy="696.2826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M1610.05,692.931 Q1608.9125,692.931 1608.3031,693.7841 Q1607.7141,694.6373 1607.7141,696.181 Q1607.7141,697.7451 1608.2625,698.5576 Q1608.8109,699.3701 1610.05,699.3701 Q1610.6594,699.3701 1611.2484,699.2279 Q1611.8578,699.0857 1612.8734,698.7607 L1612.8734,701.0154 Q1612.0406,701.3607 1611.35,701.4826 Q1610.6797,701.6248 1609.8469,701.6248 Q1608.2016,701.6248 1607.125,700.9341 Q1606.0484,700.2435 1605.5406,699.0248 Q1605.0328,697.7857 1605.0328,696.1607 Q1605.0328,694.5763 1605.6016,693.3373 Q1606.1906,692.0779 1607.3078,691.3873 Q1608.4453,690.6763 1610.05,690.6763 Q1610.8219,690.6763 1611.6141,690.8795 Q1612.4063,691.0826 1613.3203,691.5295 L1612.4469,693.6826 Q1611.675,693.317 1611.1063,693.1341 Q1610.5578,692.931 1610.05,692.931 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="166.4" x="1630.85" y="701.8309">StateDetectSingleThread</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1468.35" x2="1927.25" y1="713.1826" y2="713.1826"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" text-decoration="underline" textLength="161.2" x="1489.15" y="733.6692">TAG_BOX_COLOR: tuple</text><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" text-decoration="underline" textLength="183.3" x="1489.15" y="753.1456">VALVE_COLORS_BGRA: dict</text><ellipse cx="1481.35" cy="766.4355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="46.8" x="1489.15" y="772.6221">cfg: str</text><ellipse cx="1481.35" cy="785.9119" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="79.3" x="1489.15" y="792.0985">weights: str</text><ellipse cx="1481.35" cy="805.3884" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="28.6" x="1489.15" y="811.575">font</text><ellipse cx="1481.35" cy="824.8648" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="132.6" x="1489.15" y="831.0514">net: cv.dnn.readnet</text><ellipse cx="1481.35" cy="844.3413" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="106.6" x="1489.15" y="850.5279">layerNames: list</text><ellipse cx="1481.35" cy="863.8178" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="118.3" x="1489.15" y="870.0043">outputLayers: list</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1468.35" x2="1927.25" y1="879.3942" y2="879.3942"/><ellipse cx="1481.35" cy="893.6942" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="431.6" x="1489.15" y="899.8808">detectFromStream(streamPath: str, confidThresh: float) -&gt; None</text><!--MD5=[aa9e8fc4b13e4efe0ec3c630b4207ecf]
+class ReturnType--><rect codeLine="26" fill="#2E2E2E" height="93.5529" id="ReturnType" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="113.1" x="918.45" y="1020.6326"/><ellipse cx="934.05" cy="1037.5326" fill="#EB937F" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M937.1172,1042.7326 L930.7797,1042.7326 L930.7797,1032.0685 L937.1172,1032.0685 L937.1172,1034.3029 L933.4,1034.3029 L933.4,1036.0904 L936.8531,1036.0904 L936.8531,1038.3045 L933.4,1038.3045 L933.4,1040.4982 L937.1172,1040.4982 L937.1172,1042.7326 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="79.3" x="948.35" y="1043.0809">ReturnType</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="919.75" x2="1030.25" y1="1054.4326" y2="1054.4326"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="45.5" x="926.25" y="1074.9192">ANGLE</text><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="40.3" x="926.25" y="1094.3956">STATE</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="919.75" x2="1030.25" y1="1103.7855" y2="1103.7855"/><!--MD5=[55e4e9e2dc26fc6d8d5e42db42767e63]
+class SIFTImageHandler--><rect codeLine="31" fill="#2E2E2E" height="113.0294" id="SIFTImageHandler" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="249.6" x="622.7" y="1010.8826"/><ellipse cx="679.9" cy="1027.7826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M679.9,1024.431 Q678.7625,1024.431 678.1531,1025.2841 Q677.5641,1026.1373 677.5641,1027.681 Q677.5641,1029.2451 678.1125,1030.0576 Q678.6609,1030.8701 679.9,1030.8701 Q680.5094,1030.8701 681.0984,1030.7279 Q681.7078,1030.5857 682.7234,1030.2607 L682.7234,1032.5154 Q681.8906,1032.8607 681.2,1032.9826 Q680.5297,1033.1248 679.6969,1033.1248 Q678.0516,1033.1248 676.975,1032.4341 Q675.8984,1031.7435 675.3906,1030.5248 Q674.8828,1029.2857 674.8828,1027.6607 Q674.8828,1026.0763 675.4516,1024.8373 Q676.0406,1023.5779 677.1578,1022.8873 Q678.2953,1022.1763 679.9,1022.1763 Q680.6719,1022.1763 681.4641,1022.3795 Q682.2563,1022.5826 683.1703,1023.0295 L682.2969,1025.1826 Q681.525,1024.817 680.9563,1024.6341 Q680.4078,1024.431 679.9,1024.431 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="126.1" x="700.7" y="1033.3309">SIFTImageHandler</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="624" x2="871" y1="1044.6826" y2="1044.6826"/><ellipse cx="637" cy="1058.9826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" text-decoration="underline" textLength="157.3" x="644.8" y="1065.1692">SIFT_IMAGES_PATH: str</text><ellipse cx="637" cy="1078.459" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" text-decoration="underline" textLength="179.4" x="644.8" y="1084.6456">VALVE_COMP_IMAGES: dic</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="624" x2="871" y1="1094.0355" y2="1094.0355"/><ellipse cx="637" cy="1108.3355" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" text-decoration="underline" textLength="219.7" x="644.8" y="1114.5221">fetchImages(classID: int) -&gt; tuple</text><!--MD5=[08f335049f85b976812bc33fb634bf41]
+class StateDetector--><rect codeLine="38" fill="#2E2E2E" height="93.5529" id="StateDetector" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="504.4" x="72.8" y="1020.6326"/><ellipse cx="274.3" cy="1037.5326" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M274.3,1034.181 Q273.1625,1034.181 272.5531,1035.0341 Q271.9641,1035.8873 271.9641,1037.431 Q271.9641,1038.9951 272.5125,1039.8076 Q273.0609,1040.6201 274.3,1040.6201 Q274.9094,1040.6201 275.4984,1040.4779 Q276.1078,1040.3357 277.1234,1040.0107 L277.1234,1042.2654 Q276.2906,1042.6107 275.6,1042.7326 Q274.9297,1042.8748 274.0969,1042.8748 Q272.4516,1042.8748 271.375,1042.1841 Q270.2984,1041.4935 269.7906,1040.2748 Q269.2828,1039.0357 269.2828,1037.4107 Q269.2828,1035.8263 269.8516,1034.5873 Q270.4406,1033.3279 271.5578,1032.6373 Q272.6953,1031.9263 274.3,1031.9263 Q275.0719,1031.9263 275.8641,1032.1295 Q276.6563,1032.3326 277.5703,1032.7795 L276.6969,1034.9326 Q275.925,1034.567 275.3563,1034.3841 Q274.8078,1034.181 274.3,1034.181 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="92.3" x="295.1" y="1043.0809">StateDetector</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="74.1" x2="575.9" y1="1054.4326" y2="1054.4326"/><ellipse cx="87.1" cy="1068.7326" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="254.8" x="94.9" y="1074.9192">valveClasses: Dict[ClassID, ValveClass]</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="74.1" x2="575.9" y1="1084.309" y2="1084.309"/><ellipse cx="87.1" cy="1098.609" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="474.5" x="94.9" y="1104.7956">sift(img: np.ndarray, data: BBoxData) -&gt; Tuple[Returntype, ValveState]</text><!--MD5=[049b3ad286ca706ba73ec7e521fe251c]
+class TagID_Functions--><rect codeLine="45" fill="#2E2E2E" height="268.841" id="TagID_Functions" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="603.2" x="1396.2" y="225.0326"/><ellipse cx="1636.7" cy="241.9326" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M1636.7,238.581 Q1635.5625,238.581 1634.9531,239.4341 Q1634.3641,240.2873 1634.3641,241.831 Q1634.3641,243.3951 1634.9125,244.2076 Q1635.4609,245.0201 1636.7,245.0201 Q1637.3094,245.0201 1637.8984,244.8779 Q1638.5078,244.7357 1639.5234,244.4107 L1639.5234,246.6654 Q1638.6906,247.0107 1638,247.1326 Q1637.3297,247.2748 1636.4969,247.2748 Q1634.8516,247.2748 1633.775,246.5841 Q1632.6984,245.8935 1632.1906,244.6748 Q1631.6828,243.4357 1631.6828,241.8107 Q1631.6828,240.2263 1632.2516,238.9873 Q1632.8406,237.7279 1633.9578,237.0373 Q1635.0953,236.3263 1636.7,236.3263 Q1637.4719,236.3263 1638.2641,236.5295 Q1639.0563,236.7326 1639.9703,237.1795 L1639.0969,239.3326 Q1638.325,238.967 1637.7563,238.7841 Q1637.2078,238.581 1636.7,238.581 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="113.1" x="1657.5" y="247.4809">TagID_Functions</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1397.5" x2="1998.1" y1="258.8326" y2="258.8326"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1397.5" x2="1998.1" y1="269.2326" y2="269.2326"/><ellipse cx="1410.5" cy="283.5326" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="475.8" x="1418.3" y="289.7192">assignTagsToBBoxes(tagBoxes: tuple, bboxes: List[BBoxData]) -&gt; None</text><rect fill="#F24D5C" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="1406.6" y="299.109"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="573.3" x="1418.3" y="309.1956">Filter_Contours_Based_On_ArcLength(contours, requiredLength=40, filterThreshold)</text><rect fill="#F24D5C" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="1406.6" y="318.5855"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="518.7" x="1418.3" y="328.6721">Filter_Contours_Based_On_Dimensions_Of_Bounding_Boxes(image, conturs)</text><rect fill="#F24D5C" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="1406.6" y="338.0619"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="364" x="1418.3" y="348.1485">Get_x_Coordinates_For_The_Contour_Center(conturs)</text><rect fill="#F24D5C" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="1406.6" y="357.5384"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="488.8" x="1418.3" y="367.625">Filter_Contours_That_Have_Same_x_Coordinate_Of_The_Center(conturs)</text><rect fill="#F24D5C" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="1406.6" y="377.0148"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="509.6" x="1418.3" y="387.1014">Filter_Inner_Contours_Insid_Parent_Contours(contours, unique_x_Centers)</text><rect fill="#F24D5C" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="1406.6" y="396.4913"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="332.8" x="1418.3" y="406.5779">Filter_Contours(image, contours, filterThreshold)</text><rect fill="#F24D5C" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="1406.6" y="415.9678"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="252.2" x="1418.3" y="426.0543">Sort_Contours(contours: np.ndarray)</text><rect fill="#F24D5C" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="1406.6" y="435.4442"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="148.2" x="1418.3" y="445.5308">Fix_Dimension(image)</text><rect fill="#F24D5C" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="1406.6" y="454.9207"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="175.5" x="1418.3" y="465.0072">CNN_Model(model, digits)</text><ellipse cx="1410.5" cy="478.2971" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="344.5" x="1418.3" y="484.4837">detectTagID(cnnModel, tagImage: numpy.ndarray)</text><!--MD5=[6b007dbbf60004202ab6ee52918486ce]
+class Global_Functions--><rect codeLine="61" fill="#2E2E2E" height="113.0294" id="Global_Functions" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="360.1" x="129.35" y="737.8826"/><ellipse cx="246.35" cy="754.7826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M246.35,751.431 Q245.2125,751.431 244.6031,752.2841 Q244.0141,753.1373 244.0141,754.681 Q244.0141,756.2451 244.5625,757.0576 Q245.1109,757.8701 246.35,757.8701 Q246.9594,757.8701 247.5484,757.7279 Q248.1578,757.5857 249.1734,757.2607 L249.1734,759.5154 Q248.3406,759.8607 247.65,759.9826 Q246.9797,760.1248 246.1469,760.1248 Q244.5016,760.1248 243.425,759.4341 Q242.3484,758.7435 241.8406,757.5248 Q241.3328,756.2857 241.3328,754.6607 Q241.3328,753.0763 241.9016,751.8373 Q242.4906,750.5779 243.6078,749.8873 Q244.7453,749.1763 246.35,749.1763 Q247.1219,749.1763 247.9141,749.3795 Q248.7063,749.5826 249.6203,750.0295 L248.7469,752.1826 Q247.975,751.817 247.4063,751.6341 Q246.8578,751.431 246.35,751.431 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="117" x="267.15" y="760.3309">Global_Functions</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="130.65" x2="488.15" y1="771.6826" y2="771.6826"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="130.65" x2="488.15" y1="782.0826" y2="782.0826"/><ellipse cx="143.65" cy="796.3826" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="258.7" x="151.45" y="802.5692">freeAllShmInImageDataQueue(queue)</text><ellipse cx="143.65" cy="815.859" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="330.2" x="151.45" y="822.0456">freeShmFromImageData(imageData: ImageData)</text><ellipse cx="143.65" cy="835.3355" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="206.7" x="151.45" y="841.5221">freeShm(shm: SharedMemory)</text><!--MD5=[bfa497e3a7da58df13b227a69a0bcda3]
+class UnifiedStateDetectProcess--><rect codeLine="98" fill="#2E2E2E" height="444.1291" id="UnifiedStateDetectProcess" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="403" x="920.4" y="137.2826"/><ellipse cx="1028.3" cy="154.1826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M1028.3,150.831 Q1027.1625,150.831 1026.5531,151.6841 Q1025.9641,152.5373 1025.9641,154.081 Q1025.9641,155.6451 1026.5125,156.4576 Q1027.0609,157.2701 1028.3,157.2701 Q1028.9094,157.2701 1029.4984,157.1279 Q1030.1078,156.9857 1031.1234,156.6607 L1031.1234,158.9154 Q1030.2906,159.2607 1029.6,159.3826 Q1028.9297,159.5248 1028.0969,159.5248 Q1026.4516,159.5248 1025.375,158.8341 Q1024.2984,158.1435 1023.7906,156.9248 Q1023.2828,155.6857 1023.2828,154.0607 Q1023.2828,152.4763 1023.8516,151.2373 Q1024.4406,149.9779 1025.5578,149.2873 Q1026.6953,148.5763 1028.3,148.5763 Q1029.0719,148.5763 1029.8641,148.7795 Q1030.6563,148.9826 1031.5703,149.4295 L1030.6969,151.5826 Q1029.925,151.217 1029.3563,151.0341 Q1028.8078,150.831 1028.3,150.831 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="178.1" x="1049.1" y="159.7309">UnifiedStateDetectProcess</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="921.7" x2="1322.1" y1="171.0826" y2="171.0826"/><ellipse cx="934.7" cy="185.3826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="145.6" x="942.5" y="191.5692">maxTimeoutSec: float</text><ellipse cx="934.7" cy="204.859" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="46.8" x="942.5" y="211.0456">cfg: str</text><ellipse cx="934.7" cy="224.3355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="79.3" x="942.5" y="230.5221">weights: str</text><ellipse cx="934.7" cy="243.8119" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="102.7" x="942.5" y="249.9985">frontPipe: Pipe</text><ellipse cx="934.7" cy="263.2884" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="98.8" x="942.5" y="269.475">backPipe: Pipe</text><ellipse cx="934.7" cy="282.7648" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="127.4" x="942.5" y="288.9514">comQueue: Queue</text><ellipse cx="934.7" cy="302.2413" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="137.8" x="942.5" y="308.4279">resultQueue: Queue</text><ellipse cx="934.7" cy="321.7178" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="141.7" x="942.5" y="327.9043">mainExitEvent: Event</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="921.7" x2="1322.1" y1="337.2942" y2="337.2942"/><ellipse cx="934.7" cy="351.5942" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="163.8" x="942.5" y="357.7808">run() -&gt; None «Overide»</text><ellipse cx="934.7" cy="371.0707" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="347.1" x="942.5" y="377.2572">listenFrontend__(data: PreStateDetectData) -&gt; None</text><ellipse cx="934.7" cy="390.5471" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="280.8" x="942.5" y="396.7337">flush__(data: PreStateDetectData) -&gt; None</text><ellipse cx="934.7" cy="410.0236" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="315.9" x="942.5" y="416.2102">shutdown__(data: PreStateDetectData) -&gt; None</text><ellipse cx="934.7" cy="429.5" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="373.1" x="942.5" y="435.6866">detectFromStream__(data: PreStateDetectData) -&gt; None</text><ellipse cx="934.7" cy="448.9765" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="286" x="942.5" y="455.1631">activate(data: PreStateDetectArgs) -&gt; None</text><ellipse cx="934.7" cy="468.4529" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="98.8" x="942.5" y="474.6395">flush() -&gt; None</text><ellipse cx="934.7" cy="487.9294" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="133.9" x="942.5" y="494.116">deactivate() -&gt; None</text><ellipse cx="934.7" cy="507.4058" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="209.3" x="942.5" y="513.5924">sendShutdownSignal() -&gt; None</text><ellipse cx="934.7" cy="526.8823" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="133.9" x="942.5" y="533.0689">shutdown() -&gt; None</text><ellipse cx="934.7" cy="546.3588" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="117" x="942.5" y="552.5453">getPipe() -&gt; None</text><ellipse cx="934.7" cy="565.8352" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="248.3" x="942.5" y="572.0218">getPostStateDetectQueue() -&gt; Queue</text><!--MD5=[ebdcb439148375b84931752b9a30a3ea]
+class StateDetectProcess--><rect codeLine="122" fill="#2E2E2E" height="405.1762" id="StateDetectProcess" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="353.6" x="521.3" y="156.7826"/><ellipse cx="629.2" cy="173.6826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M629.2,170.331 Q628.0625,170.331 627.4531,171.1841 Q626.8641,172.0373 626.8641,173.581 Q626.8641,175.1451 627.4125,175.9576 Q627.9609,176.7701 629.2,176.7701 Q629.8094,176.7701 630.3984,176.6279 Q631.0078,176.4857 632.0234,176.1607 L632.0234,178.4154 Q631.1906,178.7607 630.5,178.8826 Q629.8297,179.0248 628.9969,179.0248 Q627.3516,179.0248 626.275,178.3341 Q625.1984,177.6435 624.6906,176.4248 Q624.1828,175.1857 624.1828,173.5607 Q624.1828,171.9763 624.7516,170.7373 Q625.3406,169.4779 626.4578,168.7873 Q627.5953,168.0763 629.2,168.0763 Q629.9719,168.0763 630.7641,168.2795 Q631.5563,168.4826 632.4703,168.9295 L631.5969,171.0826 Q630.825,170.717 630.2563,170.5341 Q629.7078,170.331 629.2,170.331 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="128.7" x="650" y="179.2309">StateDetectProcess</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="522.6" x2="873.6" y1="190.5826" y2="190.5826"/><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="531.7" y="200.9826"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="145.6" x="543.4" y="211.0692">maxTimeoutSec: float</text><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="531.7" y="220.459"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="102.7" x="543.4" y="230.5456">frontPipe: Pipe</text><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="531.7" y="239.9355"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="98.8" x="543.4" y="250.0221">backPipe: Pipe</text><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="531.7" y="259.4119"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="127.4" x="543.4" y="269.4985">comQueue: Queue</text><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="531.7" y="278.8884"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="140.4" x="543.4" y="288.975">preSDQueue: Queue</text><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="531.7" y="298.3648"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="146.9" x="543.4" y="308.4514">postSDQueue: Queue</text><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="531.7" y="317.8413"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="141.7" x="543.4" y="327.9279">mainExitEvent: Event</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="522.6" x2="873.6" y1="337.3178" y2="337.3178"/><ellipse cx="535.6" cy="351.6178" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="163.8" x="543.4" y="357.8043">run() -&gt; None «Overide»</text><ellipse cx="535.6" cy="371.0942" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="323.7" x="543.4" y="377.2808">listenFrontend__(data: StateDetectData) -&gt; None</text><ellipse cx="535.6" cy="390.5707" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="257.4" x="543.4" y="396.7572">flush__(data: StateDetectData) -&gt; None</text><ellipse cx="535.6" cy="410.0471" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="321.1" x="543.4" y="416.2337">stateDetection__(data: StateDetectData) -&gt; None</text><ellipse cx="535.6" cy="429.5236" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="286" x="543.4" y="435.7102">activate(data: PreStateDetectArgs) -&gt; None</text><ellipse cx="535.6" cy="449" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="98.8" x="543.4" y="455.1866">flush() -&gt; None</text><ellipse cx="535.6" cy="468.4765" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="133.9" x="543.4" y="474.6631">deactivate() -&gt; None</text><ellipse cx="535.6" cy="487.9529" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="209.3" x="543.4" y="494.1395">sendShutdownSignal() -&gt; None</text><ellipse cx="535.6" cy="507.4294" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="133.9" x="543.4" y="513.616">shutdown() -&gt; None</text><ellipse cx="535.6" cy="526.9058" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="117" x="543.4" y="533.0924">getPipe() -&gt; None</text><ellipse cx="535.6" cy="546.3823" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="180.7" x="543.4" y="552.5689">getPostSDQueue() -&gt; None</text><!--MD5=[ffc67ae99049853c950a7052301f0aa5]
+class PreStateDetectProcess--><rect codeLine="144" fill="#2E2E2E" height="483.082" id="PreStateDetectProcess" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="403" x="72.8" y="117.7826"/><ellipse cx="193.7" cy="134.6826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M193.7,131.331 Q192.5625,131.331 191.9531,132.1841 Q191.3641,133.0373 191.3641,134.581 Q191.3641,136.1451 191.9125,136.9576 Q192.4609,137.7701 193.7,137.7701 Q194.3094,137.7701 194.8984,137.6279 Q195.5078,137.4857 196.5234,137.1607 L196.5234,139.4154 Q195.6906,139.7607 195,139.8826 Q194.3297,140.0248 193.4969,140.0248 Q191.8516,140.0248 190.775,139.3341 Q189.6984,138.6435 189.1906,137.4248 Q188.6828,136.1857 188.6828,134.5607 Q188.6828,132.9763 189.2516,131.7373 Q189.8406,130.4779 190.9578,129.7873 Q192.0953,129.0763 193.7,129.0763 Q194.4719,129.0763 195.2641,129.2795 Q196.0563,129.4826 196.9703,129.9295 L196.0969,132.0826 Q195.325,131.717 194.7563,131.5341 Q194.2078,131.331 193.7,131.331 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="152.1" x="214.5" y="140.2309">PreStateDetectProcess</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="74.1" x2="474.5" y1="151.5826" y2="151.5826"/><ellipse cx="87.1" cy="165.8826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="145.6" x="94.9" y="172.0692">maxTimeoutSec: float</text><ellipse cx="87.1" cy="185.359" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="46.8" x="94.9" y="191.5456">cfg: str</text><ellipse cx="87.1" cy="204.8355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="79.3" x="94.9" y="211.0221">weights: str</text><ellipse cx="87.1" cy="224.3119" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="102.7" x="94.9" y="230.4985">frontPipe: Pipe</text><ellipse cx="87.1" cy="243.7884" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="98.8" x="94.9" y="249.975">backPipe: Pipe</text><ellipse cx="87.1" cy="263.2648" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="127.4" x="94.9" y="269.4514">comQueue: Queue</text><ellipse cx="87.1" cy="282.7413" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="141.7" x="94.9" y="288.9279">mainExitEvent: Event</text><ellipse cx="87.1" cy="302.2178" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="172.9" x="94.9" y="308.4043">preSDetectQueue: Queue</text><ellipse cx="87.1" cy="321.6942" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="179.4" x="94.9" y="327.8808">postSDetectQueue: Queue</text><ellipse cx="87.1" cy="341.1707" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="210.6" x="94.9" y="347.3572">stateDProc: StateDetectProcess</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="74.1" x2="474.5" y1="356.7471" y2="356.7471"/><ellipse cx="87.1" cy="371.0471" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="163.8" x="94.9" y="377.2337">run() -&gt; None «Overide»</text><ellipse cx="87.1" cy="390.5236" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="347.1" x="94.9" y="396.7102">listenFrontend__(data: PreStateDetectData) -&gt; None</text><ellipse cx="87.1" cy="410" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="280.8" x="94.9" y="416.1866">flush__(data: PreStateDetectData) -&gt; None</text><ellipse cx="87.1" cy="429.4765" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="315.9" x="94.9" y="435.6631">shutdown__(data: PreStateDetectData) -&gt; None</text><ellipse cx="87.1" cy="448.9529" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="373.1" x="94.9" y="455.1395">detectFromStream__(data: PreStateDetectData) -&gt; None</text><ellipse cx="87.1" cy="468.4294" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="286" x="94.9" y="474.616">activate(data: PreStateDetectArgs) -&gt; None</text><ellipse cx="87.1" cy="487.9058" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="98.8" x="94.9" y="494.0924">flush() -&gt; None</text><ellipse cx="87.1" cy="507.3823" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="133.9" x="94.9" y="513.5689">deactivate() -&gt; None</text><ellipse cx="87.1" cy="526.8588" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="209.3" x="94.9" y="533.0453">sendShutdownSignal() -&gt; None</text><ellipse cx="87.1" cy="546.3352" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="133.9" x="94.9" y="552.5218">shutdown() -&gt; None</text><ellipse cx="87.1" cy="565.8117" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="117" x="94.9" y="571.9982">getPipe() -&gt; None</text><ellipse cx="87.1" cy="585.2881" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="248.3" x="94.9" y="591.4747">getPostStateDetectQueue() -&gt; Queue</text><!--MD5=[bb370c11d182b7ebaea7e6fa83404e81]
+class Process--><rect codeLine="68" fill="#2E2E2E" height="132.5058" id="Process" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="85.8" x="1080.3" y="728.1326"/><ellipse cx="1095.9" cy="745.0326" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M1095.9,741.681 Q1094.7625,741.681 1094.1531,742.5341 Q1093.5641,743.3873 1093.5641,744.931 Q1093.5641,746.4951 1094.1125,747.3076 Q1094.6609,748.1201 1095.9,748.1201 Q1096.5094,748.1201 1097.0984,747.9779 Q1097.7078,747.8357 1098.7234,747.5107 L1098.7234,749.7654 Q1097.8906,750.1107 1097.2,750.2326 Q1096.5297,750.3748 1095.6969,750.3748 Q1094.0516,750.3748 1092.975,749.6841 Q1091.8984,748.9935 1091.3906,747.7748 Q1090.8828,746.5357 1090.8828,744.9107 Q1090.8828,743.3263 1091.4516,742.0873 Q1092.0406,740.8279 1093.1578,740.1373 Q1094.2953,739.4263 1095.9,739.4263 Q1096.6719,739.4263 1097.4641,739.6295 Q1098.2563,739.8326 1099.1703,740.2795 L1098.2969,742.4326 Q1097.525,742.067 1096.9563,741.8841 Q1096.4078,741.681 1095.9,741.681 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="52" x="1110.2" y="750.5809">Process</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1081.6" x2="1164.8" y1="761.9326" y2="761.9326"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1081.6" x2="1164.8" y1="772.3326" y2="772.3326"/><ellipse cx="1094.6" cy="786.6326" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="32.5" x="1102.4" y="792.8192">run()</text><ellipse cx="1094.6" cy="806.109" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="39" x="1102.4" y="812.2956">start()</text><ellipse cx="1094.6" cy="825.5855" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="33.8" x="1102.4" y="831.7721">join()</text><ellipse cx="1094.6" cy="845.0619" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="41.6" x="1102.4" y="851.2485">close()</text><!--MD5=[cc99110d9c6a907c669d86144fedc9d7]
+class SharedMemory--><rect codeLine="75" fill="#2E2E2E" height="93.5529" id="SharedMemory" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="139.1" x="779.35" y="747.6326"/><ellipse cx="794.95" cy="764.5326" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M794.95,761.181 Q793.8125,761.181 793.2031,762.0341 Q792.6141,762.8873 792.6141,764.431 Q792.6141,765.9951 793.1625,766.8076 Q793.7109,767.6201 794.95,767.6201 Q795.5594,767.6201 796.1484,767.4779 Q796.7578,767.3357 797.7734,767.0107 L797.7734,769.2654 Q796.9406,769.6107 796.25,769.7326 Q795.5797,769.8748 794.7469,769.8748 Q793.1016,769.8748 792.025,769.1841 Q790.9484,768.4935 790.4406,767.2748 Q789.9328,766.0357 789.9328,764.4107 Q789.9328,762.8263 790.5016,761.5873 Q791.0906,760.3279 792.2078,759.6373 Q793.3453,758.9263 794.95,758.9263 Q795.7219,758.9263 796.5141,759.1295 Q797.3063,759.3326 798.2203,759.7795 L797.3469,761.9326 Q796.575,761.567 796.0063,761.3841 Q795.4578,761.181 794.95,761.181 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="105.3" x="809.25" y="770.0809">SharedMemory</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="780.65" x2="917.15" y1="781.4326" y2="781.4326"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="780.65" x2="917.15" y1="791.8326" y2="791.8326"/><ellipse cx="793.65" cy="806.1326" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="41.6" x="801.45" y="812.3192">close()</text><ellipse cx="793.65" cy="825.609" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="50.7" x="801.45" y="831.7956">unlink()</text><!--MD5=[15b0de36700cf8bf422172734e699e19]
+class Queue--><rect codeLine="80" fill="#2E2E2E" height="113.0294" id="Queue" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="79.3" x="534.95" y="737.8826"/><ellipse cx="550.55" cy="754.7826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M550.55,751.431 Q549.4125,751.431 548.8031,752.2841 Q548.2141,753.1373 548.2141,754.681 Q548.2141,756.2451 548.7625,757.0576 Q549.3109,757.8701 550.55,757.8701 Q551.1594,757.8701 551.7484,757.7279 Q552.3578,757.5857 553.3734,757.2607 L553.3734,759.5154 Q552.5406,759.8607 551.85,759.9826 Q551.1797,760.1248 550.3469,760.1248 Q548.7016,760.1248 547.625,759.4341 Q546.5484,758.7435 546.0406,757.5248 Q545.5328,756.2857 545.5328,754.6607 Q545.5328,753.0763 546.1016,751.8373 Q546.6906,750.5779 547.8078,749.8873 Q548.9453,749.1763 550.55,749.1763 Q551.3219,749.1763 552.1141,749.3795 Q552.9063,749.5826 553.8203,750.0295 L552.9469,752.1826 Q552.175,751.817 551.6063,751.6341 Q551.0578,751.431 550.55,751.431 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="45.5" x="564.85" y="760.3309">Queue</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="536.25" x2="612.95" y1="771.6826" y2="771.6826"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="11.7" x="542.75" y="792.1692">...</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="536.25" x2="612.95" y1="801.559" y2="801.559"/><ellipse cx="549.25" cy="815.859" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="29.9" x="557.05" y="822.0456">get()</text><ellipse cx="549.25" cy="835.3355" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="31.2" x="557.05" y="841.5221">put()</text><!--MD5=[ac13618b1a974308c1f12eb6c57723dc]
+class Event--><rect codeLine="86" fill="#2E2E2E" height="93.5529" id="Event" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="74.1" x="659.75" y="747.6326"/><ellipse cx="676.52" cy="764.5326" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M676.52,761.181 Q675.3825,761.181 674.7731,762.0341 Q674.1841,762.8873 674.1841,764.431 Q674.1841,765.9951 674.7325,766.8076 Q675.2809,767.6201 676.52,767.6201 Q677.1294,767.6201 677.7184,767.4779 Q678.3278,767.3357 679.3434,767.0107 L679.3434,769.2654 Q678.5106,769.6107 677.82,769.7326 Q677.1497,769.8748 676.3169,769.8748 Q674.6716,769.8748 673.595,769.1841 Q672.5184,768.4935 672.0106,767.2748 Q671.5028,766.0357 671.5028,764.4107 Q671.5028,762.8263 672.0716,761.5873 Q672.6606,760.3279 673.7778,759.6373 Q674.9153,758.9263 676.52,758.9263 Q677.2919,758.9263 678.0841,759.1295 Q678.8763,759.3326 679.7903,759.7795 L678.9169,761.9326 Q678.145,761.567 677.5763,761.3841 Q677.0278,761.181 676.52,761.181 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="37.7" x="691.08" y="770.0809">Event</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="661.05" x2="732.55" y1="781.4326" y2="781.4326"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="661.05" x2="732.55" y1="791.8326" y2="791.8326"/><ellipse cx="674.05" cy="806.1326" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="44.2" x="681.85" y="812.3192">is_set()</text><ellipse cx="674.05" cy="825.609" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="27.3" x="681.85" y="831.7956">set()</text><!--MD5=[4dfa3bfde5407297cdf87f3e284398fb]
+class Pipe--><rect codeLine="91" fill="#2E2E2E" height="93.5529" id="Pipe" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="70.2" x="964.6" y="747.6326"/><ellipse cx="983.125" cy="764.5326" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M983.125,761.181 Q981.9875,761.181 981.3781,762.0341 Q980.7891,762.8873 980.7891,764.431 Q980.7891,765.9951 981.3375,766.8076 Q981.8859,767.6201 983.125,767.6201 Q983.7344,767.6201 984.3234,767.4779 Q984.9328,767.3357 985.9484,767.0107 L985.9484,769.2654 Q985.1156,769.6107 984.425,769.7326 Q983.7547,769.8748 982.9219,769.8748 Q981.2766,769.8748 980.2,769.1841 Q979.1234,768.4935 978.6156,767.2748 Q978.1078,766.0357 978.1078,764.4107 Q978.1078,762.8263 978.6766,761.5873 Q979.2656,760.3279 980.3828,759.6373 Q981.5203,758.9263 983.125,758.9263 Q983.8969,758.9263 984.6891,759.1295 Q985.4813,759.3326 986.3953,759.7795 L985.5219,761.9326 Q984.75,761.567 984.1813,761.3841 Q983.6328,761.181 983.125,761.181 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="29.9" x="998.075" y="770.0809">Pipe</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="965.9" x2="1033.5" y1="781.4326" y2="781.4326"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="965.9" x2="1033.5" y1="791.8326" y2="791.8326"/><ellipse cx="978.9" cy="806.1326" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="40.3" x="986.7" y="812.3192">send()</text><ellipse cx="978.9" cy="825.609" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="36.4" x="986.7" y="831.7956">recv()</text><!--MD5=[24917c224a39338362708c82a7d6ebd6]
+reverse link Process to UnifiedStateDetectProcess--><path d="M1122.927,701.7816 C1122.823,666.4736 1122.693,624.4056 1122.563,582.0776 " fill="none" id="Process-backto-UnifiedStateDetectProcess" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="none" points="1132.027,701.9116,1123.005,727.9506,1113.827,701.9766,1132.027,701.9116" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[c63812b26ee1891a71b2eb8c98fcd190]
+reverse link Process to StateDetectProcess--><path d="M1108.406,702.4836 C1098.812,671.6086 1082.991,639.8106 1056.9,619.5826 C1000.376,575.7466 959.881,635.4556 897,601.3826 C877.474,590.8006 859.092,577.4366 841.997,562.4606 " fill="none" id="Process-backto-StateDetectProcess" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="none" points="1117.285,700.4686,1115.101,727.9246,1099.683,705.0966,1117.285,700.4686" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[3f8d604dec645959a23b603ab5f3e9ac]
+reverse link UnifiedStateDetectProcess to Queue--><path codeLine="174" d="M916.513,591.1256 C910.117,594.8046 903.604,598.2366 897,601.3826 C844.701,626.2776 683.189,584.6386 637,619.5826 C600.483,647.2076 585.299,698.1286 578.994,737.6876 " fill="none" id="UnifiedStateDetectProcess-backto-Queue" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="931.255,582.1036,921.8876,581.7407,917.9497,590.2479,927.3171,590.6108,931.255,582.1036" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[56473ae0478783d73f6a31bb8e35a10b]
+reverse link UnifiedStateDetectProcess to Pipe--><path codeLine="175" d="M1054.703,598.5876 C1038.596,655.5536 1023.061,710.5176 1012.635,747.3986 " fill="none" id="UnifiedStateDetectProcess-backto-Pipe" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="1059.37,582.0776,1052.2484,588.1737,1055.1364,597.0921,1062.2581,590.996,1059.37,582.0776" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[379a0659a3323124c8061a58bc0838da]
+reverse link UnifiedStateDetectProcess to Event--><path codeLine="176" d="M924.235,585.6006 C915.356,591.3336 906.269,596.6246 897,601.3826 C841.009,630.0996 805.376,579.8286 756.6,619.5826 C718.432,650.6916 704.561,707.4626 699.556,747.5936 " fill="none" id="UnifiedStateDetectProcess-backto-Event" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="929.747,581.9736,917.1191,584.0869,924.3244,585.5577,922.8537,592.763,929.747,581.9736" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[ea62994aee977bfa165db44ab9a9ce97]
+reverse link PreStateDetectProcess to Queue--><path codeLine="178" d="M488.956,594.1026 C491.933,596.5726 494.91,598.9906 497.9,601.3826 C510.432,611.4186 519.389,606.8036 529.1,619.5826 C554.905,653.5646 566.124,700.8846 570.973,737.5186 " fill="none" id="PreStateDetectProcess-backto-Queue" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="475.943,583.0786,478.5391,592.0864,487.8525,593.1545,485.2564,584.1467,475.943,583.0786" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[1d3c4453aed4f3215ba395e3b0ff3d3f]
+reverse link PreStateDetectProcess to Pipe--><path codeLine="179" d="M491.361,598.2626 C493.532,599.3286 495.703,600.3686 497.9,601.3826 C542.685,622.0006 901.758,590.0076 941.2,619.5826 C980.759,649.2486 993.85,706.9036 998.023,747.6066 " fill="none" id="PreStateDetectProcess-backto-Pipe" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="476.151,590.1376,480.5884,598.3953,489.9176,597.4752,485.4802,589.2175,476.151,590.1376" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[2d2ad4fa1f73e85eff941f8cd6c818e7]
+reverse link PreStateDetectProcess to Event--><path codeLine="180" d="M481.624,592.3476 C486.98,595.5326 492.414,598.5486 497.9,601.3826 C553.319,629.9436 588.692,580.1536 637,619.5826 C675.142,650.7176 689.026,707.4886 694.044,747.6066 " fill="none" id="PreStateDetectProcess-backto-Event" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="475.839,588.8116,483.1294,599.3368,481.3913,592.1912,488.5368,590.4531,475.839,588.8116" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[3023e710f7de7736a12966ba1a5d1003]
+reverse link PreStateDetectProcess to StateDetectProcess--><path codeLine="181" d="M482.56,540.8806 C495.365,541.2576 508.183,539.6456 521.001,536.0446 " fill="none" id="PreStateDetectProcess-backto-StateDetectProcess" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="475.852,540.5036,487.2363,546.3626,482.3414,540.8744,487.8296,535.9795,475.852,540.5036" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[0e80c4aa0cf2a8828bcf7810bbd1113e]
+link PreStateDetectProcess to StateDetectProcess--><!--MD5=[514a6ede4e696cd68b33b58663f0f5df]
+reverse link StateDetectProcess to Queue--><path codeLine="183" d="M635.765,579.0486 C618.956,637.9126 602.186,696.5686 590.473,737.5576 " fill="none" id="StateDetectProcess-backto-Queue" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="640.51,562.4606,633.3673,568.5319,636.2244,577.4604,643.3671,571.389,640.51,562.4606" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[62e615fb756b793ba7b36d2957877c10]
+reverse link StateDetectProcess to Pipe--><path codeLine="184" d="M863.954,574.3426 C874.679,583.9756 885.716,593.0626 897,601.3826 C914.095,613.9926 926.679,604.0736 941.2,619.5826 C974.129,654.7476 988.572,709.0616 994.877,747.5676 " fill="none" id="StateDetectProcess-backto-Pipe" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="851.513,562.8116,853.6931,571.929,862.9476,573.4233,860.7676,564.3059,851.513,562.8116" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[ca0eaf5108bf25f3511f4ccbf1683e82]
+reverse link StateDetectProcess to Event--><path codeLine="185" d="M697.476,569.3376 C697.268,636.2616 697.073,704.1476 696.943,747.3206 " fill="none" id="StateDetectProcess-backto-Event" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="697.489,562.4606,692.2556,574.1457,697.4704,568.9606,702.6556,574.1754,697.489,562.4606" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[27aec96a41cbc2c00722c850f3f91ea0]
+link StateDetectProcess to UnifiedStateDetectProcess--><!--MD5=[3aba61426ca8f5a964a3541512847b55]
+link Global_Functions to Queue--><!--MD5=[88427b29c36b57165bf8f8124d2cfbe1]
+link Global_Functions to StateDetector--><!--MD5=[a503ed63552d3cd376d0dd762983a605]
+link TagID_Functions to StateDetectSingleThread--><!--MD5=[d3395c1576144629a708e591ff9bab5c]
+@startuml
+!define DARKRED
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+package src.Backend {
+    package StateDetectSingleThread.py <<Frame>> {
+        class StateDetectSingleThread {
+            {static} TAG_BOX_COLOR: tuple
+            {static} VALVE_COLORS_BGRA: dict
+            + cfg: str
+            + weights: str
+            + font
+            + net: cv.dnn.readnet
+            + layerNames: list
+            + outputLayers: list
+
+            + detectFromStream(streamPath: str, confidThresh: float) -> None
+        }
+    }
+
+    package src.Backend.StateMethods  {
+        enum ReturnType {
+            ANGLE
+            STATE 
+        }
+
+        class SIFTImageHandler {
+            {static} + SIFT_IMAGES_PATH: str
+            {static} + VALVE_COMP_IMAGES: dic
+
+            {static} + fetchImages(classID: int) -> tuple
+        }
+
+        class StateDetector {
+            + valveClasses: Dict[ClassID, ValveClass]
+            + sift(img: np.ndarray, data: BBoxData) -> Tuple[Returntype, ValveState]
+        }
+    }
+
+    package src.Backend.IDMethods {
+        class TagID_Functions {
+            + assignTagsToBBoxes(tagBoxes: tuple, bboxes: List[BBoxData]) -> None
+            - Filter_Contours_Based_On_ArcLength(contours, requiredLength=40, filterThreshold)
+            - Filter_Contours_Based_On_Dimensions_Of_Bounding_Boxes(image, conturs)
+            - Get_x_Coordinates_For_The_Contour_Center(conturs)
+            - Filter_Contours_That_Have_Same_x_Coordinate_Of_The_Center(conturs)
+            - Filter_Inner_Contours_Insid_Parent_Contours(contours, unique_x_Centers)
+            - Filter_Contours(image, contours, filterThreshold)
+            - Sort_Contours(contours: np.ndarray)
+            - Fix_Dimension(image)
+            - CNN_Model(model, digits)
+            + detectTagID(cnnModel, tagImage: numpy.ndarray)
+        }
+    }
+
+    package src.Backend.Processes {
+        class Global_Functions {
+            + freeAllShmInImageDataQueue(queue)
+            + freeShmFromImageData(imageData: ImageData)
+            + freeShm(shm: SharedMemory)
+        }
+
+        package multiprocessing {
+            class Process {
+                + run()
+                + start()
+                + join()
+                + close()
+            }
+
+            class SharedMemory {
+                + close()
+                + unlink()
+            }
+
+            class Queue {
+                + get()
+                + put()
+                ...
+            }
+
+            class Event {
+                + is_set()
+                + set()
+            }
+
+            class Pipe {
+                + send()
+                + recv()
+            }
+        }
+        
+
+        class UnifiedStateDetectProcess extends Process {
+            + maxTimeoutSec: float
+            + cfg: str
+            + weights: str
+            + frontPipe: Pipe
+            + backPipe: Pipe
+            + comQueue: Queue
+            + resultQueue: Queue
+            + mainExitEvent: Event
+
+            + run() -> None <<Overide>>
+            + listenFrontend__(data: PreStateDetectData) -> None
+            + flush__(data: PreStateDetectData) -> None
+            + shutdown__(data: PreStateDetectData) -> None
+            + detectFromStream__(data: PreStateDetectData) -> None
+            + activate(data: PreStateDetectArgs) -> None
+            + flush() -> None
+            + deactivate() -> None
+            + sendShutdownSignal() -> None
+            + shutdown() -> None
+            + getPipe() -> None
+            + getPostStateDetectQueue() -> Queue
+        }
+
+        class StateDetectProcess extends Process {
+            - maxTimeoutSec: float
+            - frontPipe: Pipe
+            - backPipe: Pipe
+            - comQueue: Queue
+            - preSDQueue: Queue
+            - postSDQueue: Queue
+            - mainExitEvent: Event
+
+            + run() -> None <<Overide>>
+            + listenFrontend__(data: StateDetectData) -> None
+            + flush__(data: StateDetectData) -> None
+            + stateDetection__(data: StateDetectData) -> None
+            + activate(data: PreStateDetectArgs) -> None
+            + flush() -> None
+            + deactivate() -> None
+            + sendShutdownSignal() -> None
+            + shutdown() -> None
+            + getPipe() -> None
+            + getPostSDQueue() -> None 
+        }
+
+        class PreStateDetectProcess {
+            + maxTimeoutSec: float
+            + cfg: str
+            + weights: str
+            + frontPipe: Pipe
+            + backPipe: Pipe
+            + comQueue: Queue
+            + mainExitEvent: Event
+            + preSDetectQueue: Queue
+            + postSDetectQueue: Queue
+            + stateDProc: StateDetectProcess
+
+            + run() -> None <<Overide>>
+            + listenFrontend__(data: PreStateDetectData) -> None
+            + flush__(data: PreStateDetectData) -> None
+            + shutdown__(data: PreStateDetectData) -> None
+            + detectFromStream__(data: PreStateDetectData) -> None
+            + activate(data: PreStateDetectArgs) -> None
+            + flush() -> None
+            + deactivate() -> None
+            + sendShutdownSignal() -> None
+            + shutdown() -> None
+            + getPipe() -> None
+            + getPostStateDetectQueue() -> Queue
+        }
+    }
+
+    
+}
+
+UnifiedStateDetectProcess *- - Queue
+UnifiedStateDetectProcess *- - Pipe
+UnifiedStateDetectProcess <- - Event
+
+PreStateDetectProcess *- - Queue
+PreStateDetectProcess *- - Pipe
+PreStateDetectProcess <- - Event
+PreStateDetectProcess <- - StateDetectProcess
+
+StateDetectProcess *- - Queue
+StateDetectProcess *- - Pipe
+StateDetectProcess <- - Event
+
+PreStateDetectProcess -[hidden]right- StateDetectProcess
+StateDetectProcess -[hidden]right- UnifiedStateDetectProcess
+Global_Functions -[hidden]right- Queue
+StateDetector-[hidden]up- Global_Functions
+StateDetectSingleThread -[hidden]up- TagID_Functions
+
+@enduml
+
+@startuml
+
+
+
+
+
+skinparam stereotypeCBackgroundColor 880000
+
+
+
+
+
+
+
+skinparam backgroundColor 777
+
+
+
+
+
+
+
+skinparam circledCharacter {
+  radius 8
+  fontSize 11
+  fontName Verdana
+}
+
+skinparam class {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+
+  attributeFontColor aaa
+  attributeFontSize 11
+  attributeIconSize 11
+}
+
+
+skinparam actor {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam participant {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam collections {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam SequenceBox{
+    backgroundColor 575757
+  borderColor 767676
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam interface {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam component {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam node {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam database {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam queue {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam usecase {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam activity {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam sequence {
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+
+  lifeLineBorderColor 880000
+  lifeLineBackgroundColor 575757
+}
+
+skinparam boundary {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam control {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam entity {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam state {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+  startColor 880000
+  endColor 330000
+}
+
+
+skinparam object {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+
+skinparam note {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam cloud {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam rectangle {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam storage {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+package src.Backend {
+    package StateDetectSingleThread.py <<Frame>> {
+        class StateDetectSingleThread {
+            {static} TAG_BOX_COLOR: tuple
+            {static} VALVE_COLORS_BGRA: dict
+            + cfg: str
+            + weights: str
+            + font
+            + net: cv.dnn.readnet
+            + layerNames: list
+            + outputLayers: list
+
+            + detectFromStream(streamPath: str, confidThresh: float) -> None
+        }
+    }
+
+    package src.Backend.StateMethods  {
+        enum ReturnType {
+            ANGLE
+            STATE 
+        }
+
+        class SIFTImageHandler {
+            {static} + SIFT_IMAGES_PATH: str
+            {static} + VALVE_COMP_IMAGES: dic
+
+            {static} + fetchImages(classID: int) -> tuple
+        }
+
+        class StateDetector {
+            + valveClasses: Dict[ClassID, ValveClass]
+            + sift(img: np.ndarray, data: BBoxData) -> Tuple[Returntype, ValveState]
+        }
+    }
+
+    package src.Backend.IDMethods {
+        class TagID_Functions {
+            + assignTagsToBBoxes(tagBoxes: tuple, bboxes: List[BBoxData]) -> None
+            - Filter_Contours_Based_On_ArcLength(contours, requiredLength=40, filterThreshold)
+            - Filter_Contours_Based_On_Dimensions_Of_Bounding_Boxes(image, conturs)
+            - Get_x_Coordinates_For_The_Contour_Center(conturs)
+            - Filter_Contours_That_Have_Same_x_Coordinate_Of_The_Center(conturs)
+            - Filter_Inner_Contours_Insid_Parent_Contours(contours, unique_x_Centers)
+            - Filter_Contours(image, contours, filterThreshold)
+            - Sort_Contours(contours: np.ndarray)
+            - Fix_Dimension(image)
+            - CNN_Model(model, digits)
+            + detectTagID(cnnModel, tagImage: numpy.ndarray)
+        }
+    }
+
+    package src.Backend.Processes {
+        class Global_Functions {
+            + freeAllShmInImageDataQueue(queue)
+            + freeShmFromImageData(imageData: ImageData)
+            + freeShm(shm: SharedMemory)
+        }
+
+        package multiprocessing {
+            class Process {
+                + run()
+                + start()
+                + join()
+                + close()
+            }
+
+            class SharedMemory {
+                + close()
+                + unlink()
+            }
+
+            class Queue {
+                + get()
+                + put()
+                ...
+            }
+
+            class Event {
+                + is_set()
+                + set()
+            }
+
+            class Pipe {
+                + send()
+                + recv()
+            }
+        }
+        
+
+        class UnifiedStateDetectProcess extends Process {
+            + maxTimeoutSec: float
+            + cfg: str
+            + weights: str
+            + frontPipe: Pipe
+            + backPipe: Pipe
+            + comQueue: Queue
+            + resultQueue: Queue
+            + mainExitEvent: Event
+
+            + run() -> None <<Overide>>
+            + listenFrontend__(data: PreStateDetectData) -> None
+            + flush__(data: PreStateDetectData) -> None
+            + shutdown__(data: PreStateDetectData) -> None
+            + detectFromStream__(data: PreStateDetectData) -> None
+            + activate(data: PreStateDetectArgs) -> None
+            + flush() -> None
+            + deactivate() -> None
+            + sendShutdownSignal() -> None
+            + shutdown() -> None
+            + getPipe() -> None
+            + getPostStateDetectQueue() -> Queue
+        }
+
+        class StateDetectProcess extends Process {
+            - maxTimeoutSec: float
+            - frontPipe: Pipe
+            - backPipe: Pipe
+            - comQueue: Queue
+            - preSDQueue: Queue
+            - postSDQueue: Queue
+            - mainExitEvent: Event
+
+            + run() -> None <<Overide>>
+            + listenFrontend__(data: StateDetectData) -> None
+            + flush__(data: StateDetectData) -> None
+            + stateDetection__(data: StateDetectData) -> None
+            + activate(data: PreStateDetectArgs) -> None
+            + flush() -> None
+            + deactivate() -> None
+            + sendShutdownSignal() -> None
+            + shutdown() -> None
+            + getPipe() -> None
+            + getPostSDQueue() -> None 
+        }
+
+        class PreStateDetectProcess {
+            + maxTimeoutSec: float
+            + cfg: str
+            + weights: str
+            + frontPipe: Pipe
+            + backPipe: Pipe
+            + comQueue: Queue
+            + mainExitEvent: Event
+            + preSDetectQueue: Queue
+            + postSDetectQueue: Queue
+            + stateDProc: StateDetectProcess
+
+            + run() -> None <<Overide>>
+            + listenFrontend__(data: PreStateDetectData) -> None
+            + flush__(data: PreStateDetectData) -> None
+            + shutdown__(data: PreStateDetectData) -> None
+            + detectFromStream__(data: PreStateDetectData) -> None
+            + activate(data: PreStateDetectArgs) -> None
+            + flush() -> None
+            + deactivate() -> None
+            + sendShutdownSignal() -> None
+            + shutdown() -> None
+            + getPipe() -> None
+            + getPostStateDetectQueue() -> Queue
+        }
+    }
+
+    
+}
+
+UnifiedStateDetectProcess *- - Queue
+UnifiedStateDetectProcess *- - Pipe
+UnifiedStateDetectProcess <- - Event
+
+PreStateDetectProcess *- - Queue
+PreStateDetectProcess *- - Pipe
+PreStateDetectProcess <- - Event
+PreStateDetectProcess <- - StateDetectProcess
+
+StateDetectProcess *- - Queue
+StateDetectProcess *- - Pipe
+StateDetectProcess <- - Event
+
+PreStateDetectProcess -[hidden]right- StateDetectProcess
+StateDetectProcess -[hidden]right- UnifiedStateDetectProcess
+Global_Functions -[hidden]right- Queue
+StateDetector-[hidden]up- Global_Functions
+StateDetectSingleThread -[hidden]up- TagID_Functions
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(MIT source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: IE
+--></g></svg>

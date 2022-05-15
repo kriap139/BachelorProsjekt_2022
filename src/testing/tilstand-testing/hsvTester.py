@@ -83,7 +83,7 @@ cv.createTrackbar(high_S_name, window_detection_name, high_S, max_value, on_high
 cv.createTrackbar(low_V_name, window_detection_name, low_V, max_value, on_low_V_thresh_trackbar)
 cv.createTrackbar(high_V_name, window_detection_name, high_V, max_value, on_high_V_thresh_trackbar)
 
-p = os.path.join("resources", "testing", "ventil-tilstand", "5.jpg")
+p = os.path.join("resources", "testing", "ventil-tilstand", "2.jpg")
 
 img = cv.imread(p)
 

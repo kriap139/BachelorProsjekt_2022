@@ -1,0 +1,16 @@
+{
+   "GUI": {
+      "theme": "Combinear",
+      "windowGeometry": [
+         372,
+         48,
+         1111,
+         875
+      ],
+      "valveImages": {
+         "UNKNOWN": "images/valve/Valve_UNKNOWN.png",
+         "OPEN": "images/valve/Valve_OPEN.png",
+         "CLOSED": "images/valve/Valve_CLOSED.png"
+      }
+   }
+}

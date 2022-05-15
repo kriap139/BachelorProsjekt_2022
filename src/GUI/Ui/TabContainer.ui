@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TabContainer</class>
+ <widget class="QTabWidget" name="TabContainer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>777</width>
+    <height>665</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="mouseTracking">
+   <bool>true</bool>
+  </property>
+  <property name="tabletTracking">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>TabWidget</string>
+  </property>
+  <property name="currentIndex">
+   <number>1</number>
+  </property>
+  <property name="tabsClosable">
+   <bool>true</bool>
+  </property>
+  <property name="movable">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="ValveOverview">
+   <attribute name="title">
+    <string>Valve Overview</string>
+   </attribute>
+  </widget>
+  <widget class="QWidget" name="SystemOverview">
+   <attribute name="title">
+    <string>System Overview</string>
+   </attribute>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,14 +1,56 @@
 {
-    "valves" : {
-        "AFGK11" : {
-            "clazz": "fra yolo",
-            "state": false
+    "valves" : [
+
+    ],
+    "valveClasses": [
+        {
+            "classID": 0,
+            "className": "ventilRattBlaa",
+            "colorLower": [20, 100, 100],
+            "colorUpper": [30, 255, 255],
+            "stateMethod": null
+        },
+        {
+            "classID": 1,
+            "className": "ventilRattMetall",
+            "colorLower": [],
+            "colorUpper": [],
+            "stateMethod": null
+        },
+        {
+            "classID": 2,
+            "className": "ventilSpakMetall",
+            "colorLower": [],
+            "colorUpper": [],
+            "stateMethod": null
+        },
+        {
+            "classID": 3,
+            "className": "ventilSpakBrun",
+            "colorLower": [0, 83, 25],
+            "colorUpper": [12, 255, 111],
+            "stateMethod": "sift"
+        },
+        {
+            "classID": 4,
+            "className": "ventilSpakBlaa",
+            "colorLower": [],
+            "colorUpper": [],
+            "stateMethod": null
+        },
+        {
+            "classID": 5,
+            "className": "ventilSpakGul",
+            "colorLower": [],
+            "colorUpper": [],
+            "stateMethod": null
+        },
+        {
+            "classID": 6,
+            "className": "ventilSpakRod",
+            "colorLower": [176, 123, 21],
+            "colorUpper": [180, 232, 221],
+            "stateMethod": "sift"
         }
-    },
-    "colorsHSV": {
-        "ventilclasse": {
-            "lower": [255, 255, 255],
-            "upper": [0, 0, 0]
-        }
-    }
+    ]
 }

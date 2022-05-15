@@ -1,0 +1,194 @@
+@startuml
+!define DARKRED
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+package src.Backend {
+    package StateDetectSingleThread.py <<Frame>> {
+        class StateDetectSingleThread {
+            {static} TAG_BOX_COLOR: tuple
+            {static} VALVE_COLORS_BGRA: dict
+            + cfg: str
+            + weights: str
+            + font
+            + net: cv.dnn.readnet
+            + layerNames: list
+            + outputLayers: list
+
+            + detectFromStream(streamPath: str, confidThresh: float) -> None
+        }
+    }
+
+    package src.Backend.StateMethods  {
+        enum ReturnType {
+            ANGLE
+            STATE 
+        }
+
+        class SIFTImageHandler {
+            {static} + SIFT_IMAGES_PATH: str
+            {static} + VALVE_COMP_IMAGES: dic
+
+            {static} + fetchImages(classID: int) -> tuple
+        }
+
+        class StateDetector {
+            + valveClasses: Dict[ClassID, ValveClass]
+            + sift(img: np.ndarray, data: BBoxData) -> Tuple[Returntype, ValveState]
+        }
+    }
+
+    package src.Backend.IDMethods {
+        class TagID_Functions {
+            + assignTagsToBBoxes(tagBoxes: tuple, bboxes: List[BBoxData]) -> None
+            - Filter_Contours_Based_On_ArcLength(contours, requiredLength=40, filterThreshold)
+            - Filter_Contours_Based_On_Dimensions_Of_Bounding_Boxes(image, conturs)
+            - Get_x_Coordinates_For_The_Contour_Center(conturs)
+            - Filter_Contours_That_Have_Same_x_Coordinate_Of_The_Center(conturs)
+            - Filter_Inner_Contours_Insid_Parent_Contours(contours, unique_x_Centers)
+            - Filter_Contours(image, contours, filterThreshold)
+            - Sort_Contours(contours: np.ndarray)
+            - Fix_Dimension(image)
+            - CNN_Model(model, digits)
+            + detectTagID(cnnModel, tagImage: numpy.ndarray)
+        }
+    }
+
+    package src.Backend.Processes {
+        class Global_Functions {
+            + freeAllShmInImageDataQueue(queue)
+            + freeShmFromImageData(imageData: ImageData)
+            + freeShm(shm: SharedMemory)
+        }
+
+        package multiprocessing {
+            class Process {
+                + run()
+                + start()
+                + join()
+                + close()
+            }
+
+            class SharedMemory {
+                + close()
+                + unlink()
+            }
+
+            class Queue {
+                + get()
+                + put()
+                ...
+            }
+
+            class Event {
+                + is_set()
+                + set()
+            }
+
+            class Pipe {
+                + send()
+                + recv()
+            }
+        }
+        
+
+        class UnifiedStateDetectProcess extends Process {
+            + maxTimeoutSec: float
+            + cfg: str
+            + weights: str
+            + frontPipe: Pipe
+            + backPipe: Pipe
+            + comQueue: Queue
+            + resultQueue: Queue
+            + mainExitEvent: Event
+
+            + run() -> None <<Overide>>
+            + listenFrontend__(data: PreStateDetectData) -> None
+            + flush__(data: PreStateDetectData) -> None
+            + shutdown__(data: PreStateDetectData) -> None
+            + detectFromStream__(data: PreStateDetectData) -> None
+            + activate(data: PreStateDetectArgs) -> None
+            + flush() -> None
+            + deactivate() -> None
+            + sendShutdownSignal() -> None
+            + shutdown() -> None
+            + getPipe() -> None
+            + getPostStateDetectQueue() -> Queue
+        }
+
+        class StateDetectProcess extends Process {
+            - maxTimeoutSec: float
+            - frontPipe: Pipe
+            - backPipe: Pipe
+            - comQueue: Queue
+            - preSDQueue: Queue
+            - postSDQueue: Queue
+            - mainExitEvent: Event
+
+            + run() -> None <<Overide>>
+            + listenFrontend__(data: StateDetectData) -> None
+            + flush__(data: StateDetectData) -> None
+            + stateDetection__(data: StateDetectData) -> None
+            + activate(data: PreStateDetectArgs) -> None
+            + flush() -> None
+            + deactivate() -> None
+            + sendShutdownSignal() -> None
+            + shutdown() -> None
+            + getPipe() -> None
+            + getPostSDQueue() -> None 
+        }
+
+        class PreStateDetectProcess {
+            + maxTimeoutSec: float
+            + cfg: str
+            + weights: str
+            + frontPipe: Pipe
+            + backPipe: Pipe
+            + comQueue: Queue
+            + mainExitEvent: Event
+            + preSDetectQueue: Queue
+            + postSDetectQueue: Queue
+            + stateDProc: StateDetectProcess
+
+            + run() -> None <<Overide>>
+            + listenFrontend__(data: PreStateDetectData) -> None
+            + flush__(data: PreStateDetectData) -> None
+            + shutdown__(data: PreStateDetectData) -> None
+            + detectFromStream__(data: PreStateDetectData) -> None
+            + activate(data: PreStateDetectArgs) -> None
+            + flush() -> None
+            + deactivate() -> None
+            + sendShutdownSignal() -> None
+            + shutdown() -> None
+            + getPipe() -> None
+            + getPostStateDetectQueue() -> Queue
+        }
+    }
+
+    
+}
+
+UnifiedStateDetectProcess *-- Queue
+UnifiedStateDetectProcess *-- Pipe
+UnifiedStateDetectProcess <-- Event
+
+PreStateDetectProcess *-- Queue
+PreStateDetectProcess *-- Pipe
+PreStateDetectProcess <-- Event
+PreStateDetectProcess <-- StateDetectProcess
+
+StateDetectProcess *-- Queue
+StateDetectProcess *-- Pipe
+StateDetectProcess <-- Event
+
+PreStateDetectProcess -[hidden]right- StateDetectProcess
+StateDetectProcess -[hidden]right- UnifiedStateDetectProcess
+Global_Functions -[hidden]right- Queue
+StateDetector-[hidden]up- Global_Functions
+StateDetectSingleThread -[hidden]up- TagID_Functions
+
+@enduml

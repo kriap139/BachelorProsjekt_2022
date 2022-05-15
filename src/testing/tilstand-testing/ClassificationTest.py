@@ -5,7 +5,7 @@ import os
 from typing import Tuple, Union
 import json
 import os
-from src.Backend.StateDetection.ValveDetection import ValveState
+from src.Backend.StateMethods.ValveDetection import ValveState
 
 
 class ClassificationTest:

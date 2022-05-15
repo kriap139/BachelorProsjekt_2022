@@ -1,15 +1,12 @@
-import src.Backend.StateDetection.Methods as dm
+import src.Backend.StateMethods.Methods as dm
+from src.Backend.Valve import ValveClass, ValveState
 from src.Backend.Valve import Valve
-from typing import Tuple, Dict, Callable, Union, List
-from src.GUI.PlotWindow import PlotWindow
-import matplotlib.pyplot as plt
+from typing import Tuple, Dict, List
 import numpy as np
 import cv2
 import json
 import os
-import glob
 import time
-from src.Util.Logging import Logging
 
 
 class ImageData:
@@ -24,15 +21,17 @@ class ImageData:
 
 class ValveStateTest:
     def __init__(self):
-        self.window = PlotWindow()
+        self.window = None #PlotWindow()
 
     def display(self, title: str, img, cmap=None):
-        fig = plt.figure(figsize=(10, 8))
-        ax = fig.add_subplot(111)
-        ax.imshow(img, cmap=cmap)
+        #fig = plt.figure(figsize=(10, 8))
+        #ax = fig.add_subplot(111)
+        #ax.imshow(img, cmap=cmap)
 
-        self.window.addPlot(title, fig)
-        pass
+        #self.window.addPlot(title, fig)
+        if title == "Processed image":
+            cv2.imshow("rmgr", img)
+            cv2.waitKey(0)
 
     def show(self):
         self.window.show()
@@ -41,7 +40,7 @@ class ValveStateTest:
                    methodName: str,
                    classes: tuple,
                    states: Tuple[str, ...],
-                   statesEnum: Tuple[dm.ValveState, ...],
+                   statesEnum: Tuple[ValveState, ...],
                    imgData: Dict[int, Dict[str, List[ImageData]]],
                    angleOpenThreshold=35) -> Tuple[float, float, Tuple[float, ...]]:
 
@@ -64,11 +63,12 @@ class ValveStateTest:
 
                 for imData in datas:
                     for j, bbox in enumerate(imData.boxes):
+
                         ret_type, v_state = method(imData.img.copy(), bbox, imData.valve, self.display)
 
                         if ret_type == dm.ReturnType.ANGLE:
                             check = (v_state < angleOpenThreshold) or (np.abs(v_state - 180) < angleOpenThreshold)
-                            v_state = dm.ValveState.OPEN if check else dm.ValveState.CLOSED
+                            v_state = ValveState.OPEN if check else ValveState.CLOSED
 
                         if v_state == statesEnum[i]:
                             nums_correct[cls] += 1
@@ -121,11 +121,29 @@ class ValveStateTest:
                     path = os.path.join(rootDir, str(cls), state, f)
                     img = cv2.imread(path)
 
-                    res[cls][state].append(
-                        ImageData(f, img, imgData[str(cls)][state][f]["confidences"],
-                                  imgData[str(cls)][state][f]["boxes"], v)
-                    )
+                    if img is not None:
+                        res[cls][state].append(
+                            ImageData(f, img, imgData[str(cls)][state][f]["boxes"],
+                                      imgData[str(cls)][state][f]["confidences"], v)
+                        )
         return res
+
+    def showEachCroppedImage(self, imgData, classes: tuple,  states: Tuple[str, ...]):
+        for cls in classes:
+            for i, state in enumerate(states):
+
+                datas = imgData[cls][state]
+
+                for imData in datas:
+                    for j, bbox in enumerate(imData.boxes):
+
+                        x, y, w, h = bbox
+                        #crop = imData.img[y:y + h, x:x + w]
+                        img = imData.img.copy()
+
+                        cv2.rectangle(img, (x, y), (x+w, y+h), (0, 0, 255), 2)
+                        cv2.imshow("img", img)
+                        cv2.waitKey(0)
 
 
 if __name__ == "__main__":
@@ -136,12 +154,13 @@ if __name__ == "__main__":
     rootDir = "resources/testing/ventil-tilstand/tilstand-test"
     classes = (0, 3, 6)
     states = ("OPEN", "CLOSED")
-    statesEnum = (dm.ValveState.OPEN, dm.ValveState.CLOSED)
+    statesEnum = (ValveState.OPEN, ValveState.CLOSED)
 
+    # 0: l:(20, 100, 100), u: (30, 255, 255); l:(26, 106, 187), u:(35, 255, 255); l:(22, 46, 74), u:(83, 255, 216)
     # 3: (41,18,10), (21, 48, 23)
-    valves = {0: Valve("", 0, "", "", colorLower=(20, 100, 100), colorUpper=(30, 255, 255)),
-              3: Valve("", 3, "", "", colorLower=(0, 83, 25), colorUpper=(12, 255, 111)),
-              6: Valve("", 6, "", "", colorLower=(176, 123, 21), colorUpper=(180, 232, 221))}
+    valves = {0: Valve("", ValveClass(0, "", "", colorLower=(20, 100, 100), colorUpper=(30, 255, 255))),
+              3: Valve("", ValveClass(3, "", "", colorLower=(0, 83, 25), colorUpper=(12, 255, 111))),
+              6: Valve("", ValveClass(6, "", "", colorLower=(176, 123, 21), colorUpper=(180, 232, 221)))}
 
     vs = ValveStateTest()
 
@@ -150,21 +169,36 @@ if __name__ == "__main__":
 
     imgData = vs.loadImages(rootDir, classes, states, valves, data)
 
+    imgDataMarked = vs.loadImages(os.path.join(rootDir, "color-marking", "marked"),
+                                  classes, states, valves, data)
+
     tests = (
-        ("pipeMarking", 26),
         ("watershedVec", 26),
-        ("sift", None)
     )
 
-    tests = (("sift", None),)
+    # ("sift", None) ("watershedVec", 26)
 
-    if False:
+    if True:
         for methodName, angleTD in tests:
             time_sec, tar, (arv0, arv3, arv6) = vs.methodTest(methodName, classes, states, statesEnum, imgData,
                                                               angleOpenThreshold=angleTD)
 
-            print(f"{methodName}: Time(sec)={time_sec},  TAR={tar}, arv0={arv0}, arv3={arv3}, arv6={arv6},"
+            print(f"{methodName}: Time(sec)={round(time_sec, 3)},  TAR={round(tar, 3)}, "
+                  f"arv0={round(arv0, 3)}, arv3={round(arv3, 3)}, arv6={round(arv6, 3)},"
                   f" angleOpenThreshold={angleTD}")
+
+        #vs.show()
+    elif False:
+        vs.showEachCroppedImage(imgData, classes, states)
+    elif False:
+        methodName, angleTD = "pipeMarking", 26
+
+        time_sec, tar, (arv0, arv3, arv6) = vs.methodTest(methodName, classes, states, statesEnum, imgDataMarked,
+                                                          angleOpenThreshold=angleTD)
+
+        print(f"{methodName}: Time(sec)={round(time_sec, 3)},  TAR={round(tar, 3)}, "
+              f"arv0={round(arv0, 3)}, arv3={round(arv3, 3)}, arv6={round(arv6, 3)},"
+              f" angleOpenThreshold={angleTD}")
     else:
         p = os.path.join("resources", "testing", "ventil-tilstand", "5.jpg")
         #p = os.path.join("resources", "testing", "ventil-tilstand", "tilstand-test", "color-marking", "marked", "0", "OPEN", "001408.jpg")
@@ -172,7 +206,7 @@ if __name__ == "__main__":
         res = dm.watershedVec(img, (0,), valves[6], vs.display)
         print(res)
 
-    vs.show()
+
 
 
 

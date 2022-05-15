@@ -1,14 +1,8 @@
-from src.Backend.StateDetection.Methods.TypeDefs import TYDisplay
-from src.GUI.PlotWindow import PlotWindow
-from src.Backend.StateDetection.Methods.constants import ValveState, ReturnType, RAD_TO_DEG
-from src.Backend.StateDetection.Methods.filter_and_sorting import filterContours
-from src.Util.Logging import Logging
-from src.Backend.Valve import Valve
-from typing import Union, Tuple
+from src.testing.PlotWindow import PlotWindow
+from src.Backend.StateMethods.Methods import filterContours
 import numpy as np
 import os
 import cv2
-import numbers
 import matplotlib.pyplot as plt
 
 
@@ -150,11 +144,16 @@ hsl = cv2.cvtColor(img, cv2.COLOR_BGR2HLS)
 mask = findMaskContours(hsl, colorLower=(0, 0, 0), colorUpper=(180, 218, 255))
 conts, hier = cv2.findContours(mask, cv2.RETR_CCOMP, cv2.CHAIN_APPROX_SIMPLE)
 
+
+
 # Grab only the innermost child components
 # https://stackoverflow.com/questions/49958640/sort-associated-hierarchy-with-already-sorted-contours-in-opencv-in-python
 
 # hier = hier[0]  # get the actual inner list of hierarchy descriptions
 # inner_contours = [i for i, c in enumerate(zip(conts, hier)) if c[1][3] > 0]
+
+#cv2.imshow("mask", mask)
+#cv2.waitKey(0)
 
 sc = sortBiggestFirst(conts)
 sc = sc[2:]
@@ -168,13 +167,14 @@ sc = filterContours(sc, filterThreshold=0.30)
 # conts, hier = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
 
 for c in sc:
-    # x, y, w, h = cv2.boundingRect(c)
-    # cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 3)
+    x, y, w, h = cv2.boundingRect(c)
+    cv2.rectangle(img, (x, y), (x + w, y + h), (0, 255, 0), 3)
 
-    mar = cv2.minAreaRect(c)
-    box = np.int64(cv2.boxPoints(mar))
-    cv2.drawContours(img, [box], -1, (0, 255, 0), thickness=3)
+    # mar = cv2.minAreaRect(c)
+    # box = np.int64(cv2.boxPoints(mar))
+    # cv2.drawContours(img, [box], -1, (0, 255, 0), thickness=3)
 
     cv2.imshow("Test", img)
     cv2.waitKey(0)
+
 

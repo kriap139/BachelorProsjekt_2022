@@ -1,0 +1,87 @@
+@startuml
+!define DARKRED
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+package src {
+
+package Controller {
+
+    class PIDController {
+        + kp: float
+        + kd: float
+        + maxAngularSpeed: float
+        + maxAngularSpeedNeg: float
+        + initSearchSpeed: float
+        + minSearchSpeed: float
+        + searchDecrement: float
+        + searchRadius: float
+        + radiusIncrement: float
+        + searchSpeed: float
+
+        + getAngularSpeed(lateralError: float, angularError: float): tuple
+        + checkAngularSpeed(angularSpeed: float): float
+        + getSearchSpeed()
+    }
+    }
+
+package src.image_processing {
+
+    class ImageProcessing {
+        + {static} LANE_TOGGLE: dict
+        + rawImg: numpy.array
+        + ocvImg: numpy.array
+        + canny: numpy.array
+        + fowWidth: int
+        + fowHeight: int
+        + center: tuple
+        + track: int
+        + intApproach: boolean
+        + intDetectDelay: float
+        + intReactDelay: float
+        + intDelay: float
+        + laneSide: str
+
+        + getContours(img: numpy.array): tuple
+        + calculateErrors(contour: numpy.array, smallContour: numpy.array): tuple
+        + checkForIntersection(conts: list, extrema: list, errMargin: int): optional(tuple, None)
+        + intFuncTrack2(conts: list, extrema: list): tuple
+        + intFuncTrack3(conts: list, extrema: array): tuple
+        + chooseContour(conts: list): tuple
+        + shrinkContour(cont: numpy.array, toVal: Number): optional(numpy.array, None)
+        + getFOWInfo(camera: PiCamera, stream: BytesIO): tuple
+    }
+
+    class filter_and_sorting {
+        + getExtremaOfContours(conts: list): list
+        + filterContours(conts: list, requiredLength: int, filterThreshold: float): list
+        + sortContours(conts: list, extrema: list, order: str, then: str, keepAll: boolean): tuple
+
+    }
+}
+
+class main {
+    + gpg: EasyGoPiGo3
+    + imp: ImageProcessing
+    + controller: PIDController
+}
+
+main <--right PIDController
+main <--down ImageProcessing
+main <--down filter_and_sorting: <<Import>>
+ImageProcessing <--left filter_and_sorting: <<Import>>
+main -[hidden]- PIDController
+
+note "These are Python Modules (.py files)" as msg1
+filter_and_sorting .. msg1
+main ..left msg1
+
+note top of main : The EasyGoPiGo3 class is part of the easygopigo3 Python library
+
+}
+
+@enduml

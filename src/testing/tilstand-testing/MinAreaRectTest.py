@@ -1,7 +1,7 @@
 import cv2 as cv2
 import numpy as np
 from numbers import Number
-from src.Backend.StateDetection.Methods.constants import RAD_TO_DEG, DEG_TO_RAD
+from src.Backend.StateMethods.Methods import DEG_TO_RAD
 from operator import mul
 
 
