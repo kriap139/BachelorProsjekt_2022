@@ -1,0 +1,487 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="937.3px" preserveAspectRatio="none" style="width:897px;height:937px;background:#777777;" version="1.1" viewBox="0 0 897 937" width="897px" zoomAndPan="magnify"><defs/><g><!--MD5=[4e356e007fc6daa57ab7197a292211b4]
+cluster PyQt6--><polygon fill="#777777" points="205.4,8.5826,270.6438,8.5826,279.7438,41.1709,611,41.1709,611,172.3826,205.4,172.3826,205.4,8.5826" style="stroke:#000000;stroke-width:1.9500000000000002;"/><line style="stroke:#000000;stroke-width:1.9500000000000002;" x1="205.4" x2="279.7438" y1="41.1709" y2="41.1709"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="57.4438" x="210.6" y="30.6383">PyQt6</text><!--MD5=[6904d586f11a3edbb4f4300b2174eed5]
+cluster multiprocessing--><polygon fill="#777777" points="642.2,28.0826,804.1313,28.0826,813.2313,60.6709,816.4,60.6709,816.4,152.8826,642.2,152.8826,642.2,28.0826" style="stroke:#000000;stroke-width:1.9500000000000002;"/><line style="stroke:#000000;stroke-width:1.9500000000000002;" x1="642.2" x2="813.2313" y1="60.6709" y2="60.6709"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="154.1313" x="647.4" y="50.1383">multiprocessing</text><!--MD5=[ae8fb04cf3697c74fea88e80cf48cd0a]
+cluster src.GUI.BackInterface--><polygon fill="#777777" points="20.8,203.5826,234.2438,203.5826,243.3438,236.1709,874.9,236.1709,874.9,928.9826,20.8,928.9826,20.8,203.5826" style="stroke:#000000;stroke-width:1.9500000000000002;"/><line style="stroke:#000000;stroke-width:1.9500000000000002;" x1="20.8" x2="243.3438" y1="236.1709" y2="236.1709"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="205.6438" x="26" y="225.6383">src.GUI.BackInterface</text><!--MD5=[b30b89c9be870d0748b59b5419bf9590]
+class QThread--><rect codeLine="11" fill="#2E2E2E" height="74.0765" id="QThread" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="93.6" x="496.6" y="67.7326"/><ellipse cx="512.2" cy="84.6326" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M512.2,81.281 Q511.0625,81.281 510.4531,82.1341 Q509.8641,82.9873 509.8641,84.531 Q509.8641,86.0951 510.4125,86.9076 Q510.9609,87.7201 512.2,87.7201 Q512.8094,87.7201 513.3984,87.5779 Q514.0078,87.4357 515.0234,87.1107 L515.0234,89.3654 Q514.1906,89.7107 513.5,89.8326 Q512.8297,89.9748 511.9969,89.9748 Q510.3516,89.9748 509.275,89.2841 Q508.1984,88.5935 507.6906,87.3748 Q507.1828,86.1357 507.1828,84.5107 Q507.1828,82.9263 507.7516,81.6873 Q508.3406,80.4279 509.4578,79.7373 Q510.5953,79.0263 512.2,79.0263 Q512.9719,79.0263 513.7641,79.2295 Q514.5563,79.4326 515.4703,79.8795 L514.5969,82.0326 Q513.825,81.667 513.2563,81.4841 Q512.7078,81.281 512.2,81.281 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="59.8" x="526.5" y="90.1809">QThread</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="497.9" x2="588.9" y1="101.5326" y2="101.5326"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="497.9" x2="588.9" y1="111.9326" y2="111.9326"/><ellipse cx="510.9" cy="126.2326" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="32.5" x="518.7" y="132.4192">run()</text><!--MD5=[43bb2f89f799385f2eb3150d986689f2]
+class QMutex--><rect codeLine="15" fill="#2E2E2E" height="93.5529" id="QMutex" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="88.4" x="362.7" y="57.9826"/><ellipse cx="378.3" cy="74.8826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M378.3,71.531 Q377.1625,71.531 376.5531,72.3841 Q375.9641,73.2373 375.9641,74.781 Q375.9641,76.3451 376.5125,77.1576 Q377.0609,77.9701 378.3,77.9701 Q378.9094,77.9701 379.4984,77.8279 Q380.1078,77.6857 381.1234,77.3607 L381.1234,79.6154 Q380.2906,79.9607 379.6,80.0826 Q378.9297,80.2248 378.0969,80.2248 Q376.4516,80.2248 375.375,79.5341 Q374.2984,78.8435 373.7906,77.6248 Q373.2828,76.3857 373.2828,74.7607 Q373.2828,73.1763 373.8516,71.9373 Q374.4406,70.6779 375.5578,69.9873 Q376.6953,69.2763 378.3,69.2763 Q379.0719,69.2763 379.8641,69.4795 Q380.6563,69.6826 381.5703,70.1295 L380.6969,72.2826 Q379.925,71.917 379.3563,71.7341 Q378.8078,71.531 378.3,71.531 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="54.6" x="392.6" y="80.4309">QMutex</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="364" x2="449.8" y1="91.7826" y2="91.7826"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="364" x2="449.8" y1="102.1826" y2="102.1826"/><ellipse cx="377" cy="116.4826" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="58.5" x="384.8" y="122.6692">acquire()</text><ellipse cx="377" cy="135.959" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="55.9" x="384.8" y="142.1456">release()</text><!--MD5=[8dd17ccd1ae0e0e4eb0a7117370c35f4]
+class QObject--><rect codeLine="20" fill="#2E2E2E" height="54.6" id="QObject" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="89.7" x="226.85" y="77.4826"/><ellipse cx="242.45" cy="94.3826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M242.45,91.031 Q241.3125,91.031 240.7031,91.8841 Q240.1141,92.7373 240.1141,94.281 Q240.1141,95.8451 240.6625,96.6576 Q241.2109,97.4701 242.45,97.4701 Q243.0594,97.4701 243.6484,97.3279 Q244.2578,97.1857 245.2734,96.8607 L245.2734,99.1154 Q244.4406,99.4607 243.75,99.5826 Q243.0797,99.7248 242.2469,99.7248 Q240.6016,99.7248 239.525,99.0341 Q238.4484,98.3435 237.9406,97.1248 Q237.4328,95.8857 237.4328,94.2607 Q237.4328,92.6763 238.0016,91.4373 Q238.5906,90.1779 239.7078,89.4873 Q240.8453,88.7763 242.45,88.7763 Q243.2219,88.7763 244.0141,88.9795 Q244.8063,89.1826 245.7203,89.6295 L244.8469,91.7826 Q244.075,91.417 243.5063,91.2341 Q242.9578,91.031 242.45,91.031 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="55.9" x="256.75" y="99.9309">QObject</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="228.15" x2="315.25" y1="111.2826" y2="111.2826"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="228.15" x2="315.25" y1="121.6826" y2="121.6826"/><!--MD5=[4dfa3bfde5407297cdf87f3e284398fb]
+class Pipe--><rect codeLine="26" fill="#2E2E2E" height="54.6" id="Pipe" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="63.7" x="663.65" y="77.4826"/><ellipse cx="679.25" cy="94.3826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M679.25,91.031 Q678.1125,91.031 677.5031,91.8841 Q676.9141,92.7373 676.9141,94.281 Q676.9141,95.8451 677.4625,96.6576 Q678.0109,97.4701 679.25,97.4701 Q679.8594,97.4701 680.4484,97.3279 Q681.0578,97.1857 682.0734,96.8607 L682.0734,99.1154 Q681.2406,99.4607 680.55,99.5826 Q679.8797,99.7248 679.0469,99.7248 Q677.4016,99.7248 676.325,99.0341 Q675.2484,98.3435 674.7406,97.1248 Q674.2328,95.8857 674.2328,94.2607 Q674.2328,92.6763 674.8016,91.4373 Q675.3906,90.1779 676.5078,89.4873 Q677.6453,88.7763 679.25,88.7763 Q680.0219,88.7763 680.8141,88.9795 Q681.6063,89.1826 682.5203,89.6295 L681.6469,91.7826 Q680.875,91.417 680.3063,91.2341 Q679.7578,91.031 679.25,91.031 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="29.9" x="693.55" y="99.9309">Pipe</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="664.95" x2="726.05" y1="111.2826" y2="111.2826"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="664.95" x2="726.05" y1="121.6826" y2="121.6826"/><!--MD5=[c12188df3ea54791903d3030b979bd18]
+class ProcessWrapper--><rect codeLine="33" fill="#2E2E2E" height="132.5058" id="ProcessWrapper" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="184.6" x="544.7" y="775.5826"/><ellipse cx="577.85" cy="792.4826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M577.85,789.131 Q576.7125,789.131 576.1031,789.9841 Q575.5141,790.8373 575.5141,792.381 Q575.5141,793.9451 576.0625,794.7576 Q576.6109,795.5701 577.85,795.5701 Q578.4594,795.5701 579.0484,795.4279 Q579.6578,795.2857 580.6734,794.9607 L580.6734,797.2154 Q579.8406,797.5607 579.15,797.6826 Q578.4797,797.8248 577.6469,797.8248 Q576.0016,797.8248 574.925,797.1341 Q573.8484,796.4435 573.3406,795.2248 Q572.8328,793.9857 572.8328,792.3607 Q572.8328,790.7763 573.4016,789.5373 Q573.9906,788.2779 575.1078,787.5873 Q576.2453,786.8763 577.85,786.8763 Q578.6219,786.8763 579.4141,787.0795 Q580.2063,787.2826 581.1203,787.7295 L580.2469,789.8826 Q579.475,789.517 578.9063,789.3341 Q578.3578,789.131 577.85,789.131 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="111.8" x="596.05" y="798.0309">ProcessWrapper</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="546" x2="728" y1="809.3826" y2="809.3826"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="88.4" x="552.5" y="829.8692">streamID: str</text><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="52" x="552.5" y="849.3456">process</text><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="169" x="552.5" y="868.8221">args: PreStateDetectArgs</text><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="113.1" x="552.5" y="888.2985">timeAdded: float</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="546" x2="728" y1="897.6884" y2="897.6884"/><!--MD5=[7bae3795716a7924cac5f900a24ced80]
+class QBackendHandler--><rect codeLine="40" fill="#2E2E2E" height="444.1291" id="QBackendHandler" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="434.2" x="419.9" y="252.9826"/><ellipse cx="570.7" cy="269.8826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M570.7,266.531 Q569.5625,266.531 568.9531,267.3841 Q568.3641,268.2373 568.3641,269.781 Q568.3641,271.3451 568.9125,272.1576 Q569.4609,272.9701 570.7,272.9701 Q571.3094,272.9701 571.8984,272.8279 Q572.5078,272.6857 573.5234,272.3607 L573.5234,274.6154 Q572.6906,274.9607 572,275.0826 Q571.3297,275.2248 570.4969,275.2248 Q568.8516,275.2248 567.775,274.5341 Q566.6984,273.8435 566.1906,272.6248 Q565.6828,271.3857 565.6828,269.7607 Q565.6828,268.1763 566.2516,266.9373 Q566.8406,265.6779 567.9578,264.9873 Q569.0953,264.2763 570.7,264.2763 Q571.4719,264.2763 572.2641,264.4795 Q573.0563,264.6826 573.9703,265.1295 L573.0969,267.2826 Q572.325,266.917 571.7563,266.7341 Q571.2078,266.531 570.7,266.531 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="123.5" x="591.5" y="275.4309">QBackendHandler</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="421.2" x2="852.8" y1="286.7826" y2="286.7826"/><ellipse cx="434.2" cy="301.0826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" text-decoration="underline" textLength="161.2" x="442" y="307.2692">TAG_BOX_COLOR: tuple</text><ellipse cx="434.2" cy="320.559" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="145.6" x="442" y="326.7456">maxTimeoutSec: float</text><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="430.3" y="336.1355"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="118.3" x="442" y="346.2221">currStreamID: str</text><ellipse cx="434.2" cy="359.5119" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="102.7" x="442" y="365.6985">frontPipe: Pipe</text><ellipse cx="434.2" cy="378.9884" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="98.8" x="442" y="385.175">backPipe: Pipe</text><ellipse cx="434.2" cy="398.4648" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="62.4" x="442" y="404.6514">coms: list</text><ellipse cx="434.2" cy="417.9413" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="128.7" x="442" y="424.1279">comsLock: QMutex</text><ellipse cx="434.2" cy="437.4178" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="331.5" x="442" y="443.6043">procWrapperByPipe: Dict[Pipe, ProcessWrapper]</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="421.2" x2="852.8" y1="452.9942" y2="452.9942"/><ellipse cx="434.2" cy="467.2942" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="404.3" x="442" y="473.4808">updateValveStates(newStates: List[ValveStateData]) «signal»</text><ellipse cx="434.2" cy="486.7707" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="293.8" x="442" y="492.9572">updateImageFeed(frame: QImage) «signal»</text><ellipse cx="434.2" cy="506.2471" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="89.7" x="442" y="512.4337">run() -&gt; None</text><ellipse cx="434.2" cy="525.7236" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="146.9" x="442" y="531.9102">shutdown__() -&gt; None</text><ellipse cx="434.2" cy="545.2" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="172.9" x="442" y="551.3866">handleResults__() -&gt; None</text><ellipse cx="434.2" cy="564.6765" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="379.6" x="442" y="570.8631">updateImageStream__(imageDaata: ImageData) -&gt; None</text><ellipse cx="434.2" cy="584.1529" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="296.4" x="442" y="590.3395">addProcess__(pw: ProcessWrapper) -&gt; None</text><ellipse cx="434.2" cy="603.6294" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="283.4" x="442" y="609.816">addProcess(pw: ProcessWrapper) -&gt; None</text><ellipse cx="434.2" cy="623.1058" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="243.1" x="442" y="629.2924">addStream(streamPath: str) -&gt; None</text><ellipse cx="434.2" cy="642.5823" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="301.6" x="442" y="648.7689">setCurrentImageFeed(streamID: str) -&gt; None</text><ellipse cx="434.2" cy="662.0588" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="133.9" x="442" y="668.2453">shutdown() -&gt; None</text><ellipse cx="434.2" cy="681.5352" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" text-decoration="underline" textLength="256.1" x="442" y="687.7218">createStreamID(streamPath: str) -&gt; str</text><!--MD5=[c4fd95be3042f869f560a296fe7f2f6b]
+class QValveStateDetector--><rect codeLine="64" fill="#2E2E2E" height="229.8881" id="QValveStateDetector" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="332.8" x="41.6" y="360.2326"/><ellipse cx="133.25" cy="377.1326" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M133.25,373.781 Q132.1125,373.781 131.5031,374.6341 Q130.9141,375.4873 130.9141,377.031 Q130.9141,378.5951 131.4625,379.4076 Q132.0109,380.2201 133.25,380.2201 Q133.8594,380.2201 134.4484,380.0779 Q135.0578,379.9357 136.0734,379.6107 L136.0734,381.8654 Q135.2406,382.2107 134.55,382.3326 Q133.8797,382.4748 133.0469,382.4748 Q131.4016,382.4748 130.325,381.7841 Q129.2484,381.0935 128.7406,379.8748 Q128.2328,378.6357 128.2328,377.0107 Q128.2328,375.4263 128.8016,374.1873 Q129.3906,372.9279 130.5078,372.2373 Q131.6453,371.5263 133.25,371.5263 Q134.0219,371.5263 134.8141,371.7295 Q135.6063,371.9326 136.5203,372.3795 L135.6469,374.5326 Q134.875,374.167 134.3063,373.9841 Q133.7578,373.781 133.25,373.781 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="140.4" x="154.05" y="382.6809">QValveStateDetector</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="42.9" x2="373.1" y1="394.0326" y2="394.0326"/><ellipse cx="55.9" cy="408.3326" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="266.5" x="63.7" y="414.5192">valveClasses: Dict[classID, ValveClasses]</text><ellipse cx="55.9" cy="427.809" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="180.7" x="63.7" y="433.9956">valves: Dict[valveID, Valve]</text><ellipse cx="55.9" cy="447.2855" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="217.1" x="63.7" y="453.4721">backHandler: QBackendHandler</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="42.9" x2="373.1" y1="462.8619" y2="462.8619"/><ellipse cx="55.9" cy="477.1619" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="293.8" x="63.7" y="483.3485">valvesUpdated(valves: List[Valves]) «signal»</text><ellipse cx="55.9" cy="496.6384" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="302.9" x="63.7" y="502.825">imageFeedUpdated(frame: QImage) «signal»</text><ellipse cx="55.9" cy="516.1148" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="243.1" x="63.7" y="522.3014">addStream(streamPath: str) -&gt; None</text><ellipse cx="55.9" cy="535.5913" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="133.9" x="63.7" y="541.7779">shutdown() -&gt; None</text><ellipse cx="55.9" cy="555.0678" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="301.6" x="63.7" y="561.2543">setCurrentImageFeed(streamID: str) -&gt; None</text><ellipse cx="55.9" cy="574.5442" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="163.8" x="63.7" y="580.7308">getValves() -&gt; List[Valve]</text><!--MD5=[b7a77081c8cbeffca727ecf28ef4c707]
+reverse link QThread to QBackendHandler--><path d="M559.039,167.5726 C565.253,191.9606 572.793,221.6136 580.723,252.7616 " fill="none" id="QThread-backto-QBackendHandler" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="none" points="550.134,169.4706,552.539,142.0276,567.775,164.9856,550.134,169.4706" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[ee7231f06fcff5141ae65bb2363eb585]
+reverse link QObject to QValveStateDetector--><path d="M262.678,158.1866 C253.643,210.3946 239.434,292.4506 227.76,359.8426 " fill="none" id="QObject-backto-QValveStateDetector" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="none" points="253.721,156.6136,267.124,132.5376,271.648,159.7076,253.721,156.6136" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[e9a94cda5beef8b5f2270628fd862c96]
+reverse link QBackendHandler to QMutex--><path codeLine="78" d="M495.092,247.0806 C472.55,211.0446 451.477,177.3486 435.578,151.9336 " fill="none" id="QBackendHandler-backto-QMutex" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="498.719,252.8786,496.9468,240.1983,495.2824,247.3614,488.1193,245.6969,498.719,252.8786" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[357ad0637a24c5932739bd894f9c9195]
+link Pipe to QBackendHandler--><path codeLine="79" d="M691.288,132.5376 C687.505,156.3926 681.512,194.0666 674.869,235.8226 " fill="none" id="Pipe-to-QBackendHandler" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="672.191,252.6446,678.5443,245.7514,674.6249,237.2356,668.2716,244.1288,672.191,252.6446" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[15551afa356f9e2ed9f89f7e6fb6669f]
+reverse link QBackendHandler to ProcessWrapper--><path codeLine="80" d="M637,714.7296 C637,736.6216 637,757.3306 637,775.3746 " fill="none" id="QBackendHandler-backto-ProcessWrapper" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="637,697.7646,631.8,705.5646,637,713.3646,642.2,705.5646,637,697.7646" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[6d4a972b533ce39b8ce136a622d475bf]
+reverse link QValveStateDetector to QBackendHandler--><path codeLine="82" d="M381.433,475.2826 C394.225,475.2826 407.017,475.2826 419.822,475.2826 " fill="none" id="QValveStateDetector-backto-QBackendHandler" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="374.738,475.2826,386.438,480.4826,381.238,475.2826,386.438,470.0826,374.738,475.2826" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[93f8278237e4ce5407eaf8f805c4c85b]
+@startuml
+!define DARKRED
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+
+package PyQt6 {
+    class QThread {
+        + run()
+    }
+
+    class QMutex {
+        + acquire()
+        + release()
+    }
+
+    class QObject {
+
+    }
+}
+
+package multiprocessing {
+    class Pipe {
+
+    }
+}
+
+package src.GUI.BackInterface {
+    
+    class ProcessWrapper {
+        streamID: str
+        process
+        args: PreStateDetectArgs
+        timeAdded: float
+    }
+
+    class QBackendHandler extends QThread {
+        {static} + TAG_BOX_COLOR: tuple
+        + maxTimeoutSec: float
+        - currStreamID: str
+        + frontPipe: Pipe
+        + backPipe: Pipe
+        + coms: list
+        + comsLock: QMutex
+        + procWrapperByPipe: Dict[Pipe, ProcessWrapper]
+
+        + updateValveStates(newStates: List[ValveStateData]) <<signal>>
+        + updateImageFeed(frame: QImage) <<signal>>
+        + run() -> None 
+        + shutdown__() -> None
+        + handleResults__() -> None
+        + updateImageStream__(imageDaata: ImageData) -> None
+        + addProcess__(pw: ProcessWrapper) -> None
+        + addProcess(pw: ProcessWrapper) -> None
+        + addStream(streamPath: str) -> None
+        + setCurrentImageFeed(streamID: str) -> None
+        + shutdown() -> None
+        {static} + createStreamID(streamPath: str) -> str
+    }
+
+    class QValveStateDetector extends QObject {
+        + valveClasses: Dict[classID, ValveClasses]
+        + valves: Dict[valveID, Valve]
+        + backHandler: QBackendHandler
+
+        + valvesUpdated(valves: List[Valves]) <<signal>>
+        + imageFeedUpdated(frame: QImage) <<signal>>
+        + addStream(streamPath: str) -> None
+        + shutdown() -> None
+        + setCurrentImageFeed(streamID: str) -> None
+        + getValves() -> List[Valve]
+    }
+}
+
+QBackendHandler <- - QMutex
+QBackendHandler *- -up Pipe
+QBackendHandler *- - ProcessWrapper
+
+QValveStateDetector <-right- QBackendHandler
+
+
+
+@enduml
+
+@startuml
+
+
+
+
+
+skinparam stereotypeCBackgroundColor 880000
+
+
+
+
+
+
+
+skinparam backgroundColor 777
+
+
+
+
+
+
+
+skinparam circledCharacter {
+  radius 8
+  fontSize 11
+  fontName Verdana
+}
+
+skinparam class {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+
+  attributeFontColor aaa
+  attributeFontSize 11
+  attributeIconSize 11
+}
+
+
+skinparam actor {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam participant {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam collections {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam SequenceBox{
+    backgroundColor 575757
+  borderColor 767676
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam interface {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam component {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam node {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam database {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam queue {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam usecase {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam activity {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam sequence {
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+
+  lifeLineBorderColor 880000
+  lifeLineBackgroundColor 575757
+}
+
+skinparam boundary {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam control {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam entity {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam state {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+  startColor 880000
+  endColor 330000
+}
+
+
+skinparam object {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+
+skinparam note {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam cloud {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam rectangle {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam storage {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+
+package PyQt6 {
+    class QThread {
+        + run()
+    }
+
+    class QMutex {
+        + acquire()
+        + release()
+    }
+
+    class QObject {
+
+    }
+}
+
+package multiprocessing {
+    class Pipe {
+
+    }
+}
+
+package src.GUI.BackInterface {
+    
+    class ProcessWrapper {
+        streamID: str
+        process
+        args: PreStateDetectArgs
+        timeAdded: float
+    }
+
+    class QBackendHandler extends QThread {
+        {static} + TAG_BOX_COLOR: tuple
+        + maxTimeoutSec: float
+        - currStreamID: str
+        + frontPipe: Pipe
+        + backPipe: Pipe
+        + coms: list
+        + comsLock: QMutex
+        + procWrapperByPipe: Dict[Pipe, ProcessWrapper]
+
+        + updateValveStates(newStates: List[ValveStateData]) <<signal>>
+        + updateImageFeed(frame: QImage) <<signal>>
+        + run() -> None 
+        + shutdown__() -> None
+        + handleResults__() -> None
+        + updateImageStream__(imageDaata: ImageData) -> None
+        + addProcess__(pw: ProcessWrapper) -> None
+        + addProcess(pw: ProcessWrapper) -> None
+        + addStream(streamPath: str) -> None
+        + setCurrentImageFeed(streamID: str) -> None
+        + shutdown() -> None
+        {static} + createStreamID(streamPath: str) -> str
+    }
+
+    class QValveStateDetector extends QObject {
+        + valveClasses: Dict[classID, ValveClasses]
+        + valves: Dict[valveID, Valve]
+        + backHandler: QBackendHandler
+
+        + valvesUpdated(valves: List[Valves]) <<signal>>
+        + imageFeedUpdated(frame: QImage) <<signal>>
+        + addStream(streamPath: str) -> None
+        + shutdown() -> None
+        + setCurrentImageFeed(streamID: str) -> None
+        + getValves() -> List[Valve]
+    }
+}
+
+QBackendHandler <- - QMutex
+QBackendHandler *- -up Pipe
+QBackendHandler *- - ProcessWrapper
+
+QValveStateDetector <-right- QBackendHandler
+
+
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(MIT source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: IE
+--></g></svg>

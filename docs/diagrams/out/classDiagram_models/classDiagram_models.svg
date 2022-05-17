@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="887.9px" preserveAspectRatio="none" style="width:1415px;height:887px;background:#777777;" version="1.1" viewBox="0 0 1415 887" width="1415.7px" zoomAndPan="magnify"><defs/><g><!--MD5=[95296a8e9a7c5c6cefdcaeb3255b90b9]
+cluster src.Backend--><polygon fill="#777777" points="20.8,8.5826,142.7563,8.5826,151.8563,41.1709,1393.6,41.1709,1393.6,879.5826,20.8,879.5826,20.8,8.5826" style="stroke:#000000;stroke-width:1.9500000000000002;"/><line style="stroke:#000000;stroke-width:1.9500000000000002;" x1="20.8" x2="151.8563" y1="41.1709" y2="41.1709"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="114.1563" x="26" y="30.6383">src.Backend</text><!--MD5=[8fc02144da62102b03e679c673953cfa]
+cluster Valve.py--><rect fill="#777777" height="510.9" style="stroke:#000000;stroke-width:1.9500000000000002;" width="353.6" x="1008.8" y="337.4826"/><path d="M1101.75,337.4826 L1101.75,353.1709 L1088.75,366.1709 L1008.8,366.1709 " fill="none" style="stroke:#000000;stroke-width:1.9500000000000002;"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="79.95" x="1012.7" y="358.2383">Valve.py</text><!--MD5=[1876a77740f2a04657811664c8990ee5]
+cluster Dataclasses.py--><rect fill="#777777" height="510.9" style="stroke:#000000;stroke-width:1.9500000000000002;" width="925.6" x="52" y="68.3826"/><path d="M204.2625,68.3826 L204.2625,84.0709 L191.2625,97.0709 L52,97.0709 " fill="none" style="stroke:#000000;stroke-width:1.9500000000000002;"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="139.2625" x="55.9" y="89.1383">Dataclasses.py</text><!--MD5=[fc6ab5a20b49d90cfa4cf9f932de07a2]
+class ValveState--><rect codeLine="12" fill="#2E2E2E" height="113.0294" id="ValveState" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="105.3" x="1235.65" y="416.1326"/><ellipse cx="1251.835" cy="433.0326" fill="#EB937F" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M1254.9022,438.2326 L1248.5647,438.2326 L1248.5647,427.5685 L1254.9022,427.5685 L1254.9022,429.8029 L1251.185,429.8029 L1251.185,431.5904 L1254.6381,431.5904 L1254.6381,433.8045 L1251.185,433.8045 L1251.185,435.9982 L1254.9022,435.9982 L1254.9022,438.2326 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="70.2" x="1266.265" y="438.5809">ValveState</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1236.95" x2="1339.65" y1="449.9326" y2="449.9326"/><ellipse cx="1249.95" cy="464.2326" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="75.4" x="1257.75" y="470.4192">UNKNOWN</text><ellipse cx="1249.95" cy="483.709" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="39" x="1257.75" y="489.8956">OPEN</text><ellipse cx="1249.95" cy="503.1855" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="54.6" x="1257.75" y="509.3721">CLOSED</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1236.95" x2="1339.65" y1="518.7619" y2="518.7619"/><!--MD5=[e5a22725e72eec9b3adff4cc5d577b69]
+class ValveClass--><rect codeLine="18" fill="#2E2E2E" height="171.4587" id="ValveClass" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="159.9" x="1030.25" y="386.8826"/><ellipse cx="1071.005" cy="403.7826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M1071.005,400.431 Q1069.8675,400.431 1069.2581,401.2841 Q1068.6691,402.1373 1068.6691,403.681 Q1068.6691,405.2451 1069.2175,406.0576 Q1069.7659,406.8701 1071.005,406.8701 Q1071.6144,406.8701 1072.2034,406.7279 Q1072.8128,406.5857 1073.8284,406.2607 L1073.8284,408.5154 Q1072.9956,408.8607 1072.305,408.9826 Q1071.6347,409.1248 1070.8019,409.1248 Q1069.1566,409.1248 1068.08,408.4341 Q1067.0034,407.7435 1066.4956,406.5248 Q1065.9878,405.2857 1065.9878,403.6607 Q1065.9878,402.0763 1066.5566,400.8373 Q1067.1456,399.5779 1068.2628,398.8873 Q1069.4003,398.1763 1071.005,398.1763 Q1071.7769,398.1763 1072.5691,398.3795 Q1073.3613,398.5826 1074.2753,399.0295 L1073.4019,401.1826 Q1072.63,400.817 1072.0613,400.6341 Q1071.5128,400.431 1071.005,400.431 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="70.2" x="1090.895" y="409.3309">ValveClass</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1031.55" x2="1188.85" y1="420.6826" y2="420.6826"/><ellipse cx="1044.55" cy="434.9826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="72.8" x="1052.35" y="441.1692">classID: int</text><ellipse cx="1044.55" cy="454.459" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="96.2" x="1052.35" y="460.6456">className: str</text><ellipse cx="1044.55" cy="473.9355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="120.9" x="1052.35" y="480.1221">colorLower: tuple</text><ellipse cx="1044.55" cy="493.4119" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="120.9" x="1052.35" y="499.5985">colorUpper: tuple</text><ellipse cx="1044.55" cy="512.8884" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="111.8" x="1052.35" y="519.075">stateMethod: str</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1031.55" x2="1188.85" y1="528.4648" y2="528.4648"/><ellipse cx="1044.55" cy="542.7648" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="130" x="1052.35" y="548.9514">infoLabelStr() -&gt; str</text><!--MD5=[72bfd782fef577c3c896afe870721fbe]
+class Valve--><rect codeLine="28" fill="#2E2E2E" height="190.9352" id="Valve" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="245.7" x="1030.25" y="636.4826"/><ellipse cx="1130.35" cy="653.3826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M1130.35,650.031 Q1129.2125,650.031 1128.6031,650.8841 Q1128.0141,651.7373 1128.0141,653.281 Q1128.0141,654.8451 1128.5625,655.6576 Q1129.1109,656.4701 1130.35,656.4701 Q1130.9594,656.4701 1131.5484,656.3279 Q1132.1578,656.1857 1133.1734,655.8607 L1133.1734,658.1154 Q1132.3406,658.4607 1131.65,658.5826 Q1130.9797,658.7248 1130.1469,658.7248 Q1128.5016,658.7248 1127.425,658.0341 Q1126.3484,657.3435 1125.8406,656.1248 Q1125.3328,654.8857 1125.3328,653.2607 Q1125.3328,651.6763 1125.9016,650.4373 Q1126.4906,649.1779 1127.6078,648.4873 Q1128.7453,647.7763 1130.35,647.7763 Q1131.1219,647.7763 1131.9141,647.9795 Q1132.7063,648.1826 1133.6203,648.6295 L1132.7469,650.7826 Q1131.975,650.417 1131.4063,650.2341 Q1130.8578,650.031 1130.35,650.031 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="36.4" x="1151.15" y="658.9309">Valve</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1031.55" x2="1274.65" y1="670.2826" y2="670.2826"/><ellipse cx="1044.55" cy="684.5826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="39" x="1052.35" y="690.7692">id: str</text><ellipse cx="1044.55" cy="704.059" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="94.9" x="1052.35" y="710.2456">cls: ValveClass</text><ellipse cx="1044.55" cy="723.5355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="110.5" x="1052.35" y="729.7221">state: ValveState</text><ellipse cx="1044.55" cy="743.0119" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="76.7" x="1052.35" y="749.1985">angle: float</text><ellipse cx="1044.55" cy="762.4884" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="150.8" x="1052.35" y="768.675">lastUpdated: Datetime</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="1031.55" x2="1274.65" y1="778.0648" y2="778.0648"/><ellipse cx="1044.55" cy="792.3648" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="215.8" x="1052.35" y="798.5514">setState(state: ValveState): None</text><ellipse cx="1044.55" cy="811.8413" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="130" x="1052.35" y="818.0279">infoLabelStr() -&gt; str</text><!--MD5=[2416dbe05eaa723dc0ee17e2a1f42ce6]
+class ValveStateData--><rect codeLine="41" fill="#2E2E2E" height="113.0294" id="ValveStateData" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="176.8" x="780" y="156.7826"/><ellipse cx="814.32" cy="173.6826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M814.32,170.331 Q813.1825,170.331 812.5731,171.1841 Q811.9841,172.0373 811.9841,173.581 Q811.9841,175.1451 812.5325,175.9576 Q813.0809,176.7701 814.32,176.7701 Q814.9294,176.7701 815.5184,176.6279 Q816.1278,176.4857 817.1434,176.1607 L817.1434,178.4154 Q816.3106,178.7607 815.62,178.8826 Q814.9497,179.0248 814.1169,179.0248 Q812.4716,179.0248 811.395,178.3341 Q810.3184,177.6435 809.8106,176.4248 Q809.3028,175.1857 809.3028,173.5607 Q809.3028,171.9763 809.8716,170.7373 Q810.4606,169.4779 811.5778,168.7873 Q812.7153,168.0763 814.32,168.0763 Q815.0919,168.0763 815.8841,168.2795 Q816.6763,168.4826 817.5903,168.9295 L816.7169,171.0826 Q815.945,170.717 815.3763,170.5341 Q814.8278,170.331 814.32,170.331 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="101.4" x="832.78" y="179.2309">ValveStateData</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="781.3" x2="955.5" y1="190.5826" y2="190.5826"/><ellipse cx="794.3" cy="204.8826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="76.7" x="802.1" y="211.0692">valveID: str</text><ellipse cx="794.3" cy="224.359" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="146.9" x="802.1" y="230.5456">valveState: ValveState</text><ellipse cx="794.3" cy="243.8355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="76.7" x="802.1" y="250.0221">angle: float</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="781.3" x2="955.5" y1="259.4119" y2="259.4119"/><!--MD5=[6cfd847d89676e5fc6a7b03f6798bec4]
+class BBoxData--><rect codeLine="47" fill="#2E2E2E" height="171.4587" id="BBoxData" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="176.8" x="551.2" y="386.8826"/><ellipse cx="601.9" cy="403.7826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M601.9,400.431 Q600.7625,400.431 600.1531,401.2841 Q599.5641,402.1373 599.5641,403.681 Q599.5641,405.2451 600.1125,406.0576 Q600.6609,406.8701 601.9,406.8701 Q602.5094,406.8701 603.0984,406.7279 Q603.7078,406.5857 604.7234,406.2607 L604.7234,408.5154 Q603.8906,408.8607 603.2,408.9826 Q602.5297,409.1248 601.6969,409.1248 Q600.0516,409.1248 598.975,408.4341 Q597.8984,407.7435 597.3906,406.5248 Q596.8828,405.2857 596.8828,403.6607 Q596.8828,402.0763 597.4516,400.8373 Q598.0406,399.5779 599.1578,398.8873 Q600.2953,398.1763 601.9,398.1763 Q602.6719,398.1763 603.4641,398.3795 Q604.2563,398.5826 605.1703,399.0295 L604.2969,401.1826 Q603.525,400.817 602.9563,400.6341 Q602.4078,400.431 601.9,400.431 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="66.3" x="622.7" y="409.3309">BBoxData</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="552.5" x2="726.7" y1="420.6826" y2="420.6826"/><ellipse cx="565.5" cy="434.9826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="72.8" x="573.3" y="441.1692">classID: int</text><ellipse cx="565.5" cy="454.459" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="68.9" x="573.3" y="460.6456">box: tuple</text><ellipse cx="565.5" cy="473.9355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="91" x="573.3" y="480.1221">tagBox: tuple</text><ellipse cx="565.5" cy="493.4119" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="76.7" x="573.3" y="499.5985">valveID: str</text><ellipse cx="565.5" cy="512.8884" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="146.9" x="573.3" y="519.075">valveState: ValveState</text><ellipse cx="565.5" cy="532.3648" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="76.7" x="573.3" y="538.5514">angle: float</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="552.5" x2="726.7" y1="547.9413" y2="547.9413"/><!--MD5=[60ad7c1821a6f7ec7628eaaf98eef4d8]
+class SharedImage--><rect codeLine="56" fill="#2E2E2E" height="113.0294" id="SharedImage" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="140.4" x="802.1" y="416.1326"/><ellipse cx="824.72" cy="433.0326" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M824.72,429.681 Q823.5825,429.681 822.9731,430.5341 Q822.3841,431.3873 822.3841,432.931 Q822.3841,434.4951 822.9325,435.3076 Q823.4809,436.1201 824.72,436.1201 Q825.3294,436.1201 825.9184,435.9779 Q826.5278,435.8357 827.5434,435.5107 L827.5434,437.7654 Q826.7106,438.1107 826.02,438.2326 Q825.3497,438.3748 824.5169,438.3748 Q822.8716,438.3748 821.795,437.6841 Q820.7184,436.9935 820.2106,435.7748 Q819.7028,434.5357 819.7028,432.9107 Q819.7028,431.3263 820.2716,430.0873 Q820.8606,428.8279 821.9778,428.1373 Q823.1153,427.4263 824.72,427.4263 Q825.4919,427.4263 826.2841,427.6295 Q827.0763,427.8326 827.9903,428.2795 L827.1169,430.4326 Q826.345,430.067 825.7763,429.8841 Q825.2278,429.681 824.72,429.681 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="91" x="840.58" y="438.5809">SharedImage</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="803.4" x2="941.2" y1="449.9326" y2="449.9326"/><ellipse cx="816.4" cy="464.2326" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="98.8" x="824.2" y="470.4192">memName: str</text><ellipse cx="816.4" cy="483.709" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="110.5" x="824.2" y="489.8956">dType: np.dtype</text><ellipse cx="816.4" cy="503.1855" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="83.2" x="824.2" y="509.3721">shape: tuple</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="803.4" x2="941.2" y1="518.7619" y2="518.7619"/><!--MD5=[549e62c21419d62001aa3240e7ca068b]
+class ImageData--><rect codeLine="62" fill="#2E2E2E" height="113.0294" id="ImageData" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="218.4" x="516.1" y="156.7826"/><ellipse cx="583.7" cy="173.6826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M583.7,170.331 Q582.5625,170.331 581.9531,171.1841 Q581.3641,172.0373 581.3641,173.581 Q581.3641,175.1451 581.9125,175.9576 Q582.4609,176.7701 583.7,176.7701 Q584.3094,176.7701 584.8984,176.6279 Q585.5078,176.4857 586.5234,176.1607 L586.5234,178.4154 Q585.6906,178.7607 585,178.8826 Q584.3297,179.0248 583.4969,179.0248 Q581.8516,179.0248 580.775,178.3341 Q579.6984,177.6435 579.1906,176.4248 Q578.6828,175.1857 578.6828,173.5607 Q578.6828,171.9763 579.2516,170.7373 Q579.8406,169.4779 580.9578,168.7873 Q582.0953,168.0763 583.7,168.0763 Q584.4719,168.0763 585.2641,168.2795 Q586.0563,168.4826 586.9703,168.9295 L586.0969,171.0826 Q585.325,170.717 584.7563,170.5341 Q584.2078,170.331 583.7,170.331 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="74.1" x="604.5" y="179.2309">ImageData</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="517.4" x2="733.2" y1="190.5826" y2="190.5826"/><ellipse cx="530.4" cy="204.8826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="88.4" x="538.2" y="211.0692">streamID: str</text><ellipse cx="530.4" cy="224.359" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="188.5" x="538.2" y="230.5456">sharedImage: SharedImage</text><ellipse cx="530.4" cy="243.8355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="156" x="538.2" y="250.0221">bboxes: List[BBoxdata]</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="517.4" x2="733.2" y1="259.4119" y2="259.4119"/><!--MD5=[264c2dcf37cb078f45af9ee8ddfe4949]
+class PreStateDetectArgs--><rect codeLine="68" fill="#2E2E2E" height="132.5058" id="PreStateDetectArgs" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="195" x="273" y="406.3826"/><ellipse cx="302.055" cy="423.2826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M302.055,419.931 Q300.9175,419.931 300.3081,420.7841 Q299.7191,421.6373 299.7191,423.181 Q299.7191,424.7451 300.2675,425.5576 Q300.8159,426.3701 302.055,426.3701 Q302.6644,426.3701 303.2534,426.2279 Q303.8628,426.0857 304.8784,425.7607 L304.8784,428.0154 Q304.0456,428.3607 303.355,428.4826 Q302.6847,428.6248 301.8519,428.6248 Q300.2066,428.6248 299.13,427.9341 Q298.0534,427.2435 297.5456,426.0248 Q297.0378,424.7857 297.0378,423.1607 Q297.0378,421.5763 297.6066,420.3373 Q298.1956,419.0779 299.3128,418.3873 Q300.4503,417.6763 302.055,417.6763 Q302.8269,417.6763 303.6191,417.8795 Q304.4113,418.0826 305.3253,418.5295 L304.4519,420.6826 Q303.68,420.317 303.1113,420.1341 Q302.5628,419.931 302.055,419.931 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="131.3" x="319.345" y="428.8309">PreStateDetectArgs</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="274.3" x2="466.7" y1="440.1826" y2="440.1826"/><ellipse cx="287.3" cy="454.4826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="104" x="295.1" y="460.6692">streamPath: str</text><ellipse cx="287.3" cy="473.959" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="88.4" x="295.1" y="480.1456">streamID: str</text><ellipse cx="287.3" cy="493.4355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="165.1" x="295.1" y="499.6221">confidValveThresh: float</text><ellipse cx="287.3" cy="512.9119" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="153.4" x="295.1" y="519.0985">confidTagThresh: float</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="274.3" x2="466.7" y1="528.4884" y2="528.4884"/><!--MD5=[3362979d2773056bf295459dcbb193a7]
+class PreStateDetectData--><rect codeLine="75" fill="#2E2E2E" height="190.9352" id="PreStateDetectData" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="198.9" x="271.05" y="117.7826"/><ellipse cx="301.86" cy="134.6826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M301.86,131.331 Q300.7225,131.331 300.1131,132.1841 Q299.5241,133.0373 299.5241,134.581 Q299.5241,136.1451 300.0725,136.9576 Q300.6209,137.7701 301.86,137.7701 Q302.4694,137.7701 303.0584,137.6279 Q303.6678,137.4857 304.6834,137.1607 L304.6834,139.4154 Q303.8506,139.7607 303.16,139.8826 Q302.4897,140.0248 301.6569,140.0248 Q300.0116,140.0248 298.935,139.3341 Q297.8584,138.6435 297.3506,137.4248 Q296.8428,136.1857 296.8428,134.5607 Q296.8428,132.9763 297.4116,131.7373 Q298.0006,130.4779 299.1178,129.7873 Q300.2553,129.0763 301.86,129.0763 Q302.6319,129.0763 303.4241,129.2795 Q304.2163,129.4826 305.1303,129.9295 L304.2569,132.0826 Q303.485,131.717 302.9163,131.5341 Q302.3678,131.331 301.86,131.331 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="131.3" x="319.54" y="140.2309">PreStateDetectData</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="272.35" x2="468.65" y1="151.5826" y2="151.5826"/><ellipse cx="285.35" cy="165.8826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="113.1" x="293.15" y="172.0692">mainActive: bool</text><ellipse cx="285.35" cy="185.359" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="91" x="293.15" y="191.5456">stActive: bool</text><ellipse cx="285.35" cy="204.8355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="119.6" x="293.15" y="211.0221">activateFlag: bool</text><ellipse cx="285.35" cy="224.3119" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="122.2" x="293.15" y="230.4985">finishedFlag: bool</text><ellipse cx="285.35" cy="243.7884" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="136.5" x="293.15" y="249.975">shutdownFlag: bool</text><ellipse cx="285.35" cy="263.2648" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="78" x="293.15" y="269.4514">valveModel</text><ellipse cx="285.35" cy="282.7413" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="169" x="293.15" y="288.9279">args: PreStateDetectArgs</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="272.35" x2="468.65" y1="298.3178" y2="298.3178"/><!--MD5=[0f5acfd16f73597386abd5c509de0087]
+class StateDetectData--><rect codeLine="85" fill="#2E2E2E" height="132.5058" id="StateDetectData" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="152.1" x="73.45" y="147.0326"/><ellipse cx="93.73" cy="163.9326" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M93.73,160.581 Q92.5925,160.581 91.9831,161.4341 Q91.3941,162.2873 91.3941,163.831 Q91.3941,165.3951 91.9425,166.2076 Q92.4909,167.0201 93.73,167.0201 Q94.3394,167.0201 94.9284,166.8779 Q95.5378,166.7357 96.5534,166.4107 L96.5534,168.6654 Q95.7206,169.0107 95.03,169.1326 Q94.3597,169.2748 93.5269,169.2748 Q91.8816,169.2748 90.805,168.5841 Q89.7284,167.8935 89.2206,166.6748 Q88.7128,165.4357 88.7128,163.8107 Q88.7128,162.2263 89.2816,160.9873 Q89.8706,159.7279 90.9878,159.0373 Q92.1253,158.3263 93.73,158.3263 Q94.5019,158.3263 95.2941,158.5295 Q96.0862,158.7326 97.0003,159.1795 L96.1269,161.3326 Q95.355,160.967 94.7863,160.7841 Q94.2378,160.581 93.73,160.581 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="107.9" x="109.07" y="169.4809">StateDetectData</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="74.75" x2="224.25" y1="180.8326" y2="180.8326"/><ellipse cx="87.75" cy="195.1326" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="113.1" x="95.55" y="201.3192">mainActive: bool</text><ellipse cx="87.75" cy="214.609" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="91" x="95.55" y="220.7956">stActive: bool</text><ellipse cx="87.75" cy="234.0855" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="119.6" x="95.55" y="240.2721">activateFlag: bool</text><ellipse cx="87.75" cy="253.5619" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="122.2" x="95.55" y="259.7485">finishedFlag: bool</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="74.75" x2="224.25" y1="269.1384" y2="269.1384"/><!--MD5=[609236a6f63f5900b9994c219a188b58]
+link ValveClass to Valve--><path codeLine="95" d="M1124.37,558.7686 C1128.153,581.4666 1132.3,606.2186 1136.213,629.6966 " fill="none" id="ValveClass-to-Valve" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="1137.318,636.2876,1140.5063,623.8874,1136.2404,629.8775,1130.2502,625.6116,1137.318,636.2876" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[8e68a2ca142da79784f02706b1962b33]
+link ValveState to Valve--><path codeLine="96" d="M1258.959,529.6876 C1243.476,559.1066 1223.989,596.1176 1205.971,630.3336 " fill="none" id="ValveState-to-Valve" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="1202.851,636.2486,1212.8986,628.3129,1205.8761,630.4954,1203.6936,623.4728,1202.851,636.2486" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[38cc456672dc9aa563c1b01f0390cd40]
+reverse link ValveStateData to ValveState--><path codeLine="97" d="M963.716,225.8516 C1038.765,239.0076 1142.167,267.2046 1212.9,327.0826 C1240.304,350.2746 1259.076,385.9726 1271.036,416.0546 " fill="none" id="ValveStateData-backto-ValveState" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="957.008,224.7076,967.664,231.8054,963.415,225.8033,969.4171,221.5542,957.008,224.7076" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[4e980590a15621210e2e16f50657662f]
+reverse link BBoxData to ValveState--><path codeLine="98" d="M701.415,381.5006 C727.922,352.3416 761.943,325.5876 801.45,317.9826 C843.856,309.8186 1147.744,309.8186 1190.15,317.9826 C1235.598,326.7316 1261.091,375.5076 1274.624,415.9896 " fill="none" id="BBoxData-backto-ValveState" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="696.891,386.5836,708.5405,381.2715,701.2001,381.7172,700.7544,374.3768,696.891,386.5836" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[02809394a1bdf212992e81f54417b6ee]
+reverse link ImageData to SharedImage--><path codeLine="99" d="M695.448,274.8356 C713.7,291.3066 733.031,309.4806 750.1,327.0826 C777.413,355.2406 805.857,388.5596 828.412,416.0806 " fill="none" id="ImageData-backto-SharedImage" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="690.339,270.2336,695.6041,281.9044,695.1879,274.5623,702.5301,274.1462,690.339,270.2336" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[5e7bcc63638edc0addae57c32870d741]
+reverse link ImageData to BBoxData--><path codeLine="100" d="M629.356,287.3546 C631.072,318.2166 633.087,354.3956 634.868,386.4796 " fill="none" id="ImageData-backto-BBoxData" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="628.407,270.3376,623.6526,278.4169,629.2818,285.913,634.0362,277.8337,628.407,270.3376" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[3ad259b6ac6e8c0825a70b5a8e2bdea7]
+reverse link PreStateDetectData to PreStateDetectArgs--><path codeLine="102" d="M370.5,316.0066 C370.5,346.4006 370.5,378.9266 370.5,406.3176 " fill="none" id="PreStateDetectData-backto-PreStateDetectArgs" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="370.5,309.1426,365.3,320.8426,370.5,315.6426,375.7,320.8426,370.5,309.1426" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[0f068ccc9c9b743896adfcefc61314ed]
+link Valve to SharedImage--><!--MD5=[8bad5a5a1e57f70d32bf5406e18dc6f8]
+@startuml
+!define DARKRED
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+package src.Backend {
+
+    package Valve.py <<Frame>> {
+        enum ValveState {
+            + UNKNOWN
+            + OPEN 
+            + CLOSED
+        }
+
+        class ValveClass {
+            + classID: int 
+            + className: str 
+            + colorLower: tuple
+            + colorUpper: tuple
+            + stateMethod: str
+
+            + infoLabelStr() -> str
+        }
+
+        class Valve {
+            + id: str
+            + cls: ValveClass
+            + state: ValveState
+            + angle: float
+            + lastUpdated: Datetime
+
+            + setState(state: ValveState): None
+            + infoLabelStr() -> str
+        }
+    }
+
+    package Dataclasses.py <<Frame>> {
+        class ValveStateData {
+            + valveID: str
+            + valveState: ValveState
+            + angle: float 
+        }
+
+        class BBoxData {
+            + classID: int
+            + box: tuple
+            + tagBox: tuple
+            + valveID: str
+            + valveState: ValveState
+            + angle: float
+        }
+
+        class SharedImage {
+            + memName: str
+            + dType: np.dtype
+            + shape: tuple
+        }
+
+        class ImageData {
+            + streamID: str
+            + sharedImage: SharedImage
+            + bboxes: List[BBoxdata]
+        }
+
+        class PreStateDetectArgs {
+            + streamPath: str
+            + streamID: str
+            + confidValveThresh: float
+            + confidTagThresh: float
+        }
+
+        class PreStateDetectData {
+            + mainActive: bool
+            + stActive: bool 
+            + activateFlag: bool
+            + finishedFlag: bool
+            + shutdownFlag: bool
+            + valveModel
+            + args: PreStateDetectArgs
+        }
+
+        class StateDetectData {
+            + mainActive: bool
+            + stActive: bool 
+            + activateFlag: bool
+            + finishedFlag: bool
+        }
+
+    }
+}
+
+Valve <- -up ValveClass
+Valve <- -up ValveState
+ValveStateData <- -ValveState
+BBoxData <- - ValveState
+ImageData <- - SharedImage
+ImageData *- - BBoxData
+
+PreStateDetectData <- - PreStateDetectArgs
+
+Valve -[hidden]- SharedImage
+
+@enduml
+
+@startuml
+
+
+
+
+
+skinparam stereotypeCBackgroundColor 880000
+
+
+
+
+
+
+
+skinparam backgroundColor 777
+
+
+
+
+
+
+
+skinparam circledCharacter {
+  radius 8
+  fontSize 11
+  fontName Verdana
+}
+
+skinparam class {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+
+  attributeFontColor aaa
+  attributeFontSize 11
+  attributeIconSize 11
+}
+
+
+skinparam actor {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam participant {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam collections {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam SequenceBox{
+    backgroundColor 575757
+  borderColor 767676
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam interface {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam component {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam node {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam database {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam queue {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam usecase {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam activity {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam sequence {
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+
+  lifeLineBorderColor 880000
+  lifeLineBackgroundColor 575757
+}
+
+skinparam boundary {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam control {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam entity {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam state {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+  startColor 880000
+  endColor 330000
+}
+
+
+skinparam object {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+
+skinparam note {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam cloud {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam rectangle {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam storage {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+package src.Backend {
+
+    package Valve.py <<Frame>> {
+        enum ValveState {
+            + UNKNOWN
+            + OPEN 
+            + CLOSED
+        }
+
+        class ValveClass {
+            + classID: int 
+            + className: str 
+            + colorLower: tuple
+            + colorUpper: tuple
+            + stateMethod: str
+
+            + infoLabelStr() -> str
+        }
+
+        class Valve {
+            + id: str
+            + cls: ValveClass
+            + state: ValveState
+            + angle: float
+            + lastUpdated: Datetime
+
+            + setState(state: ValveState): None
+            + infoLabelStr() -> str
+        }
+    }
+
+    package Dataclasses.py <<Frame>> {
+        class ValveStateData {
+            + valveID: str
+            + valveState: ValveState
+            + angle: float 
+        }
+
+        class BBoxData {
+            + classID: int
+            + box: tuple
+            + tagBox: tuple
+            + valveID: str
+            + valveState: ValveState
+            + angle: float
+        }
+
+        class SharedImage {
+            + memName: str
+            + dType: np.dtype
+            + shape: tuple
+        }
+
+        class ImageData {
+            + streamID: str
+            + sharedImage: SharedImage
+            + bboxes: List[BBoxdata]
+        }
+
+        class PreStateDetectArgs {
+            + streamPath: str
+            + streamID: str
+            + confidValveThresh: float
+            + confidTagThresh: float
+        }
+
+        class PreStateDetectData {
+            + mainActive: bool
+            + stActive: bool 
+            + activateFlag: bool
+            + finishedFlag: bool
+            + shutdownFlag: bool
+            + valveModel
+            + args: PreStateDetectArgs
+        }
+
+        class StateDetectData {
+            + mainActive: bool
+            + stActive: bool 
+            + activateFlag: bool
+            + finishedFlag: bool
+        }
+
+    }
+}
+
+Valve <- -up ValveClass
+Valve <- -up ValveState
+ValveStateData <- -ValveState
+BBoxData <- - ValveState
+ImageData <- - SharedImage
+ImageData *- - BBoxData
+
+PreStateDetectData <- - PreStateDetectArgs
+
+Valve -[hidden]- SharedImage
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(MIT source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: IE
+--></g></svg>

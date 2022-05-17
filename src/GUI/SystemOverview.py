@@ -19,9 +19,3 @@ class SystemOverview(QWidget):
     def setImage(self, img: QImage):
         self.ui.image.setPixmap(QPixmap.fromImage(img))
 
-    def loadStream(self):
-        pass
-
-    def setStream(self):
-        pass
-

@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="1184.3px" preserveAspectRatio="none" style="width:1402px;height:1184px;background:#777777;" version="1.1" viewBox="0 0 1402 1184" width="1402.7px" zoomAndPan="magnify"><defs/><g><!--MD5=[a06ed4f783d893720bea63c038f4e35d]
+cluster src.GUI--><polygon fill="#777777" points="30.992,8.5826,107.7733,8.5826,116.8733,41.1709,1363.492,41.1709,1363.492,1175.9826,30.992,1175.9826,30.992,8.5826" style="stroke:#000000;stroke-width:1.9500000000000002;"/><line style="stroke:#000000;stroke-width:1.9500000000000002;" x1="30.992" x2="116.8733" y1="41.1709" y2="41.1709"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="68.9813" x="36.192" y="30.6383">src.GUI</text><!--MD5=[4e356e007fc6daa57ab7197a292211b4]
+cluster PyQt6--><polygon fill="#777777" points="549.692,68.3826,614.9358,68.3826,624.0358,100.9709,865.592,100.9709,865.592,193.1826,549.692,193.1826,549.692,68.3826" style="stroke:#000000;stroke-width:1.9500000000000002;"/><line style="stroke:#000000;stroke-width:1.9500000000000002;" x1="549.692" x2="624.0358" y1="100.9709" y2="100.9709"/><text fill="#000000" font-family="sans-serif" font-size="18.2" font-weight="bold" lengthAdjust="spacing" textLength="57.4438" x="554.892" y="90.4383">PyQt6</text><!--MD5=[6b007dbbf60004202ab6ee52918486ce]
+class Global_Functions--><rect codeLine="22" fill="#2E2E2E" height="93.5529" id="Global_Functions" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="310.7" x="198.042" y="98.2826"/><ellipse cx="290.342" cy="115.1826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M290.342,111.831 Q289.2045,111.831 288.5951,112.6841 Q288.0061,113.5373 288.0061,115.081 Q288.0061,116.6451 288.5545,117.4576 Q289.1029,118.2701 290.342,118.2701 Q290.9514,118.2701 291.5404,118.1279 Q292.1498,117.9857 293.1654,117.6607 L293.1654,119.9154 Q292.3326,120.2607 291.642,120.3826 Q290.9717,120.5248 290.1389,120.5248 Q288.4936,120.5248 287.417,119.8341 Q286.3404,119.1435 285.8326,117.9248 Q285.3248,116.6857 285.3248,115.0607 Q285.3248,113.4763 285.8936,112.2373 Q286.4826,110.9779 287.5998,110.2873 Q288.7373,109.5763 290.342,109.5763 Q291.1139,109.5763 291.9061,109.7795 Q292.6983,109.9826 293.6123,110.4295 L292.7389,112.5826 Q291.967,112.217 291.3983,112.0341 Q290.8498,111.831 290.342,111.831 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="117" x="311.142" y="120.7309">Global_Functions</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="199.342" x2="507.442" y1="132.0826" y2="132.0826"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="199.342" x2="507.442" y1="142.4826" y2="142.4826"/><ellipse cx="212.342" cy="156.7826" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="280.8" x="220.142" y="162.9692">toImage(img: numpy.ndarray) -&gt; QImage</text><ellipse cx="212.342" cy="176.259" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="278.2" x="220.142" y="182.4456">toQPixmap(img: np.ndarray) -&gt; QPixmap</text><!--MD5=[e6c809820d88acc3564faeb20394ab9d]
+class MainWindow--><rect codeLine="83" fill="#2E2E2E" height="190.9352" id="MainWindow" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="458.9" x="835.042" y="568.2326"/><ellipse cx="1015.092" cy="585.1326" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M1015.092,581.781 Q1013.9545,581.781 1013.3451,582.6341 Q1012.7561,583.4873 1012.7561,585.031 Q1012.7561,586.5951 1013.3045,587.4076 Q1013.8529,588.2201 1015.092,588.2201 Q1015.7014,588.2201 1016.2904,588.0779 Q1016.8998,587.9357 1017.9154,587.6107 L1017.9154,589.8654 Q1017.0826,590.2107 1016.392,590.3326 Q1015.7217,590.4748 1014.8889,590.4748 Q1013.2436,590.4748 1012.167,589.7841 Q1011.0904,589.0935 1010.5826,587.8748 Q1010.0748,586.6357 1010.0748,585.0107 Q1010.0748,583.4263 1010.6436,582.1873 Q1011.2326,580.9279 1012.3498,580.2373 Q1013.4873,579.5263 1015.092,579.5263 Q1015.8639,579.5263 1016.6561,579.7295 Q1017.4483,579.9326 1018.3623,580.3795 L1017.4889,582.5326 Q1016.717,582.167 1016.1483,581.9841 Q1015.5998,581.781 1015.092,581.781 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="89.7" x="1035.892" y="590.6809">MainWindow</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="836.342" x2="1292.642" y1="602.0326" y2="602.0326"/><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="845.442" y="612.4326"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="131.3" x="857.142" y="622.5192">ui: Ui_MainWindow</text><ellipse cx="849.342" cy="635.809" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="275.6" x="857.142" y="641.9956">valveStateDetector: QValveStateDetector</text><ellipse cx="849.342" cy="655.2855" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="189.8" x="857.142" y="661.4721">tabContainer: TabContainer</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="836.342" x2="1292.642" y1="670.8619" y2="670.8619"/><ellipse cx="849.342" cy="685.1619" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="429" x="857.142" y="691.3485">setSizeRelToScreen(relW: float, relH: float, center: bool) -&gt; None</text><ellipse cx="849.342" cy="704.6384" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="327.6" x="857.142" y="710.825">setScreenSize(cx: int, cy: int, w: int, h: int) -&gt; bool</text><ellipse cx="849.342" cy="724.1148" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="336.7" x="857.142" y="730.3014">setTheme(filePath: str, app: QApplication) -&gt; bool:</text><ellipse cx="849.342" cy="743.5913" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="189.8" x="857.142" y="749.7779">shutdownCleanup() -&gt; None</text><!--MD5=[e226e56f7280d70109489ee317bc21c2]
+class InfoBubble--><rect codeLine="31" fill="#2E2E2E" height="93.5529" id="InfoBubble" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="202.8" x="891.592" y="983.5826"/><ellipse cx="950.092" cy="1000.4826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M950.092,997.131 Q948.9545,997.131 948.3451,997.9841 Q947.7561,998.8373 947.7561,1000.381 Q947.7561,1001.9451 948.3045,1002.7576 Q948.8529,1003.5701 950.092,1003.5701 Q950.7014,1003.5701 951.2904,1003.4279 Q951.8998,1003.2857 952.9154,1002.9607 L952.9154,1005.2154 Q952.0826,1005.5607 951.392,1005.6826 Q950.7217,1005.8248 949.8889,1005.8248 Q948.2436,1005.8248 947.167,1005.1341 Q946.0904,1004.4435 945.5826,1003.2248 Q945.0748,1001.9857 945.0748,1000.3607 Q945.0748,998.7763 945.6436,997.5373 Q946.2326,996.2779 947.3498,995.5873 Q948.4873,994.8763 950.092,994.8763 Q950.8639,994.8763 951.6561,995.0795 Q952.4483,995.2826 953.3623,995.7295 L952.4889,997.8826 Q951.717,997.517 951.1483,997.3341 Q950.5998,997.131 950.092,997.131 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="76.7" x="970.892" y="1006.0309">InfoBubble</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="892.892" x2="1093.092" y1="1017.3826" y2="1017.3826"/><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="901.992" y="1027.7826"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="118.3" x="913.692" y="1037.8692">ui: Ui_InfoBubble</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="892.892" x2="1093.092" y1="1047.259" y2="1047.259"/><ellipse cx="905.892" cy="1061.559" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="172.9" x="913.692" y="1067.7456">setValve(v: Valve) -&gt; None</text><!--MD5=[b7d7de6c861c4fd34a660c748bf36e24]
+class ValveOverview--><rect codeLine="36" fill="#2E2E2E" height="327.2704" id="ValveOverview" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="348.4" x="440.492" y="499.9826"/><ellipse cx="559.442" cy="516.8826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M559.442,513.531 Q558.3045,513.531 557.6951,514.3841 Q557.1061,515.2373 557.1061,516.781 Q557.1061,518.3451 557.6545,519.1576 Q558.2029,519.9701 559.442,519.9701 Q560.0514,519.9701 560.6404,519.8279 Q561.2498,519.6857 562.2654,519.3607 L562.2654,521.6154 Q561.4326,521.9607 560.742,522.0826 Q560.0717,522.2248 559.2389,522.2248 Q557.5936,522.2248 556.517,521.5341 Q555.4404,520.8435 554.9326,519.6248 Q554.4248,518.3857 554.4248,516.7607 Q554.4248,515.1763 554.9936,513.9373 Q555.5826,512.6779 556.6998,511.9873 Q557.8373,511.2763 559.442,511.2763 Q560.2139,511.2763 561.0061,511.4795 Q561.7982,511.6826 562.7123,512.1295 L561.8389,514.2826 Q561.067,513.917 560.4983,513.7341 Q559.9498,513.531 559.442,513.531 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="101.4" x="580.242" y="522.4309">ValveOverview</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="441.792" x2="787.592" y1="533.7826" y2="533.7826"/><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="450.892" y="544.1826"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="143" x="462.592" y="554.2692">ui: Ui_ValveOverview</text><ellipse cx="454.792" cy="567.559" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="159.9" x="462.592" y="573.7456">infoBubble: InfoBubble</text><ellipse cx="454.792" cy="587.0355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="211.9" x="462.592" y="593.2221">infoBubbleWindowValve: Valve</text><ellipse cx="454.792" cy="606.5119" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="178.1" x="462.592" y="612.6985">infoBubbleTimeoutMS: int</text><ellipse cx="454.792" cy="625.9884" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="124.8" x="462.592" y="632.175">infoTimer: QTimer</text><ellipse cx="454.792" cy="645.4648" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="235.3" x="462.592" y="651.6514">valveMappings: Dict[str, ValveGUI]</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="441.792" x2="787.592" y1="661.0413" y2="661.0413"/><ellipse cx="454.792" cy="675.3413" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="318.5" x="462.592" y="681.5279">showValveInfo(item: QListWidgetItem) -&gt; None</text><ellipse cx="454.792" cy="694.8178" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="159.9" x="462.592" y="701.0043">hideValveInfo() -&gt; None</text><rect fill="#F24D5C" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="450.892" y="710.3942"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="297.7" x="462.592" y="720.4808">__show_context_menu(pos: QPoint) -&gt; None</text><ellipse cx="454.792" cy="733.7707" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="222.3" x="462.592" y="739.9572">showValveInfoWindow() -&gt; None</text><ellipse cx="454.792" cy="753.2471" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="276.9" x="462.592" y="759.4337">setValves(valves: Iterable[Valve]) -&gt; None</text><ellipse cx="454.792" cy="772.7236" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="304.2" x="462.592" y="778.9102">renderValves(valves: Iterable[Valve]) -&gt; None</text><ellipse cx="454.792" cy="792.2" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="310.7" x="462.592" y="798.3866">setValveStates(valves: Iterable[Valve]) -&gt; None</text><ellipse cx="454.792" cy="811.6765" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="241.8" x="462.592" y="817.8631">reserveGuiItems(count: int) -&gt; None</text><!--MD5=[4f2ce074b1cf57245d2e4ab91579532d]
+class ValveGUI--><rect codeLine="54" fill="#2E2E2E" height="249.3645" id="ValveGUI" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="408.2" x="189.592" y="905.5826"/><ellipse cx="357.942" cy="922.4826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M357.942,919.131 Q356.8045,919.131 356.1951,919.9841 Q355.6061,920.8373 355.6061,922.381 Q355.6061,923.9451 356.1545,924.7576 Q356.7029,925.5701 357.942,925.5701 Q358.5514,925.5701 359.1404,925.4279 Q359.7498,925.2857 360.7654,924.9607 L360.7654,927.2154 Q359.9326,927.5607 359.242,927.6826 Q358.5717,927.8248 357.7389,927.8248 Q356.0936,927.8248 355.017,927.1341 Q353.9404,926.4435 353.4326,925.2248 Q352.9248,923.9857 352.9248,922.3607 Q352.9248,920.7763 353.4936,919.5373 Q354.0826,918.2779 355.1998,917.5873 Q356.3373,916.8763 357.942,916.8763 Q358.7139,916.8763 359.5061,917.0795 Q360.2983,917.2826 361.2123,917.7295 L360.3389,919.8826 Q359.567,919.517 358.9983,919.3341 Q358.4498,919.131 357.942,919.131 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="62.4" x="378.742" y="928.0309">ValveGUI</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="190.892" x2="596.492" y1="939.3826" y2="939.3826"/><ellipse cx="203.892" cy="953.6826" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" text-decoration="underline" textLength="135.2" x="211.692" y="959.8692">VALVE_IMAGES: dict</text><ellipse cx="203.892" cy="973.159" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" text-decoration="underline" textLength="139.1" x="211.692" y="979.3456">VALVE_COLORS: dict</text><ellipse cx="203.892" cy="992.6355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" text-decoration="underline" textLength="183.3" x="211.692" y="998.8221">VALVE_COLORS_BGRA: dict</text><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="199.992" y="1008.2119"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="104" x="211.692" y="1018.2985">ui: Ui_ValveGUI</text><ellipse cx="203.892" cy="1031.5884" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="79.3" x="211.692" y="1037.775">valve: Valve</text><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="199.992" y="1047.1648"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="137.8" x="211.692" y="1057.2514">imgState: ValveState</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="190.892" x2="596.492" y1="1066.6413" y2="1066.6413"/><ellipse cx="203.892" cy="1080.9413" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="172.9" x="211.692" y="1087.1279">setValve(v: Valve) -&gt; None</text><ellipse cx="203.892" cy="1100.4178" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="237.9" x="211.692" y="1106.6043">setImage(state: ValveState) -&gt; None</text><ellipse cx="203.892" cy="1119.8942" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="98.8" x="211.692" y="1126.0808">reset() -&gt; None</text><ellipse cx="203.892" cy="1139.3707" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" text-decoration="underline" textLength="378.3" x="211.692" y="1145.5572">loadValveImages(imgData: Dict[ValveState, str]) -&gt; None</text><!--MD5=[ecd7648566d08d1655719f1c082cd432]
+class TabContainer--><rect codeLine="68" fill="#2E2E2E" height="151.9823" id="TabContainer" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="430.3" x="270.842" y="269.8826"/><ellipse cx="435.292" cy="286.7826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M435.292,283.431 Q434.1545,283.431 433.5451,284.2841 Q432.9561,285.1373 432.9561,286.681 Q432.9561,288.2451 433.5045,289.0576 Q434.0529,289.8701 435.292,289.8701 Q435.9014,289.8701 436.4904,289.7279 Q437.0998,289.5857 438.1154,289.2607 L438.1154,291.5154 Q437.2826,291.8607 436.592,291.9826 Q435.9217,292.1248 435.0889,292.1248 Q433.4436,292.1248 432.367,291.4341 Q431.2904,290.7435 430.7826,289.5248 Q430.2748,288.2857 430.2748,286.6607 Q430.2748,285.0763 430.8436,283.8373 Q431.4326,282.5779 432.5498,281.8873 Q433.6873,281.1763 435.292,281.1763 Q436.0639,281.1763 436.8561,281.3795 Q437.6483,281.5826 438.5623,282.0295 L437.6889,284.1826 Q436.917,283.817 436.3483,283.6341 Q435.7998,283.431 435.292,283.431 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="92.3" x="456.092" y="292.3309">TabContainer</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="272.142" x2="699.842" y1="303.6826" y2="303.6826"/><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="281.242" y="314.0826"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="133.9" x="292.942" y="324.1692">ui: Ui_TabContainer</text><ellipse cx="285.142" cy="337.459" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="209.3" x="292.942" y="343.6456">valveOverview: ValveOverview</text><ellipse cx="285.142" cy="356.9355" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="232.7" x="292.942" y="363.1221">systemOverview: SystemOverview</text><ellipse cx="285.142" cy="376.4119" fill="none" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="275.6" x="292.942" y="382.5985">valveStateDetector: QValveStateDetector</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="272.142" x2="699.842" y1="391.9884" y2="391.9884"/><ellipse cx="285.142" cy="406.2884" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="400.4" x="292.942" y="412.475">replaceTab(index: int, newPage: QWidget, title: str) -&gt; None</text><!--MD5=[0f16525831fafb2ac3c75e6768803d1e]
+class SystemOverview--><rect codeLine="77" fill="#2E2E2E" height="93.5529" id="SystemOverview" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="245.7" x="100.542" y="616.9826"/><ellipse cx="162.292" cy="633.8826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M162.292,630.531 Q161.1545,630.531 160.5451,631.3841 Q159.9561,632.2373 159.9561,633.781 Q159.9561,635.3451 160.5045,636.1576 Q161.0529,636.9701 162.292,636.9701 Q162.9014,636.9701 163.4904,636.8279 Q164.0998,636.6857 165.1154,636.3607 L165.1154,638.6154 Q164.2826,638.9607 163.592,639.0826 Q162.9217,639.2248 162.0889,639.2248 Q160.4436,639.2248 159.367,638.5341 Q158.2904,637.8435 157.7826,636.6248 Q157.2748,635.3857 157.2748,633.7607 Q157.2748,632.1763 157.8436,630.9373 Q158.4326,629.6779 159.5498,628.9873 Q160.6873,628.2763 162.292,628.2763 Q163.0639,628.2763 163.8561,628.4795 Q164.6483,628.6826 165.5623,629.1295 L164.6889,631.2826 Q163.917,630.917 163.3483,630.7341 Q162.7998,630.531 162.292,630.531 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="113.1" x="183.092" y="639.4309">SystemOverview</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="101.842" x2="344.942" y1="650.7826" y2="650.7826"/><rect fill="none" height="7.8" style="stroke:#C82930;stroke-width:1.3;" width="7.8" x="110.942" y="661.1826"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="154.7" x="122.642" y="671.2692">ui: Ui_SystemOverview</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="101.842" x2="344.942" y1="680.659" y2="680.659"/><ellipse cx="114.842" cy="694.959" fill="#84BE84" rx="3.9" ry="3.9" style="stroke:#038048;stroke-width:1.3;"/><text fill="#AAAAAA" font-family="sans-serif" font-size="14.3" lengthAdjust="spacing" textLength="215.8" x="122.642" y="701.1456">setImage(img: QImage) -&gt; None</text><!--MD5=[3e3f16721f1fb369e45a968cb01568b2]
+class QWidget--><rect codeLine="12" fill="#2E2E2E" height="54.6" id="QWidget" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="93.6" x="570.492" y="117.7826"/><ellipse cx="586.092" cy="134.6826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M586.092,131.331 Q584.9545,131.331 584.3451,132.1841 Q583.7561,133.0373 583.7561,134.581 Q583.7561,136.1451 584.3045,136.9576 Q584.8529,137.7701 586.092,137.7701 Q586.7014,137.7701 587.2904,137.6279 Q587.8998,137.4857 588.9154,137.1607 L588.9154,139.4154 Q588.0826,139.7607 587.392,139.8826 Q586.7217,140.0248 585.8889,140.0248 Q584.2436,140.0248 583.167,139.3341 Q582.0904,138.6435 581.5826,137.4248 Q581.0748,136.1857 581.0748,134.5607 Q581.0748,132.9763 581.6436,131.7373 Q582.2326,130.4779 583.3498,129.7873 Q584.4873,129.0763 586.092,129.0763 Q586.8639,129.0763 587.6561,129.2795 Q588.4483,129.4826 589.3623,129.9295 L588.4889,132.0826 Q587.717,131.717 587.1483,131.5341 Q586.5998,131.331 586.092,131.331 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="59.8" x="600.392" y="140.2309">QWidget</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="571.792" x2="662.792" y1="151.5826" y2="151.5826"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="571.792" x2="662.792" y1="161.9826" y2="161.9826"/><!--MD5=[16d025dde850bca9df54fb6533f05466]
+class QMainWindow--><rect codeLine="16" fill="#2E2E2E" height="54.6" id="QMainWindow" style="stroke:#DAA520;stroke-width:1.9500000000000002;" width="135.2" x="709.592" y="117.7826"/><ellipse cx="725.192" cy="134.6826" fill="#880000" rx="10.4" ry="10.4" style="stroke:#DAA520;stroke-width:1.3;"/><path d="M725.192,131.331 Q724.0545,131.331 723.4451,132.1841 Q722.8561,133.0373 722.8561,134.581 Q722.8561,136.1451 723.4045,136.9576 Q723.9529,137.7701 725.192,137.7701 Q725.8014,137.7701 726.3904,137.6279 Q726.9998,137.4857 728.0154,137.1607 L728.0154,139.4154 Q727.1826,139.7607 726.492,139.8826 Q725.8217,140.0248 724.9889,140.0248 Q723.3436,140.0248 722.267,139.3341 Q721.1904,138.6435 720.6826,137.4248 Q720.1748,136.1857 720.1748,134.5607 Q720.1748,132.9763 720.7436,131.7373 Q721.3326,130.4779 722.4498,129.7873 Q723.5873,129.0763 725.192,129.0763 Q725.9639,129.0763 726.7561,129.2795 Q727.5483,129.4826 728.4623,129.9295 L727.5889,132.0826 Q726.817,131.717 726.2483,131.5341 Q725.6998,131.331 725.192,131.331 Z " fill="#000000"/><text fill="#FFFFFF" font-family="Verdana" font-size="14.3" lengthAdjust="spacing" textLength="101.4" x="739.492" y="140.2309">QMainWindow</text><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="710.892" x2="843.492" y1="151.5826" y2="151.5826"/><line style="stroke:#DAA520;stroke-width:1.9500000000000002;" x1="710.892" x2="843.492" y1="161.9826" y2="161.9826"/><!--MD5=[e4d63ccf3983b4c811a5f94c2495a8ab]
+reverse link QWidget to InfoBubble--><path d="M666.679,189.0746 C673.491,194.2226 680.537,199.2016 687.492,203.5826 C949.065,368.3056 1151.111,238.9556 1316.692,499.9826 C1394.679,622.9366 1387.386,700.2996 1316.692,827.5826 C1269.684,912.2126 1170.741,965.9156 1094.548,996.4006 " fill="none" id="QWidget-backto-InfoBubble" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="none" points="660.699,195.9386,646.152,172.5646,672.113,181.7556,660.699,195.9386" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[6db06dc37a24a7dd15597f78118e6c83]
+reverse link QWidget to ValveOverview--><path d="M669.305,190.6736 C690.534,212.1496 712.699,239.8006 723.892,269.8826 C751.452,343.9826 734.136,428.1966 705.887,499.5796 " fill="none" id="QWidget-backto-ValveOverview" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="none" points="663.039,197.2776,650.403,172.7986,675.545,184.0566,663.039,197.2776" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[73f6ba37d90f70682457ac6d7e79b264]
+reverse link QWidget to ValveGUI--><path d="M581.308,192.1296 C576.316,196.5106 570.947,200.4756 565.292,203.5826 C414.193,286.6006 319.644,164.6346 183.092,269.8826 C94.016,338.5486 101.738,390.0936 77.792,499.9826 C46.787,642.2416 7.8,699.9096 77.792,827.5826 C103.363,874.2136 144.807,911.6146 189.397,940.9166 " fill="none" id="QWidget-backto-ValveGUI" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="none" points="574.99,185.5646,599.417,172.8506,588.25,198.0316,574.99,185.5646" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[1fc5a585748f8658d4770123e42aaff1]
+reverse link QWidget to TabContainer--><path d="M585.351,194.5996 C570.388,217.2066 552.214,244.6496 535.522,269.8566 " fill="none" id="QWidget-backto-TabContainer" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="none" points="577.915,189.3606,599.859,172.7076,593.086,199.4096,577.915,189.3606" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[b8bc4133ed1e53490e9d191f6e47b3e6]
+reverse link QWidget to SystemOverview--><path d="M581.191,191.9476 C576.225,196.3546 570.895,200.3846 565.292,203.5826 C440.271,275.0826 342.381,161.0206 248.092,269.8826 C163.358,367.7076 190.541,535.8236 210.379,616.5796 " fill="none" id="QWidget-backto-SystemOverview" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="none" points="574.873,185.3826,599.3,172.6426,588.146,197.8366,574.873,185.3826" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[6d49110face5b86f7a663104a5736814]
+reverse link QMainWindow to MainWindow--><path d="M804.596,195.6266 C852.163,281.0626 950.755,458.1616 1011.894,567.9986 " fill="none" id="QMainWindow-backto-MainWindow" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="none" points="796.523,199.8256,791.83,172.6816,812.435,190.9726,796.523,199.8256" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[45fa8c0c33095fc4fa1d675fb99f7f42]
+reverse link ValveOverview to InfoBubble--><path codeLine="95" d="M796.406,839.9326 C851.513,892.9466 907.452,946.7796 945.503,983.3876 " fill="none" id="ValveOverview-backto-InfoBubble" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="783.926,827.9206,785.9427,837.0755,795.169,838.7351,793.1524,829.5802,783.926,827.9206" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[5e8c125f89642076cfb19fb42c50eb02]
+reverse link ValveOverview to ValveGUI--><path codeLine="96" d="M506.948,842.5456 C494.091,863.7226 481.195,884.9646 468.936,905.1536 " fill="none" id="ValveOverview-backto-ValveGUI" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="515.827,827.9206,507.3354,831.8921,507.7354,841.258,516.227,837.2865,515.827,827.9206" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[dbf53de0a2edb50ab28f2224c5ec1327]
+reverse link TabContainer to ValveOverview--><path codeLine="97" d="M519.155,428.4696 C528.138,450.4656 538.174,475.0616 548.288,499.8266 " fill="none" id="TabContainer-backto-ValveOverview" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="516.659,422.3466,516.2915,435.1448,519.1273,428.3597,525.9125,431.1955,516.659,422.3466" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[8e1e99cbe39fc4ba95a515775090c2cf]
+reverse link TabContainer to SystemOverview--><path codeLine="98" d="M419.25,427.3516 C369.304,487.3206 302.744,567.2186 261.508,616.7356 " fill="none" id="TabContainer-backto-SystemOverview" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="423.423,422.3466,411.9402,428.01,419.2636,427.3415,419.9321,434.665,423.423,422.3466" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[397398ea521b3b21ba598bf2bbe23f32]
+reverse link MainWindow to TabContainer--><path codeLine="99" d="M919.932,564.6186 C885.222,542.4536 847.886,519.6646 812.292,499.9826 C762.892,472.6696 707.772,445.6296 657.098,422.0606 " fill="none" id="MainWindow-backto-TabContainer" style="stroke:#FFFFFF;stroke-width:1.3;"/><polygon fill="#FFFFFF" points="925.47,568.1806,918.4402,557.4796,920.0023,564.6657,912.8163,566.2278,925.47,568.1806" style="stroke:#FFFFFF;stroke-width:1.3;"/><!--MD5=[83e15bbd2506792520c74a9a9bc5b9f8]
+link TabContainer to ValveGUI--><!--MD5=[cb46526b1b10534aba00e7cedeeecef5]
+link ValveOverview to MainWindow--><!--MD5=[6c5f6123f537461bf2358865534a1ddf]
+@startuml
+!define DARKRED
+!includeurl https://raw.githubusercontent.com/Drakemor/RedDress-PlantUML/master/style.puml
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+package src.GUI {
+
+    package PyQt6 {
+        class QWidget {
+
+        }
+
+        class QMainWindow {
+
+        }
+
+    }
+
+    class Global_Functions {
+        + toImage(img: numpy.ndarray) -> QImage
+        + toQPixmap(img: np.ndarray) -> QPixmap
+    }
+
+    class MainWindow {
+
+    }
+
+    class InfoBubble extends QWidget {
+        - ui: Ui_InfoBubble
+        + setValve(v: Valve) -> None
+    }
+
+    class ValveOverview extends QWidget {
+        - ui: Ui_ValveOverview
+        + infoBubble: InfoBubble
+        + infoBubbleWindowValve: Valve
+        + infoBubbleTimeoutMS: int 
+        + infoTimer: QTimer
+        + valveMappings: Dict[str, ValveGUI]
+
+        + showValveInfo(item: QListWidgetItem) -> None
+        + hideValveInfo() -> None
+        - __show_context_menu(pos: QPoint) -> None
+        + showValveInfoWindow() -> None
+        + setValves(valves: Iterable[Valve]) -> None
+        + renderValves(valves: Iterable[Valve]) -> None
+        + setValveStates(valves: Iterable[Valve]) -> None
+        + reserveGuiItems(count: int) -> None
+    }
+
+    class ValveGUI extends QWidget {
+        {static} + VALVE_IMAGES: dict
+        {static} + VALVE_COLORS: dict
+        {static} + VALVE_COLORS_BGRA: dict
+        - ui: Ui_ValveGUI
+        + valve: Valve
+        - imgState: ValveState
+
+        + setValve(v: Valve) -> None
+        + setImage(state: ValveState) -> None
+        + reset() -> None
+        {static} + loadValveImages(imgData: Dict[ValveState, str]) -> None
+    }
+
+    class TabContainer extends QWidget {
+        - ui: Ui_TabContainer
+        + valveOverview: ValveOverview
+        + systemOverview: SystemOverview
+        + valveStateDetector: QValveStateDetector
+        
+        + replaceTab(index: int, newPage: QWidget, title: str) -> None
+    }
+
+    class SystemOverview extends QWidget {
+        - ui: Ui_SystemOverview
+
+        + setImage(img: QImage) -> None
+    }
+
+    class MainWindow extends QMainWindow {
+        - ui: Ui_MainWindow
+        + valveStateDetector: QValveStateDetector
+        + tabContainer: TabContainer
+
+        + setSizeRelToScreen(relW: float, relH: float, center: bool) -> None
+        + setScreenSize(cx: int, cy: int, w: int, h: int) -> bool
+        + setTheme(filePath: str, app: QApplication) -> bool:
+        + shutdownCleanup() -> None
+    }
+}
+
+ValveOverview *- - InfoBubble
+ValveOverview *- - ValveGUI
+TabContainer <- - ValveOverview
+TabContainer <- - SystemOverview
+MainWindow <- - TabContainer
+
+ValveGUI -[hidden]left- TabContainer
+ValveOverview -[hidden]right- MainWindow
+
+@enduml
+
+@startuml
+
+
+
+
+
+skinparam stereotypeCBackgroundColor 880000
+
+
+
+
+
+
+
+skinparam backgroundColor 777
+
+
+
+
+
+
+
+skinparam circledCharacter {
+  radius 8
+  fontSize 11
+  fontName Verdana
+}
+
+skinparam class {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+
+  attributeFontColor aaa
+  attributeFontSize 11
+  attributeIconSize 11
+}
+
+
+skinparam actor {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam participant {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam collections {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam SequenceBox{
+    backgroundColor 575757
+  borderColor 767676
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam interface {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam component {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam node {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam database {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam queue {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam usecase {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam activity {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam sequence {
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+
+  lifeLineBorderColor 880000
+  lifeLineBackgroundColor 575757
+}
+
+skinparam boundary {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam control {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam entity {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+
+skinparam state {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+  startColor 880000
+  endColor 330000
+}
+
+
+skinparam object {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+
+skinparam note {
+    backgroundColor 880000
+  borderColor 330000
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam cloud {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+    arrowColor fff
+  arrowFontName Verdana
+  arrowFontColor bbb
+  arrowFontSize 11
+}
+
+skinparam rectangle {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam storage {
+    backgroundColor 2e2e2e
+  borderColor 1b1b1b
+    fontColor fff
+  fontName Verdana
+  fontSize 11
+  stereotypeFontColor aaa
+  stereotypeFontSize 11
+}
+
+skinparam shadowing false
+skinparam class {
+    BorderColor goldenrod
+}
+scale 1.3
+
+package src.GUI {
+
+    package PyQt6 {
+        class QWidget {
+
+        }
+
+        class QMainWindow {
+
+        }
+
+    }
+
+    class Global_Functions {
+        + toImage(img: numpy.ndarray) -> QImage
+        + toQPixmap(img: np.ndarray) -> QPixmap
+    }
+
+    class MainWindow {
+
+    }
+
+    class InfoBubble extends QWidget {
+        - ui: Ui_InfoBubble
+        + setValve(v: Valve) -> None
+    }
+
+    class ValveOverview extends QWidget {
+        - ui: Ui_ValveOverview
+        + infoBubble: InfoBubble
+        + infoBubbleWindowValve: Valve
+        + infoBubbleTimeoutMS: int 
+        + infoTimer: QTimer
+        + valveMappings: Dict[str, ValveGUI]
+
+        + showValveInfo(item: QListWidgetItem) -> None
+        + hideValveInfo() -> None
+        - __show_context_menu(pos: QPoint) -> None
+        + showValveInfoWindow() -> None
+        + setValves(valves: Iterable[Valve]) -> None
+        + renderValves(valves: Iterable[Valve]) -> None
+        + setValveStates(valves: Iterable[Valve]) -> None
+        + reserveGuiItems(count: int) -> None
+    }
+
+    class ValveGUI extends QWidget {
+        {static} + VALVE_IMAGES: dict
+        {static} + VALVE_COLORS: dict
+        {static} + VALVE_COLORS_BGRA: dict
+        - ui: Ui_ValveGUI
+        + valve: Valve
+        - imgState: ValveState
+
+        + setValve(v: Valve) -> None
+        + setImage(state: ValveState) -> None
+        + reset() -> None
+        {static} + loadValveImages(imgData: Dict[ValveState, str]) -> None
+    }
+
+    class TabContainer extends QWidget {
+        - ui: Ui_TabContainer
+        + valveOverview: ValveOverview
+        + systemOverview: SystemOverview
+        + valveStateDetector: QValveStateDetector
+        
+        + replaceTab(index: int, newPage: QWidget, title: str) -> None
+    }
+
+    class SystemOverview extends QWidget {
+        - ui: Ui_SystemOverview
+
+        + setImage(img: QImage) -> None
+    }
+
+    class MainWindow extends QMainWindow {
+        - ui: Ui_MainWindow
+        + valveStateDetector: QValveStateDetector
+        + tabContainer: TabContainer
+
+        + setSizeRelToScreen(relW: float, relH: float, center: bool) -> None
+        + setScreenSize(cx: int, cy: int, w: int, h: int) -> bool
+        + setTheme(filePath: str, app: QApplication) -> bool:
+        + shutdownCleanup() -> None
+    }
+}
+
+ValveOverview *- - InfoBubble
+ValveOverview *- - ValveGUI
+TabContainer <- - ValveOverview
+TabContainer <- - SystemOverview
+MainWindow <- - TabContainer
+
+ValveGUI -[hidden]left- TabContainer
+ValveOverview -[hidden]right- MainWindow
+
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(MIT source distribution)
+Java Runtime: OpenJDK Runtime Environment
+JVM: OpenJDK 64-Bit Server VM
+Default Encoding: UTF-8
+Language: en
+Country: IE
+--></g></svg>

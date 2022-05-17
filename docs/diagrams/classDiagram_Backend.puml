@@ -189,6 +189,7 @@ PreStateDetectProcess -[hidden]right- StateDetectProcess
 StateDetectProcess -[hidden]right- UnifiedStateDetectProcess
 Global_Functions -[hidden]right- Queue
 StateDetector-[hidden]up- Global_Functions
-StateDetectSingleThread -[hidden]up- TagID_Functions
+StateDetectSingleThread -[hidden]left- TagID_Functions
+StateDetector -[hidden]down- TagID_Functions
 
 @enduml

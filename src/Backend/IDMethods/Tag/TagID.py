@@ -7,45 +7,28 @@ from PIL import Image
 from tensorflow import keras
 
 
-def assignTagsToBBoxes(tagBoxes: Tuple[Tuple[int, int, int, int], ...], bboxes: List[BBoxData]) -> None:
-    if not any(tagBoxes):
-        return
-
-    bCenters = tuple((b.box[0] + b.box[2] * 0.5, b.box[1] + b.box[3] * 0.5) for b in bboxes)
-    tCenters = tuple((box[0] + box[2] * 0.5, box[1] + box[3] * 0.5) for box in tagBoxes)
-
-    for bc, bbd in zip(bCenters, bboxes):
-
-        currTc = tCenters[0]
-
-        sq = (currTc[0] - bc[0])**2 + (currTc[1] - bc[1])**2
-        currDist = np.sqrt(sq)
-
-        for i in range(1, len(tagBoxes)):
-            tc = tCenters[i]
-
-            sq = (tc[0] - bc[0])**2 + (tc[1] - bc[1])**2
-            dist = np.sqrt(sq)
-
-            if (dist < currDist) and (tc[1] < bc[1]):
-                bbd.tagBox = tagBoxes[i]
-                currTc = tCenters[i]
-                currDist = dist
-
-
 def Filter_Contours_Based_On_ArcLength(contours, requiredLength=40, filterThreshold=0.16):
     """fiilters contours based on their arcLength. Contours Smaller then the requiredLength(in pixels)
     parameter gets removed. Additionally any Contour that are to small commpared to the biggest countour in the list,
     will also be removed. The cantors minimum length (compared to the longest in the list),
     is given by the filterThreshold param in precent[0-1]"""
     filtered_Contours_Based_On_ArcLength = []
+
     if not contours.__len__():
         return tuple()
-    lengths = tuple(cv2.arcLength(contour, True) for contour in contours)
+
+    lengths = []
+    for contour in contours:
+        print(contour.dtype)
+        lengths.append(cv2.arcLength(contour, True))
+
+    #lengths = tuple(cv2.arcLength(contour, True) for contour in contours)
     longest = np.max(lengths)
+
     for i in range(contours.__len__()):
         if lengths[i] > requiredLength and (lengths[i] / longest > filterThreshold):
             filtered_Contours_Based_On_ArcLength.append(contours[i])
+
     return filtered_Contours_Based_On_ArcLength
 
 
@@ -177,12 +160,15 @@ def createCNNModel(modelPath: str):
     return keras.models.load_model(modelPath)
 
 
-def detectTagID(cnnModel, frame: np.ndarray, tagBox: Tuple[int, int, int, int]):
+def detectTagID(cnnModel, frame: np.ndarray, tagBox: Tuple[int, int, int, int], tagIDLength: int = 5):
 
     x, y, w, h = tagBox
     tagImage = frame[y:y + h, x:x + w]
 
     digits = []
+
+    if (tagImage.shape[0] == 0) or (tagImage.shape[1] == 0):
+        return ""
 
     # Convert the input image to grayscale
     gray = cv2.cvtColor(tagImage, cv2.COLOR_RGB2GRAY)
@@ -209,10 +195,7 @@ def detectTagID(cnnModel, frame: np.ndarray, tagBox: Tuple[int, int, int, int]):
         x, y, w, h = cv2.boundingRect(contour)
 
         # grab digit region of the tag Image
-        try:
-            digit = tagImage[y - 3:y + h + 3, x - 3:x + w + 3]
-        except:
-            digit = tagImage[y:y + h, x:x + w]
+        digit = tagImage[y:y + h, x:x + w]
 
         # Convert the digit image to Grayscale
         gray = cv2.cvtColor(digit, cv2.COLOR_RGB2GRAY)
@@ -232,4 +215,7 @@ def detectTagID(cnnModel, frame: np.ndarray, tagBox: Tuple[int, int, int, int]):
     digits = np.array(digits, dtype="float")
     digits_CNN = CNN_Model(cnnModel, digits)
 
-    return digits_CNN if len(digits_CNN) else None
+    if len(digits_CNN) == 5:
+        return digits_CNN
+    else:
+        return f"{digits_CNN}{('?' * (5 - len(digits_CNN)))}"

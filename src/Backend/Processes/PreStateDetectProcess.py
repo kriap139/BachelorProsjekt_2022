@@ -1,12 +1,9 @@
-import numbers
-from typing import Tuple, Callable, Union, List
 from src.Backend.DataClasses import ImageData, BBoxData, SharedImage
 from src.Backend.Processes.ProcessFuncs import freeAllShmInImageDataQueue
 from src.Backend.DataClasses import PreStateDetectData, PreStateDetectArgs
 from src.Backend.Processes.StateDetectProcess import StateDetectProcess
 import multiprocessing as mp
 from multiprocessing.shared_memory import SharedMemory
-from collections.abc import Iterable
 from src.Config import Config, LOG
 import time
 import os
@@ -109,7 +106,7 @@ class PreStateDetectProcess(mp.Process):
     def detectFromStream__(self, data: PreStateDetectData):
         import numpy as np
         import cv2 as cv
-        from src.Backend.IDMethods.TagID import assignTagsToBBoxes
+        from src.Backend.IDMethods.Tag.TagID import assignTagsToBBoxes
 
         cap = cv.VideoCapture(data.args.streamPath)
 

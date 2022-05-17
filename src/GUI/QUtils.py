@@ -2,7 +2,7 @@ import numpy as np
 from PyQt6.QtGui import QImage, QPixmap
 
 
-def toQPixmap(img: np.ndarray) ->  QPixmap:
+def toQPixmap(img: np.ndarray) -> QPixmap:
     """Convert Opencv RGB image to a QPixmap"""
     h, w, ch = img.shape
     bpl = ch * w

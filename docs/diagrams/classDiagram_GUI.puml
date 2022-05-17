@@ -7,9 +7,99 @@ skinparam class {
 }
 scale 1.3
 
-package src {
-    
+package src.GUI {
 
+    package PyQt6 {
+        class QWidget {
+
+        }
+
+        class QMainWindow {
+
+        }
+
+    }
+
+    class Global_Functions {
+        + toImage(img: numpy.ndarray) -> QImage
+        + toQPixmap(img: np.ndarray) -> QPixmap
+    }
+
+    class MainWindow {
+
+    }
+
+    class InfoBubble extends QWidget {
+        - ui: Ui_InfoBubble
+        + setValve(v: Valve) -> None
+    }
+
+    class ValveOverview extends QWidget {
+        - ui: Ui_ValveOverview
+        + infoBubble: InfoBubble
+        + infoBubbleWindowValve: Valve
+        + infoBubbleTimeoutMS: int 
+        + infoTimer: QTimer
+        + valveMappings: Dict[str, ValveGUI]
+
+        + showValveInfo(item: QListWidgetItem) -> None
+        + hideValveInfo() -> None
+        - __show_context_menu(pos: QPoint) -> None
+        + showValveInfoWindow() -> None
+        + setValves(valves: Iterable[Valve]) -> None
+        + renderValves(valves: Iterable[Valve]) -> None
+        + setValveStates(valves: Iterable[Valve]) -> None
+        + reserveGuiItems(count: int) -> None
+    }
+
+    class ValveGUI extends QWidget {
+        {static} + VALVE_IMAGES: dict
+        {static} + VALVE_COLORS: dict
+        {static} + VALVE_COLORS_BGRA: dict
+        - ui: Ui_ValveGUI
+        + valve: Valve
+        - imgState: ValveState
+
+        + setValve(v: Valve) -> None
+        + setImage(state: ValveState) -> None
+        + reset() -> None
+        {static} + loadValveImages(imgData: Dict[ValveState, str]) -> None
+    }
+
+    class TabContainer extends QWidget {
+        - ui: Ui_TabContainer
+        + valveOverview: ValveOverview
+        + systemOverview: SystemOverview
+        + valveStateDetector: QValveStateDetector
+        
+        + replaceTab(index: int, newPage: QWidget, title: str) -> None
+    }
+
+    class SystemOverview extends QWidget {
+        - ui: Ui_SystemOverview
+
+        + setImage(img: QImage) -> None
+    }
+
+    class MainWindow extends QMainWindow {
+        - ui: Ui_MainWindow
+        + valveStateDetector: QValveStateDetector
+        + tabContainer: TabContainer
+
+        + setSizeRelToScreen(relW: float, relH: float, center: bool) -> None
+        + setScreenSize(cx: int, cy: int, w: int, h: int) -> bool
+        + setTheme(filePath: str, app: QApplication) -> bool:
+        + shutdownCleanup() -> None
+    }
 }
+
+ValveOverview *-- InfoBubble
+ValveOverview *-- ValveGUI
+TabContainer <-- ValveOverview
+TabContainer <-- SystemOverview
+MainWindow <-- TabContainer
+
+ValveGUI -[hidden]left- TabContainer
+ValveOverview -[hidden]right- MainWindow
 
 @enduml

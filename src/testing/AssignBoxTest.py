@@ -5,13 +5,13 @@ import numpy as np
 from src.Backend.Valve import ValveState
 from src.Backend.StateMethods import SiftStateDetector
 from src.Backend.IDMethods import assignTagsToBBoxes, detectTagID, createCNNModel
-from typing import Iterable
+from typing import Iterable, Union
 import PIL
 from PIL import Image
 import os
 
 
-class StateDetectSingleThread:
+class AssignBBoxTest:
     TAG_BOX_COLOR = (155, 103, 60)
 
     VALVE_COLORS_BGRA = {
@@ -20,7 +20,7 @@ class StateDetectSingleThread:
         ValveState.OPEN: [0, 230, 17, 1]
     }
 
-    def __init__(self, tagClassID: int, frameSavePath: str, finalFrameSavePath: str):
+    def __init__(self, tagClassID: int, savePath: str):
         data = Config.getModelPaths()
 
         self.cfg = data.valveCfgSrc
@@ -28,23 +28,26 @@ class StateDetectSingleThread:
         self.tagModelPath = data.tagIdCNNPath
         self.tagClassID = tagClassID
         self.font = cv.FONT_HERSHEY_PLAIN
-        self.frameSavePath = frameSavePath
-        self.finalFrameSavePath = finalFrameSavePath
+        self.savePath = savePath
 
         self.tagModel = createCNNModel(self.tagModelPath)
         self.net = cv.dnn.readNet(self.weights, self.cfg)
         self.layerNames = self.net.getLayerNames()
         self.outputLayers = [self.layerNames[i - 1] for i in self.net.getUnconnectedOutLayers()]
 
-    def detectFromStream(self, streamPath: str, saveFrames: bool = True):
-        cap = cv.VideoCapture(streamPath)
-        frameID = 1
+    def detectFromStream(self, p: str):
+        if os.path.isfile(p):
+            paths = p,
+        elif os.path.isdir(p):
+            paths = (os.path.join(p, fn) for fn in os.listdir(p))
+            paths = tuple(filter(lambda path: os.path.isfile(path), paths))
+        else:
+            print("invalid input!")
+            return
 
-        while True:
-            _, frame = cap.read()
-
-            if frame is None:
-                break
+        for path in paths:
+            frame = cv.imread(path)
+            fn = os.path.basename(path)
 
             height, width, channels = frame.shape
             blob = cv.dnn.blobFromImage(frame, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
@@ -93,35 +96,23 @@ class StateDetectSingleThread:
             for bbd in bboxes:
                 if bbd.tagBox is not None:
                     bbd.valveID = detectTagID(self.tagModel, frame, bbd.tagBox)
-                _, state = SiftStateDetector.sift(frame, bbd)
-                bbd.valveState = state
 
-            if saveFrames:
-                cv.imwrite(os.path.join(self.frameSavePath, f"{frameID}.jpg"), frame)
-
-            # Drawing -----------------------------------------------------------------
             if len(unassigned):
+                print("Unassigned tags: ", len(unassigned))
                 for tag in unassigned:
                     tagId = detectTagID(self.tagModel, frame, tag)
-                    self.drawTag(frame, tag, tagId, color=(0, 0, 0))
+                    self.drawTag(frame, tag, tagId)
+
+            for line in tagLines:
+                cv.line(frame, line[0].toTuple(), line[1].toTuple(), (0, 255, 0), 3)
 
             self.draw(frame, bboxes)
 
-            #for line in tagLines:
-            #    cv.line(frame, line[0].toTuple(), line[1].toTuple(), (0, 255, 0), 3)
-            # -------------------------------------------------------------------------
-
             resized = self.resizeImage(frame, width=600)
+            cv.imwrite(os.path.join(self.savePath, fn), resized)
+            cv.imshow(f"result", resized)
+            cv.waitKey(0)
 
-            if saveFrames:
-                cv.imwrite(os.path.join(self.finalFrameSavePath, f"{frameID}.jpg"), resized)
-
-            cv.imshow("result", resized)
-            if cv.waitKey(1) == ord('q'):
-                break
-            frameID += 1
-
-        cap.release()
         cv.destroyAllWindows()
 
     def draw(self, img: np.ndarray, bboxes: Iterable[BBoxData]):
@@ -147,7 +138,7 @@ class StateDetectSingleThread:
                 cv.rectangle(img, (x, y), (x + w, y + 30), color, -1)
                 cv.putText(img, label, (x, y + 30), self.font, 2, (255, 255, 255), 2)
 
-    def drawTag(self, img: np.ndarray, tagBox: tuple, tagId: str = None, color: tuple = (255, 255, 255)):
+    def drawTag(self, img: np.ndarray, tagBox: tuple, tagId: str = None):
         x, y, w, h = tagBox
         color = self.TAG_BOX_COLOR
 
@@ -174,10 +165,9 @@ if __name__ == "__main__":
     fn = fn1
     baseName, ext = os.path.splitext(fn)
 
-    video = Config.createAppDataPath("video", "new-videos", fName=fn)
-    finalSavePath = Config.createAppDataPath("images", "results", "SDST", baseName, "final")
-    rawSavePath = Config.createAppDataPath("images", "results", "SDST", baseName, "raw")
+    imgPath = Config.createAppDataPath("images", "results", "assignBBox", baseName, "raw")
+    savePath = Config.createAppDataPath("images", "results", "assignBBox", baseName, "processed")
 
-    tester = StateDetectSingleThread(tagClassID=8, frameSavePath=rawSavePath, finalFrameSavePath=finalSavePath)
-    tester.detectFromStream(video, saveFrames=False)
+    tester = AssignBBoxTest(tagClassID=8, savePath=savePath)
+    tester.detectFromStream(imgPath)
 

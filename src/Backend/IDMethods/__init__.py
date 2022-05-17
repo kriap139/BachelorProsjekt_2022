@@ -1,1 +1,2 @@
-from src.Backend.IDMethods.TagID import assignTagsToBBoxes, detectTagID, createCNNModel
+from src.Backend.IDMethods.Tag import createCNNModel, detectTagID, assignTagsToBBoxes
+

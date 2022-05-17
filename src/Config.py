@@ -95,7 +95,7 @@ class Config:
 
     @classmethod
     def getSiftRefsDir(cls) -> str:
-        siftImagesPath = cls.createAppDataPath("testing", "ventil-tilstand", "tilstand-test", "sift", "cropped")
+        siftImagesPath = cls.createAppDataPath("images", "sift", "cropped")
 
         if not os.path.exists(siftImagesPath):
             LOG(f"siftImagesPath doesn't exist: {siftImagesPath}")
@@ -123,8 +123,8 @@ class Config:
 
     @classmethod
     def getModelPaths(cls) -> ModelPaths:
-        valveWeightsPath = cls.createAppDataPath("model", "classif", fName="yolov4.conv")
-        valveCfgPath = cls.createAppDataPath("model", "classif", fName="yolo-tiny-valve.cfg")
+        valveWeightsPath = cls.createAppDataPath("model", "classif", fName="yolo_Tiny_ventiler_best6.weights")
+        valveCfgPath = cls.createAppDataPath("model", "classif", fName="yolo_Tiny_ventiler.cfg")
         tagIdCNNPath = cls.createAppDataPath("model", "tagid", fName="CNN_Characters_Classification.h5")
 
         pathData = (

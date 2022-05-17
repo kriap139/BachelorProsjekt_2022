@@ -145,6 +145,9 @@ class SiftStateDetector:
         x, y, w, h = data.box
         img = img[y:y + h, x:x + w]
 
+        if (img.shape[0] == 0) or (img.shape[1] == 0):
+            return ReturnType.STATE, ValveState.UNKNOWN
+
         comp_open, comp_closed = SIFTImageHandler.fetchImages(data.classID)
 
         if comp_open is None or (comp_closed is None):
@@ -197,7 +200,6 @@ class SiftStateDetector:
         # draw kp of image with the highest match
         #draw = cv2.drawMatchesKnn(img, kp, highest[3], highest[1], highest[2], None,
         #                          flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
-
         # display("SIFT_result", draw)
 
         sim_open = num_kp_arr[0]
