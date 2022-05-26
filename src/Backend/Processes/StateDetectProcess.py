@@ -25,7 +25,10 @@ class StateDetectProcess(mp.Process):
         self.frontPipe, self.backPipe = mp.Pipe()
 
     def run(self) -> None:
+        from src.Backend.StateMethods import ColorStateDetector
         signal.signal(signal.SIGINT, signal.SIG_IGN)
+
+        self.colorDetector = ColorStateDetector()
 
         data = StateDetectData()
         while data.mainActive:
@@ -38,6 +41,9 @@ class StateDetectProcess(mp.Process):
             data.mainActive = False
             data.stActive = False
             self.flush__(data)
+
+        elif (msg == "finishIfEmpty") and data.stActive:
+            data.finishIfEmpty = True
 
         elif data.finishedFlag and data.stActive:
             data.finishedFlag = False
@@ -57,14 +63,15 @@ class StateDetectProcess(mp.Process):
             self.backPipe.send("activated")
             data.stActive = True
             self.stateDetection__(data)
+        else:
+            time.sleep(0.1)
 
     def flush__(self, data: StateDetectData):
         freeAllShmInImageDataQueue(self.postSDQueue)
 
     def stateDetection__(self, data: StateDetectData):
-        from src.Backend.StateMethods import SIFTImageHandler, sift
+        from src.Backend.StateMethods import SIFTImageHandler, SiftStateDetector
         import numpy as np
-        import cv2 as cv
 
         while data.stActive:
             try:
@@ -73,27 +80,30 @@ class StateDetectProcess(mp.Process):
                 if imgData is None:
                     self.postSDQueue.put(None)
                     data.finishedFlag = True
-                    break
+                    self.listenFrontend__(data)
+                    continue
 
                 sharedImg = imgData.sharedImg
                 shm = SharedMemory(name=sharedImg.memName)
                 img = np.ndarray(shape=sharedImg.shape, dtype=sharedImg.dType, buffer=shm.buf)
 
                 for boxData in imgData.bboxes:
-                    retType, state = sift(img, boxData)
-                    boxData.valveState = state
+                    boxData.valveState = SiftStateDetector.sift(img, boxData)
 
                 shm.close()
-
-                #print(imgData)
-
                 self.postSDQueue.put(imgData)
                 self.listenFrontend__(data)
             except Empty as e:
-                time.sleep(0.3)
+                if data.finishIfEmpty:
+                    data.finishedFlag = True
+                else:
+                    time.sleep(0.1)
                 self.listenFrontend__(data)
 
     # Frontend
+
+    def finishIfEmpty(self):
+        self.frontPipe.send("finishIfEmpty")
 
     def activate(self):
         self.frontPipe.send("activate")

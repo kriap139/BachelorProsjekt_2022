@@ -18,7 +18,7 @@ class ValveClass:
         self.stateMethod = stateMethod
 
     def __str__(self) -> str:
-        return f"ValveClass({self.className}(id={self.classID}))"
+        return f"ValveClass(name={self.className}, id={self.classID})"
 
     def infoLabelString(self) -> str:
         return f"{self.className}(id={self.classID})"

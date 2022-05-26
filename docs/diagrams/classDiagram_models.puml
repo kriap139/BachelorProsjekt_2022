@@ -83,6 +83,19 @@ package src.Backend {
             + args: PreStateDetectArgs
         }
 
+        class Point2D {
+            x: Number
+            y: Number
+
+            toTuple() -> tuple
+        }
+
+        class TagData {
+            tagID: str
+            tagBox: Tuple[int, int, int, int]
+            tagLine: Tuple[Point2D, Point2D]
+        }
+
         class StateDetectData {
             + mainActive: bool
             + stActive: bool 
@@ -94,7 +107,7 @@ package src.Backend {
 }
 
 Valve <--up ValveClass
-Valve <--up ValveState
+Valve <--left ValveState
 ValveStateData <--ValveState
 BBoxData <-- ValveState
 ImageData <-- SharedImage
@@ -102,6 +115,7 @@ ImageData *-- BBoxData
 
 PreStateDetectData <-- PreStateDetectArgs
 
-Valve -[hidden]- SharedImage
+Valve -[hidden]up- PreStateDetectArgs
+ValveClass -[hidden]right- Valve
 
 @enduml

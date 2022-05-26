@@ -27,8 +27,8 @@
         {
             "classID": 3,
             "className": "ventilSpakBrun",
-            "colorLower": [0, 83, 25],
-            "colorUpper": [12, 255, 111],
+            "colorLower": [166, 82, 0],
+            "colorUpper": [183, 255, 167],
             "stateMethod": "sift"
         },
         {
@@ -48,8 +48,8 @@
         {
             "classID": 6,
             "className": "ventilSpakRod",
-            "colorLower": [176, 123, 21],
-            "colorUpper": [180, 232, 221],
+            "colorLower": [0, 172, 96],
+            "colorUpper": [179, 255, 255],
             "stateMethod": "sift"
         }
     ]

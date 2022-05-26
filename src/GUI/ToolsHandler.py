@@ -13,7 +13,7 @@ import numpy as np
 import os
 
 
-DEF_TOOLS = Union[tls.HLSTester, tls.DomColorGUI]
+DEF_TOOLS = Union[tls.HLSTester, tls.DomColorGUI, tls.HSVTester]
 
 
 class ToolsHandler(QObject):

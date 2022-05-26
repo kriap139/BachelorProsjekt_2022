@@ -7,6 +7,18 @@ from dataclasses import dataclass, field
 import schema as sh
 
 
+REQUIRED_PACKAGES = [
+    "PyQt6",
+    "Pillow",
+    "schema",
+    "numpy",
+    "opencv-python",
+    "tensorflow",
+    "imutils",
+    "scikit-learn"
+]
+
+
 @dataclass
 class ModelPaths:
     valveWeightsSrc: str
@@ -117,13 +129,13 @@ class Config:
         data = sh.Schema(cls.valveInfoSchema).validate(data)
 
         valves = {d["id"]: Valve(**d) for d in data["valves"]}
-        valveClasses = {d["classID"]: ValveClass(*d) for d in data["valveClasses"]}
+        valveClasses = {d["classID"]: ValveClass(**d) for d in data["valveClasses"]}
 
         return ValveData(valveClasses, valves)
 
     @classmethod
     def getModelPaths(cls) -> ModelPaths:
-        valveWeightsPath = cls.createAppDataPath("model", "classif", fName="yolo_Tiny_ventiler_best6.weights")
+        valveWeightsPath = cls.createAppDataPath("model", "classif", fName="yolo_Tiny_ventiler_best9.weights")
         valveCfgPath = cls.createAppDataPath("model", "classif", fName="yolo_Tiny_ventiler.cfg")
         tagIdCNNPath = cls.createAppDataPath("model", "tagid", fName="CNN_Characters_Classification.h5")
 

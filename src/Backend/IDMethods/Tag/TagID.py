@@ -4,7 +4,10 @@ from typing import Iterable, Tuple, List
 from src.Backend.DataClasses import BBoxData
 import os
 from PIL import Image
-from tensorflow import keras
+import logging
+import tensorflow as tf
+
+tf.keras.utils.disable_interactive_logging()
 
 
 def Filter_Contours_Based_On_ArcLength(contours, requiredLength=40, filterThreshold=0.16):
@@ -17,12 +20,12 @@ def Filter_Contours_Based_On_ArcLength(contours, requiredLength=40, filterThresh
     if not contours.__len__():
         return tuple()
 
-    lengths = []
-    for contour in contours:
-        print(contour.dtype)
-        lengths.append(cv2.arcLength(contour, True))
+    #lengths = []
+    #for contour in contours:
+    #    print(contour.dtype)
+    #    lengths.append(cv2.arcLength(contour, True))
 
-    #lengths = tuple(cv2.arcLength(contour, True) for contour in contours)
+    lengths = tuple(cv2.arcLength(contour.astype(np.int32), True) for contour in contours)
     longest = np.max(lengths)
 
     for i in range(contours.__len__()):
@@ -37,7 +40,7 @@ def Filter_Contours_Based_On_Dimensions_Of_Bounding_Boxes(image, conturs):
     imageArea = image.shape[0] * image.shape[1]
     height, width, _ = image.shape
     for i in range(0, len(conturs)):
-        contour = conturs[i]
+        contour = conturs[i].astype(np.int32)
         x, y, w, h = cv2.boundingRect(contour)
         if cv2.contourArea(contour) <= (0.3 * imageArea) and cv2.contourArea(contour) >= (0.00009 * imageArea) and (
                 w <= 0.2 * width) and (w > 0.017 * width) and (h >= 0.3 * height) and (h <= 0.8 * height):
@@ -136,7 +139,6 @@ def CNN_Model(model, digits):
     dic = {}
     result = []
     characters = '0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ'
-
     #model = keras.models.load_model(CNN_Model_Path)
 
     for i, char in enumerate(characters):
@@ -157,18 +159,21 @@ def CNN_Model(model, digits):
 
 
 def createCNNModel(modelPath: str):
-    return keras.models.load_model(modelPath)
+    model = tf.keras.models.load_model(modelPath)
+    return model
 
 
 def detectTagID(cnnModel, frame: np.ndarray, tagBox: Tuple[int, int, int, int], tagIDLength: int = 5):
 
     x, y, w, h = tagBox
+    fh, fw, _ = frame.shape
+
     tagImage = frame[y:y + h, x:x + w]
 
     digits = []
 
     if (tagImage.shape[0] == 0) or (tagImage.shape[1] == 0):
-        return ""
+        return ('?' * tagIDLength), 0
 
     # Convert the input image to grayscale
     gray = cv2.cvtColor(tagImage, cv2.COLOR_RGB2GRAY)
@@ -215,7 +220,8 @@ def detectTagID(cnnModel, frame: np.ndarray, tagBox: Tuple[int, int, int, int], 
     digits = np.array(digits, dtype="float")
     digits_CNN = CNN_Model(cnnModel, digits)
 
-    if len(digits_CNN) == 5:
-        return digits_CNN
+    if len(digits_CNN) == tagIDLength:
+        return digits_CNN, tagIDLength
     else:
-        return f"{digits_CNN}{('?' * (5 - len(digits_CNN)))}"
+        numUnknown = tagIDLength - len(digits_CNN)
+        return f"{digits_CNN}{('?' * numUnknown)}", numUnknown

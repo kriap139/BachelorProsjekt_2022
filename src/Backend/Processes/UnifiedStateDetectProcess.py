@@ -18,6 +18,7 @@ class UnifiedStateDetectProcess(mp.Process):
         data = Config.getModelPaths()
         self.cfg = data.valveCfgSrc
         self.weights = data.valveWeightsSrc
+        self.tagModelPath = data.tagIdCNNPath
 
         self.frontPipe, self.backPipe = mp.Pipe()
         self.comsQueue = mp.Queue()
@@ -29,16 +30,23 @@ class UnifiedStateDetectProcess(mp.Process):
 
     def run(self) -> None:
         import cv2 as cv
+        from src.Backend.IDMethods import createCNNModel
+        from src.Backend.StateMethods import ColorStateDetector
 
         signal.signal(signal.SIGINT, signal.SIG_IGN)
 
-        net = cv.dnn_DetectionModel(self.cfg, self.weights)
-        net.setInputSize(416, 416)
-        net.setInputScale((1.0 / 255))
-        net.setInputSwapRB(True)
+        tagModel = createCNNModel(self.tagModelPath)
+
+        net = cv.dnn.readNet(self.weights, self.cfg)
+        layerNames = net.getLayerNames()
+        outputLayers = [layerNames[i - 1] for i in net.getUnconnectedOutLayers()]
 
         data = PreStateDetectData()
         data.valveModel = net
+        data.vmOutputLayers = outputLayers
+        data.tagIdModel = tagModel
+
+        self.colorDetector = ColorStateDetector()
 
         while data.mainActive:
             self.listenFrontend__(data)
@@ -94,9 +102,12 @@ class UnifiedStateDetectProcess(mp.Process):
     def detectFromStream__(self, data: PreStateDetectData):
         import numpy as np
         import cv2 as cv
-        from src.Backend.IDMethods.Tag.TagID import assignTagsToBBoxes
+        from src.Backend.IDMethods import assignTagsToBBoxes, identifyTags
+        from src.Backend.StateMethods import SiftStateDetector, colorDetection
 
         cap = cv.VideoCapture(data.args.streamPath)
+        tagClassID = data.args.tagClassID
+        frameID = 1
 
         while data.dfsActive:
             _, frame = cap.read()
@@ -105,38 +116,67 @@ class UnifiedStateDetectProcess(mp.Process):
                 data.finishedFlag = True
                 break
 
-            classes, confidences, boxes = data.valveModel.detect(frame, confThreshold=0.1, nmsThreshold=0.4)
-            bboxes = []
-            tagIdx = []
+            height, width, channels = frame.shape
+            blob = cv.dnn.blobFromImage(frame, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
 
-            for i, (classID, confidence, box) in enumerate(zip(classes, confidences, boxes)):
-                # tag class
-                if (classID == 7) and (confidence > data.args.confidTagThresh):
-                    tagIdx.append(i)
-                elif confidence > data.args.confidValveThresh:
-                    bboxes.append(BBoxData(classID, box))
+            data.valveModel.setInput(blob)
+            outs = data.valveModel.forward(data.vmOutputLayers)
+
+            classes = []
+            confidences = []
+            boxes = []
+
+            for out in outs:
+                for detection in out:
+                    scores = detection[5:]
+                    class_id = np.argmax(scores)
+                    confidence = scores[class_id]
+
+                    if confidence > 0.2:
+                        # Object detected
+                        center_x = int(detection[0] * width)
+                        center_y = int(detection[1] * height)
+                        w = int(detection[2] * width)
+                        h = int(detection[3] * height)
+                        # Rectangle coordinates
+                        x = int(center_x - w / 2)
+                        y = int(center_y - h / 2)
+
+                        boxes.append((x, y, w, h))
+                        confidences.append(float(confidence))
+                        classes.append(class_id)
+
+            indexes = cv.dnn.NMSBoxes(boxes, confidences, 0.3, 0.4)
+
+            tags = []
+            bboxes = []
+
+            for i, box in enumerate(boxes):
+                if i in indexes:
+                    if classes[i] == tagClassID:
+                        tags.append(box)
+                    else:
+                        bboxes.append(BBoxData(classes[i], box))
+
+            tagsData = identifyTags(data.tagIdModel, frame, tags)
+            uIdx = assignTagsToBBoxes(tagsData, bboxes)
 
             if len(bboxes) > 0:
+                for bbd in bboxes:
+                    bbd.valveState = SiftStateDetector.sift(frame, bbd)
 
-                tagBoxes = [boxes[i] for i in tagIdx]
+                # Create a shared memory buffer for image for accessing across Processes
+                shm = SharedMemory(create=True, size=frame.nbytes)
+                copy = np.ndarray(frame.shape, dtype=frame.dtype, buffer=shm.buf)
+                copy[:] = frame[:]
+                # ----------------------------------------------------------------------
 
-                if len(tagBoxes) > 0:
-                    assignTagsToBBoxes(tagBoxes, bboxes)
+                imgData = ImageData(data.args.streamID, frameID, SharedImage(shm.name, copy.dtype, copy.shape), bboxes,
+                                    tagsData, uIdx)
 
-                    # Create a shared memory buffer for image for accessing across Processes
-                    shm = SharedMemory(create=True, size=frame.nbytes)
-                    copy = np.ndarray(frame.shape, dtype=frame.dtype, buffer=shm.buf)
-                    copy[:] = frame[:]
-                    # ----------------------------------------------------------------------
-
-                    imgData = ImageData(data.args.streamID, SharedImage(shm.name, copy.dtype, copy.shape), bboxes)
-
-                    #for boxData in imgData.bboxes:
-                    #    retType, state = sift(frame, boxData)
-                    #    boxData.valveState = state
-
-                    shm.close()
-                    self.resultQueue.put(imgData)
+                shm.close()
+                self.resultQueue.put(imgData)
+                frameID += 1
 
             self.listenFrontend__(data)
         cap.release()

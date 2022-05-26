@@ -3,12 +3,14 @@ from src.Config import Config
 from src.Backend.DataClasses import BBoxData, ImageData, SharedImage
 import numpy as np
 from src.Backend.Valve import ValveState
-from src.Backend.StateMethods import SiftStateDetector
-from src.Backend.IDMethods import assignTagsToBBoxes, detectTagID, createCNNModel
-from typing import Iterable
+from src.Backend.StateMethods import SiftStateDetector, SIFTImageHandler
+from src.Backend.IDMethods import createCNNModel, assignTagsToBBoxes, identifyTags
+from src.Backend.StateMethods import ColorStateDetector
+from typing import Iterable, Callable, Tuple
 import PIL
 from PIL import Image
 import os
+import time
 
 
 class StateDetectSingleThread:
@@ -20,31 +22,50 @@ class StateDetectSingleThread:
         ValveState.OPEN: [0, 230, 17, 1]
     }
 
-    def __init__(self, tagClassID: int, frameSavePath: str, finalFrameSavePath: str):
+    def __init__(self, tagClassID: int, frameSavePath: str, finalFrameSavePath: str, tagIDLength: int = 5):
         data = Config.getModelPaths()
-
         self.cfg = data.valveCfgSrc
         self.weights = data.valveWeightsSrc
         self.tagModelPath = data.tagIdCNNPath
+
         self.tagClassID = tagClassID
+        self.tagIDLength = tagIDLength
+        self.tagModel = createCNNModel(self.tagModelPath)
         self.font = cv.FONT_HERSHEY_PLAIN
         self.frameSavePath = frameSavePath
         self.finalFrameSavePath = finalFrameSavePath
 
-        self.tagModel = createCNNModel(self.tagModelPath)
+        self.colorSDetect = ColorStateDetector()
+
         self.net = cv.dnn.readNet(self.weights, self.cfg)
         self.layerNames = self.net.getLayerNames()
         self.outputLayers = [self.layerNames[i - 1] for i in self.net.getUnconnectedOutLayers()]
 
-    def detectFromStream(self, streamPath: str, saveFrames: bool = True):
+    def detectFromStream(self, streamPath: str, saveFrames: bool = True, method: str = "sift"):
         cap = cv.VideoCapture(streamPath)
-        frameID = 1
+        frameID = 0
+
+        if method == "sift":
+            SIFTImageHandler.loadAllSiftRefImages()
+            stateMethod = SiftStateDetector.sift
+        elif method == "colorSearch":
+            stateMethod = self.colorSDetect.stateDetect
+        else:
+            print("invalid Method")
+            return
+
+        start = time.time()
 
         while True:
             _, frame = cap.read()
 
             if frame is None:
                 break
+
+            frameID += 1
+
+            if saveFrames:
+                cv.imwrite(os.path.join(self.frameSavePath, f"{frameID}.jpg"), frame)
 
             height, width, channels = frame.shape
             blob = cv.dnn.blobFromImage(frame, 0.00392, (416, 416), (0, 0, 0), True, crop=False)
@@ -88,30 +109,28 @@ class StateDetectSingleThread:
                     else:
                         bboxes.append(BBoxData(classes[i], box))
 
-            tagLines, unassigned = assignTagsToBBoxes(frame, tags, bboxes)
+            tagDatas = identifyTags(self.tagModel, frame, tags, self.tagIDLength)
+            uIdx = assignTagsToBBoxes(tagDatas, bboxes)
 
             for bbd in bboxes:
                 if bbd.tagBox is not None:
-                    bbd.valveID = detectTagID(self.tagModel, frame, bbd.tagBox)
-                _, state = SiftStateDetector.sift(frame, bbd)
-                bbd.valveState = state
-
-            if saveFrames:
-                cv.imwrite(os.path.join(self.frameSavePath, f"{frameID}.jpg"), frame)
+                    state = stateMethod(frame, bbd)
+                    bbd.valveState = state
 
             # Drawing -----------------------------------------------------------------
-            if len(unassigned):
-                for tag in unassigned:
-                    tagId = detectTagID(self.tagModel, frame, tag)
-                    self.drawTag(frame, tag, tagId, color=(0, 0, 0))
+            unassigned = (tagDatas[i] for i in uIdx)
+            for td in unassigned:
+                self.drawTag(frame, td.tagBox, td.tagID, color=(0, 0, 0))
 
             self.draw(frame, bboxes)
 
-            #for line in tagLines:
-            #    cv.line(frame, line[0].toTuple(), line[1].toTuple(), (0, 255, 0), 3)
-            # -------------------------------------------------------------------------
+            for j, td in enumerate(tagDatas):
+                if j not in uIdx:
+                    cv.line(frame, td.tagLine[0].toTuple(), td.tagLine[1].toTuple(), (0, 255, 0), 3)
 
             resized = self.resizeImage(frame, width=600)
+            cv.putText(resized, f"Frame {frameID - 1}", (3, 30), self.font, 2, color=(0, 255, 0), thickness=2)
+            # -------------------------------------------------------------------------
 
             if saveFrames:
                 cv.imwrite(os.path.join(self.finalFrameSavePath, f"{frameID}.jpg"), resized)
@@ -119,7 +138,11 @@ class StateDetectSingleThread:
             cv.imshow("result", resized)
             if cv.waitKey(1) == ord('q'):
                 break
-            frameID += 1
+
+        endTime = time.time() - start
+        fps = frameID / endTime
+
+        print(f"time={round(endTime, 3)}, FPS={round(fps, 3)}, TotalFrames={frameID}")
 
         cap.release()
         cv.destroyAllWindows()
@@ -165,7 +188,7 @@ class StateDetectSingleThread:
         wPct = (width / float(pim.size[0]))
         hsize = int((float(pim.size[1]) * float(wPct)))
 
-        resized = pim.resize((width, hsize), PIL.Image.ANTIALIAS)
+        resized = pim.resize((width, hsize), PIL.Image.LANCZOS)
         return cv.cvtColor(np.asarray(resized), cv.COLOR_RGB2BGR)
 
 
@@ -174,10 +197,16 @@ if __name__ == "__main__":
     fn = fn1
     baseName, ext = os.path.splitext(fn)
 
+    method = "sift"  # "colorSearch"
+
     video = Config.createAppDataPath("video", "new-videos", fName=fn)
-    finalSavePath = Config.createAppDataPath("images", "results", "SDST", baseName, "final")
-    rawSavePath = Config.createAppDataPath("images", "results", "SDST", baseName, "raw")
+    finalSavePath = Config.createAppDataPath("images", "results", "SDST", method, baseName, "final")
+    rawSavePath = Config.createAppDataPath("images", "results", "SDST", method, baseName, "raw")
 
     tester = StateDetectSingleThread(tagClassID=8, frameSavePath=rawSavePath, finalFrameSavePath=finalSavePath)
-    tester.detectFromStream(video, saveFrames=False)
+    tester.detectFromStream(video, saveFrames=False, method=method)
+
+    # new colordetect single thread -> time=195.282, FPS=2.381, TotalFrames=465
+    # new sift single thread -> time=218.978, FPS=2.124, TotalFrames=465
+    # new sift split process (3 state detect procs) -> time=185.529, FPS=2.512, TotalFrames=465
 

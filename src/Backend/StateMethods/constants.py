@@ -5,12 +5,7 @@ from typing import Tuple, Union
 from src.Backend import ValveState
 from src.Backend.Valve import Valve
 
-
-@unique
-class ReturnType(Enum):
-    ANGLE = 1
-    STATE = 2
-
+Number = Union[float, int]
 
 # TypeDef classes
 class TYDisplay(Protocol):
@@ -19,7 +14,6 @@ class TYDisplay(Protocol):
 
 
 class TYStateMethod(Protocol):
-    def __call__(self, img: np.ndarray, bbox: Tuple[int, int, int, int], v: Valve, display: TYDisplay) \
-            -> Tuple[ReturnType, Union[ValveState, float]]:
+    def __call__(self, img: np.ndarray, bbox: Tuple[int, int, int, int], v: Valve) -> ValveState:
             pass
 

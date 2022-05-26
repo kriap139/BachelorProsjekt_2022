@@ -36,14 +36,29 @@ package src.Backend {
             {static} + fetchImages(classID: int) -> tuple
         }
 
-        class StateDetector {
+        class SiftStateDetector {
             + valveClasses: Dict[ClassID, ValveClass]
             + sift(img: np.ndarray, data: BBoxData) -> Tuple[Returntype, ValveState]
+        }
+
+        class ColorStateDetector {
+            angleClosedThreshDeg: float
+            angleOpenThreshDeg: float
+            valveClasses: Dict[classID, ValveClass]
+
+            map(val: Number, inMin: Number, inMax: Number, outMin: Number, outMax: Number) -> float:
+            calcState(self, angle: float) -> ValveState
+            calcTagLine(frame: np.ndarray, tagBox: Tuple[int, int, int, int]) -> np.ndarray
+            stateDetect(self, frame: np.ndarray, data: BBoxData, draw: bool = True) -> Tuple[ReturnType, Union[ValveState, float]]:
         }
     }
 
     package src.Backend.IDMethods {
         class TagID_Functions {
+            + calcTagLine(frame: np.ndarray, tagBox: tuple) -> Tuple[Point2D, Point2D]
+            - orientation(p: Point2D, q: Point2D, r: Point2D) -> int
+            - onSegment(p: Point2D, q: Point2D, r: Point2D) -> bool
+            + intersect(p1: Point2D, q1: Point2D, p2: Point2D, q2: Point2D) -> bool
             + assignTagsToBBoxes(tagBoxes: tuple, bboxes: List[BBoxData]) -> None
             - Filter_Contours_Based_On_ArcLength(contours, requiredLength=40, filterThreshold)
             - Filter_Contours_Based_On_Dimensions_Of_Bounding_Boxes(image, conturs)
@@ -53,8 +68,9 @@ package src.Backend {
             - Filter_Contours(image, contours, filterThreshold)
             - Sort_Contours(contours: np.ndarray)
             - Fix_Dimension(image)
-            - CNN_Model(model, digits)
-            + detectTagID(cnnModel, tagImage: numpy.ndarray)
+            + CNN_Model(model, digits)
+            - detectTagID(cnnModel, tagImage: numpy.ndarray)
+            + identifyTags(tagModel, frame: np.ndarray, tagBoxes: tuple, tagIDLength: int) -> List[TagData]
         }
     }
 
@@ -188,8 +204,9 @@ StateDetectProcess <-- Event
 PreStateDetectProcess -[hidden]right- StateDetectProcess
 StateDetectProcess -[hidden]right- UnifiedStateDetectProcess
 Global_Functions -[hidden]right- Queue
-StateDetector-[hidden]up- Global_Functions
+
+SiftStateDetector-[hidden]up- TagID_Functions
 StateDetectSingleThread -[hidden]left- TagID_Functions
-StateDetector -[hidden]down- TagID_Functions
+TagID_Functions -[hidden]up- Global_Functions
 
 @enduml

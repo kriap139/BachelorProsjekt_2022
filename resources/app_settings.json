@@ -2,10 +2,10 @@
    "GUI": {
       "theme": "Combinear",
       "windowGeometry": [
-         372,
-         48,
-         1111,
-         875
+         816,
+         132,
+         2046,
+         1379
       ],
       "valveImages": {
          "UNKNOWN": "images/valve/Valve_UNKNOWN.png",
