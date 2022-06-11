@@ -147,6 +147,7 @@ class SIFTImageHandlerSHM:
         return imgOpen, imgClosed
 
 
+
 class SiftStateDetector:
     def __init__(self):
         self.valveClasses = Config.loadValveInfoData().valveClasses
@@ -210,9 +211,13 @@ class SiftStateDetector:
                 num_kp_arr[i] += sim
 
         # draw kp of image with the highest match
-        #draw = cv2.drawMatchesKnn(img, kp, highest[3], highest[1], highest[2], None,
-        #                          flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
-        # display("SIFT_result", draw)
+        # his = highest[3]
+        # if (his is not None) and (img.shape[1] != 0) and (img.shape[0] != 0):
+        #     draw = cv2.drawMatchesKnn(img, kp, highest[3], highest[1], highest[2], None,
+        #                              flags=cv2.DrawMatchesFlags_NOT_DRAW_SINGLE_POINTS)
+        #
+        #    path = Config.createAppDataPath("images", "results", "SDST", "sift", "RefResult")
+        #    cv2.imwrite(os.path.join(path, f"{SIFTImageHandler.getFrameID()}.jpg"), draw)
 
         sim_open = num_kp_arr[0]
         sim_closed = num_kp_arr[1]

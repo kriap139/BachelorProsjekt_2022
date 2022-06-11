@@ -41,9 +41,9 @@ class StateDetectSingleThread:
         self.layerNames = self.net.getLayerNames()
         self.outputLayers = [self.layerNames[i - 1] for i in self.net.getUnconnectedOutLayers()]
 
-    def detectFromStream(self, streamPath: str, saveFrames: bool = True, method: str = "sift"):
+    def detectFromStream(self, streamPath: str, frameIDStart: int = 1, saveFrames: bool = True, method: str = "sift"):
         cap = cv.VideoCapture(streamPath)
-        frameID = 0
+        frameID = frameIDStart - 1
 
         if method == "sift":
             SIFTImageHandler.loadAllSiftRefImages()
@@ -194,17 +194,17 @@ class StateDetectSingleThread:
 
 if __name__ == "__main__":
     fn1, fn2 = "MOV_0368.mp4", "MOV_0375.mp4"
-    fn = fn1
+    fn = fn2
     baseName, ext = os.path.splitext(fn)
 
-    method = "sift"  # "colorSearch"
+    method = "sift" if True else "colorSearch"
 
     video = Config.createAppDataPath("video", "new-videos", fName=fn)
     finalSavePath = Config.createAppDataPath("images", "results", "SDST", method, baseName, "final")
     rawSavePath = Config.createAppDataPath("images", "results", "SDST", method, baseName, "raw")
 
     tester = StateDetectSingleThread(tagClassID=8, frameSavePath=rawSavePath, finalFrameSavePath=finalSavePath)
-    tester.detectFromStream(video, saveFrames=False, method=method)
+    tester.detectFromStream(video, frameIDStart=1, saveFrames=False, method=method)
 
     # new colordetect single thread -> time=195.282, FPS=2.381, TotalFrames=465
     # new sift single thread -> time=218.978, FPS=2.124, TotalFrames=465
